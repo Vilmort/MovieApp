@@ -39,10 +39,42 @@
 		0B7F055D2B39874C00AAC7A7 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F055C2B39874C00AAC7A7 /* ProfileViewController.swift */; };
 		0B7F05612B3AD45B00AAC7A7 /* TreePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F05602B3AD45B00AAC7A7 /* TreePresenter.swift */; };
 		0B7F05642B3AD50C00AAC7A7 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F05632B3AD50C00AAC7A7 /* ProfilePresenter.swift */; };
-		0B7F05692B3B4AD200AAC7A7 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F05662B3B4AD200AAC7A7 /* TabBar.swift */; };
-		0B7F056A2B3B4AD200AAC7A7 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F05672B3B4AD200AAC7A7 /* TabBarController.swift */; };
-		0B7F056B2B3B4AD200AAC7A7 /* TabBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F05682B3B4AD200AAC7A7 /* TabBarButton.swift */; };
+		0B7F05722B3B6DB100AAC7A7 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F056F2B3B6DB100AAC7A7 /* TabBar.swift */; };
+		0B7F05732B3B6DB100AAC7A7 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F05702B3B6DB100AAC7A7 /* TabBarController.swift */; };
+		0B7F05742B3B6DB100AAC7A7 /* TabBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F05712B3B6DB100AAC7A7 /* TabBarButton.swift */; };
+		77D1BB422B3AE2B7001C5F99 /* KPNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77D1BB3F2B3AE29C001C5F99 /* KPNetwork.framework */; };
+		77D1BB4A2B3AEC86001C5F99 /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D1BB492B3AEC86001C5F99 /* DIContainer.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		77D1BB3E2B3AE29C001C5F99 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 77D1BB392B3AE29C001C5F99 /* KPNetwork.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 77D1BAD42B3A25B2001C5F99;
+			remoteInfo = KPNetwork;
+		};
+		77D1BB402B3AE29C001C5F99 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 77D1BB392B3AE29C001C5F99 /* KPNetwork.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 77D1BADC2B3A25B2001C5F99;
+			remoteInfo = KPNetworkTests;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		77D1BB1A2B3AE0D1001C5F99 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0B7F04EA2B38714F00AAC7A7 /* MovieApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,9 +104,11 @@
 		0B7F055C2B39874C00AAC7A7 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		0B7F05602B3AD45B00AAC7A7 /* TreePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreePresenter.swift; sourceTree = "<group>"; };
 		0B7F05632B3AD50C00AAC7A7 /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
-		0B7F05662B3B4AD200AAC7A7 /* TabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
-		0B7F05672B3B4AD200AAC7A7 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
-		0B7F05682B3B4AD200AAC7A7 /* TabBarButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarButton.swift; sourceTree = "<group>"; };
+		0B7F056F2B3B6DB100AAC7A7 /* TabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TabBar.swift; path = BubbleTabBar/TabBar.swift; sourceTree = "<group>"; };
+		0B7F05702B3B6DB100AAC7A7 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TabBarController.swift; path = BubbleTabBar/TabBarController.swift; sourceTree = "<group>"; };
+		0B7F05712B3B6DB100AAC7A7 /* TabBarButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TabBarButton.swift; path = BubbleTabBar/TabBarButton.swift; sourceTree = "<group>"; };
+		77D1BB392B3AE29C001C5F99 /* KPNetwork.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KPNetwork.xcodeproj; path = KPNetwork/KPNetwork.xcodeproj; sourceTree = "<group>"; };
+		77D1BB492B3AEC86001C5F99 /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77D1BB422B3AE2B7001C5F99 /* KPNetwork.framework in Frameworks */,
 				0B7F052A2B387ACF00AAC7A7 /* IQKeyboardManagerSwift in Frameworks */,
 				0B7F05212B38792900AAC7A7 /* RealmSwift in Frameworks */,
 				0B7F051F2B38792900AAC7A7 /* Realm in Frameworks */,
@@ -98,9 +133,11 @@
 		0B7F04E12B38714E00AAC7A7 = {
 			isa = PBXGroup;
 			children = (
+				77D1BB392B3AE29C001C5F99 /* KPNetwork.xcodeproj */,
 				0B7F05012B3871EE00AAC7A7 /* Resource */,
 				0B7F04EC2B38714F00AAC7A7 /* MovieApp */,
 				0B7F04EB2B38714F00AAC7A7 /* Products */,
+				77D1BB172B3AE0D1001C5F99 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -170,7 +207,7 @@
 		0B7F05062B3872CE00AAC7A7 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				0B7F05122B3875D200AAC7A7 /* Network */,
+				77D1BB492B3AEC86001C5F99 /* DIContainer.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -178,17 +215,12 @@
 		0B7F05112B38744C00AAC7A7 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
-				0B7F05652B3B4AC400AAC7A7 /* BubbleTabBar */,
+				0B7F056F2B3B6DB100AAC7A7 /* TabBar.swift */,
+				0B7F05712B3B6DB100AAC7A7 /* TabBarButton.swift */,
+				0B7F05702B3B6DB100AAC7A7 /* TabBarController.swift */,
 				0B7F05162B3876C100AAC7A7 /* TabBarPreseneter.swift */,
 			);
 			path = TabBar;
-			sourceTree = "<group>";
-		};
-		0B7F05122B3875D200AAC7A7 /* Network */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Network;
 			sourceTree = "<group>";
 		};
 		0B7F05132B38764E00AAC7A7 /* Builder */ = {
@@ -377,14 +409,20 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
-		0B7F05652B3B4AC400AAC7A7 /* BubbleTabBar */ = {
+		77D1BB172B3AE0D1001C5F99 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0B7F05662B3B4AD200AAC7A7 /* TabBar.swift */,
-				0B7F05672B3B4AD200AAC7A7 /* TabBarController.swift */,
-				0B7F05682B3B4AD200AAC7A7 /* TabBarButton.swift */,
 			);
-			path = BubbleTabBar;
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		77D1BB3A2B3AE29C001C5F99 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				77D1BB3F2B3AE29C001C5F99 /* KPNetwork.framework */,
+				77D1BB412B3AE29C001C5F99 /* KPNetworkTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -397,6 +435,7 @@
 				0B7F04E62B38714F00AAC7A7 /* Sources */,
 				0B7F04E72B38714F00AAC7A7 /* Frameworks */,
 				0B7F04E82B38714F00AAC7A7 /* Resources */,
+				77D1BB1A2B3AE0D1001C5F99 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -449,12 +488,35 @@
 			);
 			productRefGroup = 0B7F04EB2B38714F00AAC7A7 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 77D1BB3A2B3AE29C001C5F99 /* Products */;
+					ProjectRef = 77D1BB392B3AE29C001C5F99 /* KPNetwork.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				0B7F04E92B38714F00AAC7A7 /* MovieApp */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		77D1BB3F2B3AE29C001C5F99 /* KPNetwork.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = KPNetwork.framework;
+			remoteRef = 77D1BB3E2B3AE29C001C5F99 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		77D1BB412B3AE29C001C5F99 /* KPNetworkTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = KPNetworkTests.xctest;
+			remoteRef = 77D1BB402B3AE29C001C5F99 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		0B7F04E82B38714F00AAC7A7 /* Resources */ = {
@@ -479,26 +541,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B7F05102B3873EE00AAC7A7 /* UILabel+.swift in Sources */,
-				0B7F056A2B3B4AD200AAC7A7 /* TabBarController.swift in Sources */,
 				0B7F050A2B38739200AAC7A7 /* UIView+.swift in Sources */,
 				0B7F05582B39860B00AAC7A7 /* SearchPresenter.swift in Sources */,
 				0B7F054E2B3984AF00AAC7A7 /* HomePresenter.swift in Sources */,
 				0B7F050C2B3873AF00AAC7A7 /* UIFont+.swift in Sources */,
 				0B7F05052B38729600AAC7A7 /* UIColor+.swift in Sources */,
-				0B7F056B2B3B4AD200AAC7A7 /* TabBarButton.swift in Sources */,
 				0B7F05612B3AD45B00AAC7A7 /* TreePresenter.swift in Sources */,
 				0B7F055D2B39874C00AAC7A7 /* ProfileViewController.swift in Sources */,
 				0B7F05172B3876C100AAC7A7 /* TabBarPreseneter.swift in Sources */,
 				0B7F05082B38735A00AAC7A7 /* UIImage+.swift in Sources */,
 				0B7F050E2B3873D000AAC7A7 /* UIStackView+.swift in Sources */,
+				77D1BB4A2B3AEC86001C5F99 /* DIContainer.swift in Sources */,
 				0B7F04EE2B38714F00AAC7A7 /* AppDelegate.swift in Sources */,
-				0B7F05692B3B4AD200AAC7A7 /* TabBar.swift in Sources */,
+				0B7F05742B3B6DB100AAC7A7 /* TabBarButton.swift in Sources */,
 				0B7F04F02B38714F00AAC7A7 /* SceneDelegate.swift in Sources */,
 				0B7F05522B3984DD00AAC7A7 /* HomeViewController.swift in Sources */,
 				0B7F05152B38765800AAC7A7 /* Builder.swift in Sources */,
 				0B7F055A2B3986D800AAC7A7 /* TreeViewController.swift in Sources */,
 				0B7F05642B3AD50C00AAC7A7 /* ProfilePresenter.swift in Sources */,
+				0B7F05732B3B6DB100AAC7A7 /* TabBarController.swift in Sources */,
 				0B7F05542B3985CC00AAC7A7 /* SearchViewController.swift in Sources */,
+				0B7F05722B3B6DB100AAC7A7 /* TabBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
