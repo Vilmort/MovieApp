@@ -1,0 +1,542 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		770178582B3B183500874D42 /* KPMovieSearchEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770178572B3B183500874D42 /* KPMovieSearchEntity.swift */; };
+		7701785A2B3B183F00874D42 /* KPMovieSearchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770178592B3B183F00874D42 /* KPMovieSearchRequest.swift */; };
+		770178622B3B255E00874D42 /* KPListSearchEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770178612B3B255E00874D42 /* KPListSearchEntity.swift */; };
+		770178642B3B25F000874D42 /* SubEntities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770178632B3B25F000874D42 /* SubEntities.swift */; };
+		770178662B3B27A600874D42 /* KPListSearchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770178652B3B27A600874D42 /* KPListSearchRequest.swift */; };
+		77D1BADD2B3A25B2001C5F99 /* KPNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77D1BAD42B3A25B2001C5F99 /* KPNetwork.framework */; };
+		77D1BAE22B3A25B2001C5F99 /* KPNetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D1BAE12B3A25B2001C5F99 /* KPNetworkTests.swift */; };
+		77D1BAE32B3A25B2001C5F99 /* KPNetwork.h in Headers */ = {isa = PBXBuildFile; fileRef = 77D1BAD72B3A25B2001C5F99 /* KPNetwork.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		77D1BAEF2B3A25EF001C5F99 /* KPNetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D1BAEE2B3A25EF001C5F99 /* KPNetworkClient.swift */; };
+		77D1BAF12B3A263D001C5F99 /* KPNetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D1BAF02B3A263D001C5F99 /* KPNetworkError.swift */; };
+		77D1BAF32B3A2694001C5F99 /* KPNetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D1BAF22B3A2694001C5F99 /* KPNetworkRequest.swift */; };
+		77D1BAF52B3A31CD001C5F99 /* KPMovieRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D1BAF42B3A31CD001C5F99 /* KPMovieRequest.swift */; };
+		77D1BAF82B3A31DC001C5F99 /* KPMovieEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D1BAF72B3A31DC001C5F99 /* KPMovieEntity.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		77D1BADE2B3A25B2001C5F99 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 77D1BACB2B3A25B2001C5F99 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 77D1BAD32B3A25B2001C5F99;
+			remoteInfo = KPNetwork;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		770178572B3B183500874D42 /* KPMovieSearchEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KPMovieSearchEntity.swift; sourceTree = "<group>"; };
+		770178592B3B183F00874D42 /* KPMovieSearchRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KPMovieSearchRequest.swift; sourceTree = "<group>"; };
+		770178612B3B255E00874D42 /* KPListSearchEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KPListSearchEntity.swift; sourceTree = "<group>"; };
+		770178632B3B25F000874D42 /* SubEntities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubEntities.swift; sourceTree = "<group>"; };
+		770178652B3B27A600874D42 /* KPListSearchRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KPListSearchRequest.swift; sourceTree = "<group>"; };
+		77D1BAD42B3A25B2001C5F99 /* KPNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KPNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		77D1BAD72B3A25B2001C5F99 /* KPNetwork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KPNetwork.h; sourceTree = "<group>"; };
+		77D1BADC2B3A25B2001C5F99 /* KPNetworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KPNetworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		77D1BAE12B3A25B2001C5F99 /* KPNetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KPNetworkTests.swift; sourceTree = "<group>"; };
+		77D1BAEE2B3A25EF001C5F99 /* KPNetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KPNetworkClient.swift; sourceTree = "<group>"; };
+		77D1BAF02B3A263D001C5F99 /* KPNetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KPNetworkError.swift; sourceTree = "<group>"; };
+		77D1BAF22B3A2694001C5F99 /* KPNetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KPNetworkRequest.swift; sourceTree = "<group>"; };
+		77D1BAF42B3A31CD001C5F99 /* KPMovieRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KPMovieRequest.swift; sourceTree = "<group>"; };
+		77D1BAF72B3A31DC001C5F99 /* KPMovieEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KPMovieEntity.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		77D1BAD12B3A25B2001C5F99 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		77D1BAD92B3A25B2001C5F99 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77D1BADD2B3A25B2001C5F99 /* KPNetwork.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		77D1BACA2B3A25B2001C5F99 = {
+			isa = PBXGroup;
+			children = (
+				77D1BAD62B3A25B2001C5F99 /* KPNetwork */,
+				77D1BAE02B3A25B2001C5F99 /* KPNetworkTests */,
+				77D1BAD52B3A25B2001C5F99 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		77D1BAD52B3A25B2001C5F99 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				77D1BAD42B3A25B2001C5F99 /* KPNetwork.framework */,
+				77D1BADC2B3A25B2001C5F99 /* KPNetworkTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		77D1BAD62B3A25B2001C5F99 /* KPNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				77D1BAD72B3A25B2001C5F99 /* KPNetwork.h */,
+				77D1BAEE2B3A25EF001C5F99 /* KPNetworkClient.swift */,
+				77D1BAF22B3A2694001C5F99 /* KPNetworkRequest.swift */,
+				77D1BAF02B3A263D001C5F99 /* KPNetworkError.swift */,
+				77D1BAF92B3A31DE001C5F99 /* Entities */,
+				77D1BAF62B3A31CF001C5F99 /* Requests */,
+			);
+			path = KPNetwork;
+			sourceTree = "<group>";
+		};
+		77D1BAE02B3A25B2001C5F99 /* KPNetworkTests */ = {
+			isa = PBXGroup;
+			children = (
+				77D1BAE12B3A25B2001C5F99 /* KPNetworkTests.swift */,
+			);
+			path = KPNetworkTests;
+			sourceTree = "<group>";
+		};
+		77D1BAF62B3A31CF001C5F99 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				77D1BAF42B3A31CD001C5F99 /* KPMovieRequest.swift */,
+				770178592B3B183F00874D42 /* KPMovieSearchRequest.swift */,
+				770178652B3B27A600874D42 /* KPListSearchRequest.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		77D1BAF92B3A31DE001C5F99 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				77D1BAF72B3A31DC001C5F99 /* KPMovieEntity.swift */,
+				770178572B3B183500874D42 /* KPMovieSearchEntity.swift */,
+				770178612B3B255E00874D42 /* KPListSearchEntity.swift */,
+				770178632B3B25F000874D42 /* SubEntities.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		77D1BACF2B3A25B2001C5F99 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77D1BAE32B3A25B2001C5F99 /* KPNetwork.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		77D1BAD32B3A25B2001C5F99 /* KPNetwork */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 77D1BAE62B3A25B2001C5F99 /* Build configuration list for PBXNativeTarget "KPNetwork" */;
+			buildPhases = (
+				77D1BACF2B3A25B2001C5F99 /* Headers */,
+				77D1BAD02B3A25B2001C5F99 /* Sources */,
+				77D1BAD12B3A25B2001C5F99 /* Frameworks */,
+				77D1BAD22B3A25B2001C5F99 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KPNetwork;
+			productName = KPNetwork;
+			productReference = 77D1BAD42B3A25B2001C5F99 /* KPNetwork.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		77D1BADB2B3A25B2001C5F99 /* KPNetworkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 77D1BAE92B3A25B2001C5F99 /* Build configuration list for PBXNativeTarget "KPNetworkTests" */;
+			buildPhases = (
+				77D1BAD82B3A25B2001C5F99 /* Sources */,
+				77D1BAD92B3A25B2001C5F99 /* Frameworks */,
+				77D1BADA2B3A25B2001C5F99 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				77D1BADF2B3A25B2001C5F99 /* PBXTargetDependency */,
+			);
+			name = KPNetworkTests;
+			productName = KPNetworkTests;
+			productReference = 77D1BADC2B3A25B2001C5F99 /* KPNetworkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		77D1BACB2B3A25B2001C5F99 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1510;
+				LastUpgradeCheck = 1510;
+				TargetAttributes = {
+					77D1BAD32B3A25B2001C5F99 = {
+						CreatedOnToolsVersion = 15.1;
+						LastSwiftMigration = 1510;
+					};
+					77D1BADB2B3A25B2001C5F99 = {
+						CreatedOnToolsVersion = 15.1;
+					};
+				};
+			};
+			buildConfigurationList = 77D1BACE2B3A25B2001C5F99 /* Build configuration list for PBXProject "KPNetwork" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 77D1BACA2B3A25B2001C5F99;
+			productRefGroup = 77D1BAD52B3A25B2001C5F99 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				77D1BAD32B3A25B2001C5F99 /* KPNetwork */,
+				77D1BADB2B3A25B2001C5F99 /* KPNetworkTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		77D1BAD22B3A25B2001C5F99 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		77D1BADA2B3A25B2001C5F99 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		77D1BAD02B3A25B2001C5F99 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77D1BAF32B3A2694001C5F99 /* KPNetworkRequest.swift in Sources */,
+				77D1BAF12B3A263D001C5F99 /* KPNetworkError.swift in Sources */,
+				7701785A2B3B183F00874D42 /* KPMovieSearchRequest.swift in Sources */,
+				77D1BAF82B3A31DC001C5F99 /* KPMovieEntity.swift in Sources */,
+				77D1BAEF2B3A25EF001C5F99 /* KPNetworkClient.swift in Sources */,
+				770178622B3B255E00874D42 /* KPListSearchEntity.swift in Sources */,
+				770178662B3B27A600874D42 /* KPListSearchRequest.swift in Sources */,
+				770178582B3B183500874D42 /* KPMovieSearchEntity.swift in Sources */,
+				77D1BAF52B3A31CD001C5F99 /* KPMovieRequest.swift in Sources */,
+				770178642B3B25F000874D42 /* SubEntities.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		77D1BAD82B3A25B2001C5F99 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77D1BAE22B3A25B2001C5F99 /* KPNetworkTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		77D1BADF2B3A25B2001C5F99 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 77D1BAD32B3A25B2001C5F99 /* KPNetwork */;
+			targetProxy = 77D1BADE2B3A25B2001C5F99 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		77D1BAE42B3A25B2001C5F99 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		77D1BAE52B3A25B2001C5F99 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		77D1BAE72B3A25B2001C5F99 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = viktorporch.KPNetwork;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		77D1BAE82B3A25B2001C5F99 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = viktorporch.KPNetwork;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		77D1BAEA2B3A25B2001C5F99 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = viktorporch.KPNetworkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		77D1BAEB2B3A25B2001C5F99 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = viktorporch.KPNetworkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		77D1BACE2B3A25B2001C5F99 /* Build configuration list for PBXProject "KPNetwork" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				77D1BAE42B3A25B2001C5F99 /* Debug */,
+				77D1BAE52B3A25B2001C5F99 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		77D1BAE62B3A25B2001C5F99 /* Build configuration list for PBXNativeTarget "KPNetwork" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				77D1BAE72B3A25B2001C5F99 /* Debug */,
+				77D1BAE82B3A25B2001C5F99 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		77D1BAE92B3A25B2001C5F99 /* Build configuration list for PBXNativeTarget "KPNetworkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				77D1BAEA2B3A25B2001C5F99 /* Debug */,
+				77D1BAEB2B3A25B2001C5F99 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 77D1BACB2B3A25B2001C5F99 /* Project object */;
+}
