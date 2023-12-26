@@ -12,7 +12,7 @@ final class Builder {
     
 //    TabBarVC
     static func createTabBar() -> UIViewController {
-        let view = TabBarController()
+        let view = TabBarController(customTabBar: TabBar())
         let presenter = TabBarPresenter(view: view)
         view.presenter = presenter
         return view
