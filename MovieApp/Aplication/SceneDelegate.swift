@@ -15,8 +15,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
-        window?.rootViewController = Builder.createTabBar()
+        var vc: UIViewController
+        UDService.ifOnboardingCompleted() ? 
+        (vc =  Builder.createTabBar()) :
+        (vc = Builder.createOnboarding())
+        let navigationController = UINavigationController(rootViewController: vc)
+        window?.rootViewController = navigationController
+        navigationController.navigationBar.isHidden = true
         window?.makeKeyAndVisible()
+    }
+    
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -36,5 +44,5 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
 
-}
+
 
