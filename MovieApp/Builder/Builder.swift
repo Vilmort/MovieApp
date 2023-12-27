@@ -50,4 +50,12 @@ final class Builder {
         return view
     }
     
+    static func createOnboarding() -> UIViewController {
+        let view = OnboardingViewController()
+        let presenter = OnboardingPresenter(view: view)
+        view.presenter = presenter
+        return view
+    }
+    
+    
 }
