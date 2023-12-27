@@ -42,6 +42,12 @@
 		0B7F05722B3B6DB100AAC7A7 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F056F2B3B6DB100AAC7A7 /* TabBar.swift */; };
 		0B7F05732B3B6DB100AAC7A7 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F05702B3B6DB100AAC7A7 /* TabBarController.swift */; };
 		0B7F05742B3B6DB100AAC7A7 /* TabBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F05712B3B6DB100AAC7A7 /* TabBarButton.swift */; };
+		0B7F05792B3C04DA00AAC7A7 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F05782B3C04DA00AAC7A7 /* OnboardingView.swift */; };
+		0B7F057D2B3C056F00AAC7A7 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F057C2B3C056F00AAC7A7 /* OnboardingViewController.swift */; };
+		0B7F05842B3C457100AAC7A7 /* OnboardingNext.json in Resources */ = {isa = PBXBuildFile; fileRef = 0B7F05832B3C457100AAC7A7 /* OnboardingNext.json */; };
+		0B7F05862B3C58D000AAC7A7 /* OnboardingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F05852B3C58D000AAC7A7 /* OnboardingPresenter.swift */; };
+		0B7F05882B3C5BEB00AAC7A7 /* OnboardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F05872B3C5BEB00AAC7A7 /* OnboardingModel.swift */; };
+		0B7F058D2B3C66E000AAC7A7 /* UDService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F058C2B3C66DF00AAC7A7 /* UDService.swift */; };
 		77D1BB422B3AE2B7001C5F99 /* KPNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77D1BB3F2B3AE29C001C5F99 /* KPNetwork.framework */; };
 		77D1BB4A2B3AEC86001C5F99 /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D1BB492B3AEC86001C5F99 /* DIContainer.swift */; };
 /* End PBXBuildFile section */
@@ -107,6 +113,12 @@
 		0B7F056F2B3B6DB100AAC7A7 /* TabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TabBar.swift; path = BubbleTabBar/TabBar.swift; sourceTree = "<group>"; };
 		0B7F05702B3B6DB100AAC7A7 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TabBarController.swift; path = BubbleTabBar/TabBarController.swift; sourceTree = "<group>"; };
 		0B7F05712B3B6DB100AAC7A7 /* TabBarButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TabBarButton.swift; path = BubbleTabBar/TabBarButton.swift; sourceTree = "<group>"; };
+		0B7F05782B3C04DA00AAC7A7 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		0B7F057C2B3C056F00AAC7A7 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		0B7F05832B3C457100AAC7A7 /* OnboardingNext.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = OnboardingNext.json; sourceTree = "<group>"; };
+		0B7F05852B3C58D000AAC7A7 /* OnboardingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPresenter.swift; sourceTree = "<group>"; };
+		0B7F05872B3C5BEB00AAC7A7 /* OnboardingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingModel.swift; sourceTree = "<group>"; };
+		0B7F058C2B3C66DF00AAC7A7 /* UDService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UDService.swift; sourceTree = "<group>"; };
 		77D1BB392B3AE29C001C5F99 /* KPNetwork.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KPNetwork.xcodeproj; path = KPNetwork/KPNetwork.xcodeproj; sourceTree = "<group>"; };
 		77D1BB492B3AEC86001C5F99 /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -174,6 +186,7 @@
 		0B7F05012B3871EE00AAC7A7 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				0B7F057E2B3C344C00AAC7A7 /* Animation */,
 				0B7F05382B3974E100AAC7A7 /* Fonts */,
 				0B7F04F62B38715000AAC7A7 /* Assets.xcassets */,
 				0B7F04F82B38715000AAC7A7 /* LaunchScreen.storyboard */,
@@ -208,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				77D1BB492B3AEC86001C5F99 /* DIContainer.swift */,
+				0B7F058C2B3C66DF00AAC7A7 /* UDService.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -234,6 +248,9 @@
 		0B7F052B2B387BD900AAC7A7 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				0B7F05892B3C666E00AAC7A7 /* View */,
+				0B7F058A2B3C667E00AAC7A7 /* Presenter */,
+				0B7F058B2B3C668700AAC7A7 /* Model */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -409,6 +426,39 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		0B7F057E2B3C344C00AAC7A7 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				0B7F05832B3C457100AAC7A7 /* OnboardingNext.json */,
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
+		0B7F05892B3C666E00AAC7A7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0B7F05782B3C04DA00AAC7A7 /* OnboardingView.swift */,
+				0B7F057C2B3C056F00AAC7A7 /* OnboardingViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0B7F058A2B3C667E00AAC7A7 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				0B7F05852B3C58D000AAC7A7 /* OnboardingPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		0B7F058B2B3C668700AAC7A7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0B7F05872B3C5BEB00AAC7A7 /* OnboardingModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		77D1BB172B3AE0D1001C5F99 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -528,6 +578,7 @@
 				0B7F05462B39770700AAC7A7 /* Montserrat-ExtraBold.ttf in Resources */,
 				0B7F054C2B39772D00AAC7A7 /* Montserrat-Medium.ttf in Resources */,
 				0B7F05482B39771500AAC7A7 /* Montserrat-SemiBold.ttf in Resources */,
+				0B7F05842B3C457100AAC7A7 /* OnboardingNext.json in Resources */,
 				0B7F04F72B38715000AAC7A7 /* Assets.xcassets in Resources */,
 				0B7F05442B3976EE00AAC7A7 /* Montserrat-Bold.ttf in Resources */,
 			);
@@ -546,21 +597,26 @@
 				0B7F054E2B3984AF00AAC7A7 /* HomePresenter.swift in Sources */,
 				0B7F050C2B3873AF00AAC7A7 /* UIFont+.swift in Sources */,
 				0B7F05052B38729600AAC7A7 /* UIColor+.swift in Sources */,
+				0B7F05792B3C04DA00AAC7A7 /* OnboardingView.swift in Sources */,
 				0B7F05612B3AD45B00AAC7A7 /* TreePresenter.swift in Sources */,
 				0B7F055D2B39874C00AAC7A7 /* ProfileViewController.swift in Sources */,
 				0B7F05172B3876C100AAC7A7 /* TabBarPreseneter.swift in Sources */,
 				0B7F05082B38735A00AAC7A7 /* UIImage+.swift in Sources */,
+				0B7F057D2B3C056F00AAC7A7 /* OnboardingViewController.swift in Sources */,
 				0B7F050E2B3873D000AAC7A7 /* UIStackView+.swift in Sources */,
 				77D1BB4A2B3AEC86001C5F99 /* DIContainer.swift in Sources */,
 				0B7F04EE2B38714F00AAC7A7 /* AppDelegate.swift in Sources */,
 				0B7F05742B3B6DB100AAC7A7 /* TabBarButton.swift in Sources */,
+				0B7F058D2B3C66E000AAC7A7 /* UDService.swift in Sources */,
 				0B7F04F02B38714F00AAC7A7 /* SceneDelegate.swift in Sources */,
 				0B7F05522B3984DD00AAC7A7 /* HomeViewController.swift in Sources */,
 				0B7F05152B38765800AAC7A7 /* Builder.swift in Sources */,
 				0B7F055A2B3986D800AAC7A7 /* TreeViewController.swift in Sources */,
 				0B7F05642B3AD50C00AAC7A7 /* ProfilePresenter.swift in Sources */,
 				0B7F05732B3B6DB100AAC7A7 /* TabBarController.swift in Sources */,
+				0B7F05862B3C58D000AAC7A7 /* OnboardingPresenter.swift in Sources */,
 				0B7F05542B3985CC00AAC7A7 /* SearchViewController.swift in Sources */,
+				0B7F05882B3C5BEB00AAC7A7 /* OnboardingModel.swift in Sources */,
 				0B7F05722B3B6DB100AAC7A7 /* TabBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
