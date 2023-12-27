@@ -42,6 +42,12 @@
 		0B7F05722B3B6DB100AAC7A7 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F056F2B3B6DB100AAC7A7 /* TabBar.swift */; };
 		0B7F05732B3B6DB100AAC7A7 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F05702B3B6DB100AAC7A7 /* TabBarController.swift */; };
 		0B7F05742B3B6DB100AAC7A7 /* TabBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F05712B3B6DB100AAC7A7 /* TabBarButton.swift */; };
+		0B7F05982B3C6AEA00AAC7A7 /* OnboardingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F05922B3C6AE900AAC7A7 /* OnboardingPresenter.swift */; };
+		0B7F05992B3C6AEA00AAC7A7 /* OnboardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F05942B3C6AE900AAC7A7 /* OnboardingModel.swift */; };
+		0B7F059A2B3C6AEA00AAC7A7 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F05962B3C6AE900AAC7A7 /* OnboardingViewController.swift */; };
+		0B7F059B2B3C6AEA00AAC7A7 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F05972B3C6AE900AAC7A7 /* OnboardingView.swift */; };
+		0B7F059D2B3C6B2C00AAC7A7 /* UDService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F059C2B3C6B2C00AAC7A7 /* UDService.swift */; };
+		0B7F05A12B3C6BBF00AAC7A7 /* OnboardingNext.json in Resources */ = {isa = PBXBuildFile; fileRef = 0B7F05A02B3C6BBF00AAC7A7 /* OnboardingNext.json */; };
 		773BB9722B3C43F100AD0412 /* error.json in Resources */ = {isa = PBXBuildFile; fileRef = 773BB9702B3C43F100AD0412 /* error.json */; };
 		773BB9732B3C43F100AD0412 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 773BB9712B3C43F100AD0412 /* loading.json */; };
 		77C997982B3B724800D39210 /* MovieListsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C997972B3B724800D39210 /* MovieListsPresenter.swift */; };
@@ -129,6 +135,12 @@
 		0B7F056F2B3B6DB100AAC7A7 /* TabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TabBar.swift; path = BubbleTabBar/TabBar.swift; sourceTree = "<group>"; };
 		0B7F05702B3B6DB100AAC7A7 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TabBarController.swift; path = BubbleTabBar/TabBarController.swift; sourceTree = "<group>"; };
 		0B7F05712B3B6DB100AAC7A7 /* TabBarButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TabBarButton.swift; path = BubbleTabBar/TabBarButton.swift; sourceTree = "<group>"; };
+		0B7F05922B3C6AE900AAC7A7 /* OnboardingPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingPresenter.swift; sourceTree = "<group>"; };
+		0B7F05942B3C6AE900AAC7A7 /* OnboardingModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingModel.swift; sourceTree = "<group>"; };
+		0B7F05962B3C6AE900AAC7A7 /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		0B7F05972B3C6AE900AAC7A7 /* OnboardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		0B7F059C2B3C6B2C00AAC7A7 /* UDService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UDService.swift; sourceTree = "<group>"; };
+		0B7F05A02B3C6BBF00AAC7A7 /* OnboardingNext.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = OnboardingNext.json; sourceTree = "<group>"; };
 		773BB9702B3C43F100AD0412 /* error.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = error.json; sourceTree = "<group>"; };
 		773BB9712B3C43F100AD0412 /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
 		77C997972B3B724800D39210 /* MovieListsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListsPresenter.swift; sourceTree = "<group>"; };
@@ -254,6 +266,7 @@
 			isa = PBXGroup;
 			children = (
 				77D1BB492B3AEC86001C5F99 /* DIContainer.swift */,
+				0B7F059C2B3C6B2C00AAC7A7 /* UDService.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -280,6 +293,9 @@
 		0B7F052B2B387BD900AAC7A7 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				0B7F05932B3C6AE900AAC7A7 /* Model */,
+				0B7F05912B3C6AE900AAC7A7 /* Presenter */,
+				0B7F05952B3C6AE900AAC7A7 /* View */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -448,6 +464,31 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		0B7F05912B3C6AE900AAC7A7 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				0B7F05922B3C6AE900AAC7A7 /* OnboardingPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		0B7F05932B3C6AE900AAC7A7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0B7F05942B3C6AE900AAC7A7 /* OnboardingModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0B7F05952B3C6AE900AAC7A7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0B7F05962B3C6AE900AAC7A7 /* OnboardingViewController.swift */,
+				0B7F05972B3C6AE900AAC7A7 /* OnboardingView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		77C997962B3B723700D39210 /* MovieLists */ = {
 			isa = PBXGroup;
 			children = (
@@ -479,6 +520,7 @@
 			children = (
 				773BB9702B3C43F100AD0412 /* error.json */,
 				773BB9712B3C43F100AD0412 /* loading.json */,
+				0B7F05A02B3C6BBF00AAC7A7 /* OnboardingNext.json */,
 			);
 			path = Lottie;
 			sourceTree = "<group>";
@@ -636,6 +678,7 @@
 				773BB9722B3C43F100AD0412 /* error.json in Resources */,
 				0B7F05482B39771500AAC7A7 /* Montserrat-SemiBold.ttf in Resources */,
 				0B7F04F72B38715000AAC7A7 /* Assets.xcassets in Resources */,
+				0B7F05A12B3C6BBF00AAC7A7 /* OnboardingNext.json in Resources */,
 				0B7F05442B3976EE00AAC7A7 /* Montserrat-Bold.ttf in Resources */,
 				773BB9732B3C43F100AD0412 /* loading.json in Resources */,
 			);
@@ -655,18 +698,22 @@
 				0B7F050A2B38739200AAC7A7 /* UIView+.swift in Sources */,
 				77C997BE2B3B7C9B00D39210 /* SpaceView.swift in Sources */,
 				0B7F05582B39860B00AAC7A7 /* SearchPresenter.swift in Sources */,
+				0B7F059A2B3C6AEA00AAC7A7 /* OnboardingViewController.swift in Sources */,
 				0B7F054E2B3984AF00AAC7A7 /* HomePresenter.swift in Sources */,
+				0B7F059D2B3C6B2C00AAC7A7 /* UDService.swift in Sources */,
 				77C997C22B3B7DF400D39210 /* UILabel+Extension.swift in Sources */,
 				77C997A02B3B72B100D39210 /* ModuleAssembly.swift in Sources */,
 				77C997C52B3B8F0D00D39210 /* HorizontalPicker.swift in Sources */,
 				0B7F050C2B3873AF00AAC7A7 /* UIFont+.swift in Sources */,
 				0B7F05052B38729600AAC7A7 /* UIColor+.swift in Sources */,
 				77C997C02B3B7DA000D39210 /* MovieListView.swift in Sources */,
+				0B7F05982B3C6AEA00AAC7A7 /* OnboardingPresenter.swift in Sources */,
 				77C997BC2B3B7BC800D39210 /* TableCell.swift in Sources */,
 				77C9979C2B3B727100D39210 /* MovieListsRouter.swift in Sources */,
 				0B7F05612B3AD45B00AAC7A7 /* TreePresenter.swift in Sources */,
 				0B7F055D2B39874C00AAC7A7 /* ProfileViewController.swift in Sources */,
 				77C9979E2B3B727A00D39210 /* MovieListsAssembly.swift in Sources */,
+				0B7F059B2B3C6AEA00AAC7A7 /* OnboardingView.swift in Sources */,
 				77C997A32B3B733000D39210 /* MovieListsProtocols.swift in Sources */,
 				0B7F05172B3876C100AAC7A7 /* TabBarPreseneter.swift in Sources */,
 				0B7F05082B38735A00AAC7A7 /* UIImage+.swift in Sources */,
@@ -683,6 +730,7 @@
 				77C997BA2B3B7AAB00D39210 /* CollectionCell.swift in Sources */,
 				77C997C72B3C11CD00D39210 /* Router.swift in Sources */,
 				77C997C92B3C151300D39210 /* ErrorPresenting.swift in Sources */,
+				0B7F05992B3C6AEA00AAC7A7 /* OnboardingModel.swift in Sources */,
 				0B7F055A2B3986D800AAC7A7 /* TreeViewController.swift in Sources */,
 				77C997B82B3B7A8C00D39210 /* Configurable.swift in Sources */,
 				0B7F05642B3AD50C00AAC7A7 /* ProfilePresenter.swift in Sources */,
