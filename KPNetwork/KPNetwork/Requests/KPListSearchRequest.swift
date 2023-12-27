@@ -11,7 +11,9 @@ public struct KPListSearchRequest: KPNetworkRequest {
     
     public typealias Response = KPListSearchEntity
     
-    public init() {}
+    public init(category: [String]? = nil) {
+        parameters["category"] = category?.joined(separator: ",")
+    }
     
     public var url: String {
         "list"
@@ -21,7 +23,5 @@ public struct KPListSearchRequest: KPNetworkRequest {
         .GET
     }
     
-    public var parameters: [String : String] {
-        ["limit": "250"]
-    }
+    public var parameters  = ["limit": "250"]
 }
