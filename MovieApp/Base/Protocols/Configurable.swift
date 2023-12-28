@@ -10,5 +10,5 @@ import UIKit
 protocol Configurable: UIView {
     associatedtype Model
     
-    func update(with model: Model)
+    func update(with model: Model?)
 }

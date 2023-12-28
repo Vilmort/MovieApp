@@ -9,11 +9,19 @@ import UIKit
 
 extension UILabel: Configurable {
     struct Model {
-        let text: String
-        let font: UIFont
-        let textColor: UIColor
+        let text: NSAttributedString
         let numberOfLines: Int
         let textAlignment: NSTextAlignment
+        
+        init(
+            text: NSAttributedString,
+            numberOfLines: Int,
+            textAlignment: NSTextAlignment = .left
+        ) {
+            self.text = text
+            self.numberOfLines = numberOfLines
+            self.textAlignment = textAlignment
+        }
         
         init(
             text: String,
@@ -22,18 +30,21 @@ extension UILabel: Configurable {
             numberOfLines: Int,
             alignment: NSTextAlignment = .left
         ) {
-            self.text = text
-            self.font = font
-            self.textColor = textColor
+            self.text = NSAttributedString(
+                string: text,
+                attributes: [.font: font, .foregroundColor: textColor]
+            )
             self.numberOfLines = numberOfLines
             self.textAlignment = alignment
         }
     }
     
-    func update(with model: Model) {
-        text = model.text
-        font = model.font
-        textColor = model.textColor
+    func update(with model: Model?) {
+        guard let model else {
+            attributedText = nil
+            return
+        }
+        attributedText = model.text
         numberOfLines = model.numberOfLines
         textAlignment = model.textAlignment
     }

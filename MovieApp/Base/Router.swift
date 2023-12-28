@@ -14,7 +14,7 @@ class Router {
         guard let controller else {
             return
         }
-        if let navController = controller as? UINavigationController {
+        if let navController = controller.navigationController {
             navController.pushViewController(vc, animated: true)
         } else {
             presentScreen(vc)
