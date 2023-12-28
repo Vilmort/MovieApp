@@ -15,26 +15,26 @@ public struct KPMovieSearchEntity: Decodable {
     public let pages: Int
     
     public struct KPSearchMovie: Decodable {
-        let id: Int
-        let name: String?
-        let alternativeName: String?
-        let enName: String?
-        let names: [KPName]
-        let type: KPMovieType?
-        let year: Int?
-        let description: String?
-        let shortDescription: String?
-        let status: String?
-        let rating: KPRating?
-        let votes: KPVotes?
-        let movieLength: Int?
-        let ratingMpaa: String?
-        let ageRating: Int?
-        let poster: KPImage?
-        let backdrop: KPImage?
-        let genres: [KPName]?
-        let countries: [KPName]?
-        let top10: Int?
-        let top250: Int?
+        public let id: Int
+        public let name: String?
+        public let alternativeName: String?
+        public let enName: String?
+        public let names: [KPName]
+        public let type: KPMovieType?
+        public let year: Int?
+        public let description: String?
+        public let shortDescription: String?
+        public let status: String?
+        public let rating: KPRating?
+        public let votes: KPVotes?
+        public let movieLength: Int?
+        public let ratingMpaa: String?
+        public let ageRating: Int?
+        public  let poster: KPImage?
+        public let backdrop: KPImage?
+        public let genres: [KPName]?
+        public let countries: [KPName]?
+        public let top10: Int?
+        public let top250: Int?
     }
 }

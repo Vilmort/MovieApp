@@ -28,7 +28,7 @@ final class MovieListsController: ViewController, MovieListsViewProtocol {
         return tv
     }()
     
-    private let listPicker = MovieListPicker()
+    private let listPicker = HorizontalPicker()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -113,7 +113,7 @@ extension MovieListsController {
             let didSelect: () -> Void
         }
         
-        let categories: [MovieListPicker.Model.Item]
+        let categories: [HorizontalPicker.Model.Item]
         let lists: [MovieList]
         let updateCategories: Bool
     }

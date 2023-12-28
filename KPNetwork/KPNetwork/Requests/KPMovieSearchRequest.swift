@@ -15,6 +15,7 @@ public struct KPMovieSearchRequest: KPNetworkRequest {
         limit: Int? = nil,
         id: [String]? = nil,
         type: KPMovieType? = nil,
+        genres: [String]? = nil,
         lists: [String]? = nil
     ) {
         if let page {
@@ -26,6 +27,7 @@ public struct KPMovieSearchRequest: KPNetworkRequest {
         parameters["id"] = id?.joined(separator: ",")
         parameters["type"] = type?.rawValue
         parameters["lists"] = lists?.joined(separator: ",")
+        parameters["genres.name"] = genres?.joined(separator: ",")
     }
     
     public var url: String {

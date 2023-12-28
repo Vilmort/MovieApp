@@ -52,7 +52,12 @@ extension MovieListView: Configurable {
         let imageURL: URL?
     }
     
-    func update(with model: Model) {
+    func update(with model: Model?) {
+        guard let model else {
+            label.text = nil
+            imageView.image = nil
+            return
+        }
         label.update(with: .init(text: model.name, font: .montserratSemiBold(ofSize: 18), textColor: .white, numberOfLines: 3, alignment: .center))
         imageView.kf.setImage(with: model.imageURL)
     }
