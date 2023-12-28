@@ -22,6 +22,12 @@ class TableCell<View: Configurable>: UITableViewCell {
         configure()
     }
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
+        view.update(with: nil)
+    }
+    
     func update(with model: View.Model, height: CGFloat? = nil, didSelectHandler: (() -> Void)? = nil) {
         view.update(with: model)
         self.didSelectHandler = didSelectHandler

@@ -16,5 +16,5 @@ protocol MovieListsPresenterProtocol: AnyObject {
 }
 
 protocol MovieListsRouterProtocol: AnyObject {
-    func showMovieList(_ slug: String)
+    func showMovieList(title: String, slug: String)
 }

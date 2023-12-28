@@ -13,9 +13,9 @@ final class SpaceView: UIView, Configurable {
         let height: CGFloat
     }
     
-    func update(with model: Model) {
+    func update(with model: Model?) {
         snp.makeConstraints {
-            $0.height.equalTo(model.height)
+            $0.height.equalTo(model?.height ?? 0)
         }
     }
 }
