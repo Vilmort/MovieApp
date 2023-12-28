@@ -8,7 +8,13 @@
 import UIKit
 
 final class MovieListsRouter: Router, MovieListsRouterProtocol {
-    func showMovieList(_ slug: String) {
-        print("show movie list \(slug)")
+    func showMovieList(title: String, slug: String) {
+        pushScreen(
+            MovieListAssembly(
+                title: title,
+                slug: slug,
+                genre: nil
+            ).build()
+        )
     }
 }

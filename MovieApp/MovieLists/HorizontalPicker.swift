@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class MovieListPickerCell: UICollectionViewCell {
+final class HorizontalPickerCell: UICollectionViewCell {
     
     let label = UILabel()
     
@@ -34,11 +34,11 @@ final class MovieListPickerCell: UICollectionViewCell {
     }
 }
 
-final class MovieListPicker: CustomView {
+final class HorizontalPicker: CustomView {
     private lazy var collectionView = {
         let cv = UICollectionView(frame: .zero, collectionViewLayout: createLayout())
         cv.backgroundColor = .clear
-        cv.register(MovieListPickerCell.self, forCellWithReuseIdentifier: String(describing: MovieListPickerCell.self))
+        cv.register(HorizontalPickerCell.self, forCellWithReuseIdentifier: String(describing: HorizontalPickerCell.self))
         cv.delegate = self
         cv.dataSource = self
         return cv
@@ -71,7 +71,7 @@ final class MovieListPicker: CustomView {
     }
 }
 
-extension MovieListPicker: Configurable {
+extension HorizontalPicker: Configurable {
     struct Model {
         
         struct Item {
@@ -82,20 +82,23 @@ extension MovieListPicker: Configurable {
         let items: [Item]
     }
     
-    func update(with model: Model) {
+    func update(with model: Model?) {
+        guard let model else {
+            return
+        }
         self.items = model.items
         collectionView.reloadData()
     }
 }
 
-extension MovieListPicker: UICollectionViewDelegate, UICollectionViewDataSource {
+extension HorizontalPicker: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         items.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let item = items[indexPath.row]
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: MovieListPickerCell.self), for: indexPath) as! MovieListPickerCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: HorizontalPickerCell.self), for: indexPath) as! HorizontalPickerCell
         cell.layer.cornerRadius = 8
         cell.backgroundColor = indexPath.row == selectedIndex ? .appSoft : .clear
         cell.label.update(
@@ -113,11 +116,11 @@ extension MovieListPicker: UICollectionViewDelegate, UICollectionViewDataSource 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         selectedIndex = indexPath.row
         
-        collectionView.visibleCells.compactMap { $0 as? MovieListPickerCell }.forEach {
+        collectionView.visibleCells.compactMap { $0 as? HorizontalPickerCell }.forEach {
             $0.backgroundColor = .clear
             $0.label.textColor = .white
         }
-        let cell = collectionView.cellForItem(at: indexPath) as! MovieListPickerCell
+        let cell = collectionView.cellForItem(at: indexPath) as! HorizontalPickerCell
         cell.backgroundColor = .appSoft
         cell.label.textColor = .appBlue
         

@@ -70,7 +70,7 @@ final class MovieListsPresenter: MovieListsPresenterProtocol {
                         didSelect: {
                             [weak self] in
                             
-                            self?.didSelectList(list.slug)
+                            self?.didSelectList(title: list.name, slug: list.slug)
                         }
                     )
                 },
@@ -94,11 +94,11 @@ final class MovieListsPresenter: MovieListsPresenterProtocol {
             })
     }
     
-    private func didSelectList(_ slug: String?) {
-        guard let slug else {
+    private func didSelectList(title: String?, slug: String?) {
+        guard let title, let slug else {
             return
         }
-        router.showMovieList(slug)
+        router.showMovieList(title: title, slug: slug)
     }
     
     private func didSelectCategory(_ category: String) {
