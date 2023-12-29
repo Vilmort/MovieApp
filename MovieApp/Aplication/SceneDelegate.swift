@@ -15,13 +15,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
-        var vc: UIViewController
-        UDService.ifOnboardingCompleted() ? 
-        (vc =  Builder.createTabBar()) :
-        (vc = Builder.createOnboarding())
-        let navigationController = UINavigationController(rootViewController: vc)
-        window?.rootViewController = navigationController
-        navigationController.navigationBar.isHidden = true
+//        window?.rootViewController = UDService.ifOnboardingCompleted() ? Builder.createTabBar() : Builder.createOnboarding()
+        window?.rootViewController = UINavigationController(rootViewController: MovieListsAssembly().build())
         window?.makeKeyAndVisible()
     }
     
