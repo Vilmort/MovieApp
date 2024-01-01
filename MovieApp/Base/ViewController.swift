@@ -11,6 +11,32 @@ import Lottie
 class ViewController: UIViewController {
     let loadingView = LoadingView()
     let errorView = ErrorView()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        configureBarBackButton()
+    }
+    
+    private func configureBarBackButton() {
+        if navigationController?.viewControllers.first != self {
+            navigationItem.leftBarButtonItem = .init(
+                image: .back.withRenderingMode(.alwaysOriginal),
+                style: .plain,
+                target: self,
+                action: #selector(didTapBackButton)
+            )
+        }
+    }
+    
+    @objc
+    private func didTapBackButton() {
+        if let navigationController {
+            navigationController.popViewController(animated: true)
+        } else {
+            dismiss(animated: true)
+        }
+    }
 }
 
 extension ViewController: LoadingPresenting {

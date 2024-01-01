@@ -88,6 +88,7 @@
 		77DFB2062B3F704F00167D3A /* MovieDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DFB2052B3F704F00167D3A /* MovieDetailRouter.swift */; };
 		77DFB2082B3F705600167D3A /* MovieDetailAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DFB2072B3F705600167D3A /* MovieDetailAssembly.swift */; };
 		77DFB20A2B3F7D2E00167D3A /* MovieInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DFB2092B3F7D2E00167D3A /* MovieInfoView.swift */; };
+		77DFB2112B3F8CC800167D3A /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DFB2102B3F8CC800167D3A /* NavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -197,6 +198,7 @@
 		77DFB2052B3F704F00167D3A /* MovieDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailRouter.swift; sourceTree = "<group>"; };
 		77DFB2072B3F705600167D3A /* MovieDetailAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailAssembly.swift; sourceTree = "<group>"; };
 		77DFB2092B3F7D2E00167D3A /* MovieInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieInfoView.swift; sourceTree = "<group>"; };
+		77DFB2102B3F8CC800167D3A /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -531,6 +533,7 @@
 			children = (
 				77C997A42B3B736A00D39210 /* ViewController.swift */,
 				77C997C62B3C11CD00D39210 /* Router.swift */,
+				77DFB2102B3F8CC800167D3A /* NavigationController.swift */,
 				77C997B62B3B7A7900D39210 /* Protocols */,
 				77C997B52B3B7A7400D39210 /* Views */,
 				77C997C32B3B7DF800D39210 /* Extensions */,
@@ -788,6 +791,7 @@
 				77DFB2082B3F705600167D3A /* MovieDetailAssembly.swift in Sources */,
 				0B7F05992B3C6AEA00AAC7A7 /* OnboardingModel.swift in Sources */,
 				0B7F055A2B3986D800AAC7A7 /* TreeViewController.swift in Sources */,
+				77DFB2112B3F8CC800167D3A /* NavigationController.swift in Sources */,
 				77C997B82B3B7A8C00D39210 /* Configurable.swift in Sources */,
 				0B7F05642B3AD50C00AAC7A7 /* ProfilePresenter.swift in Sources */,
 				0B7F05732B3B6DB100AAC7A7 /* TabBarController.swift in Sources */,
