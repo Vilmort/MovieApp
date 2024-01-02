@@ -9,6 +9,6 @@ import UIKit
 
 final class MovieListRouter: Router, MovieListRouterProtocol {
     func showMovie(_ id: Int) {
-        print("showMovie \(id)")
+        pushScreen(MovieDetailAssembly(id: id).build())
     }
 }

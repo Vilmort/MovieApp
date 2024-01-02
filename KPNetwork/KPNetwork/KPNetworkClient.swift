@@ -30,8 +30,10 @@ public actor DefaultKPNetworkClient: KPNetworkClient {
         guard var urlComponents = URLComponents(string: baseURL + request.url) else {
             return .failure(.invalidURL)
         }
-        urlComponents.queryItems = request.parameters.map {
-            URLQueryItem(name: $0.key, value: $0.value)
+        if !request.parameters.isEmpty {
+            urlComponents.queryItems = request.parameters.map {
+                URLQueryItem(name: $0.key, value: $0.value)
+            }
         }
         guard let url = urlComponents.url else {
             return .failure(.invalidURL)

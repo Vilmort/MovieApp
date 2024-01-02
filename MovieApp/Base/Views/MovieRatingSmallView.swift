@@ -8,7 +8,7 @@
 import UIKit
 
 final class MovieRatingSmallView: CustomView {
-    private let imageLabel = ImageLabelView()
+    private let imageLabel = ImageTitleSubtitleView()
     private let blurView = {
         let effect = UIBlurEffect(style: .dark)
         let blurView = UIVisualEffectView(effect: effect)
@@ -44,13 +44,17 @@ extension MovieRatingSmallView: Configurable {
         }
         imageLabel.update(
             with: .init(
-                text: .init(
+                image: .init(
+                    image: .star,
+                    tintColor: .appOrange,
+                    size: .init(width: 16, height: 16)
+                ),
+                title: .init(
                     text: "\(Double(Int(model.rating * 10)) / 10)",
                     font: .montserratMedium(ofSize: 12),
                     textColor: .appOrange,
                     numberOfLines: 1
                 ),
-                image: .init(image: .star, tintColor: .appOrange, size: .init(width: 16, height: 16)),
                 spacing: 4
             )
         )
