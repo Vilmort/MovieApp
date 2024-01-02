@@ -2,43 +2,52 @@
 //  MovieInfoView.swift
 //  MovieApp
 //
-//  Created by Victor Rubenko on 30.12.2023.
+//  Created by Victor on 30.12.2023.
 //
 
 import UIKit
 
 final class MovieInfoView: CustomView {
-    private let yearImageLabel = ImageLabelView()
-    private let lengthImageLabel = ImageLabelView()
-    private let genreImageLabel = ImageLabelView()
+    private let yearImageLabel = ImageTitleSubtitleView()
+    private let lengthImageLabel = ImageTitleSubtitleView()
+    private let genreImageLabel = ImageTitleSubtitleView()
+    private let countryLabel = UILabel()
     private lazy var divider1 = makeDivider()
     private lazy var divider2 = makeDivider()
-    private let hStack = UIStackView()
+    private let vStack = UIStackView()
     private let ratingView = MovieRatingSmallView()
+    private let ageView = MovieAgeView()
     
     override func configure() {
-        addSubview(hStack)
-        hStack.snp.makeConstraints {
-            $0.top.equalToSuperview()
+        
+        vStack.axis = .vertical
+        vStack.alignment = .center
+        vStack.spacing = 4
+        addSubview(vStack)
+        vStack.snp.makeConstraints {
+            $0.top.bottom.equalToSuperview()
             $0.leading.greaterThanOrEqualToSuperview()
             $0.trailing.lessThanOrEqualToSuperview()
             $0.centerX.equalToSuperview()
         }
         
-        hStack.addArrangedSubviews(
-            yearImageLabel,
+        let textHStack = UIStackView()
+        vStack.addArrangedSubview(textHStack)
+        
+        
+        textHStack.addArrangedSubviews(
+            countryLabel,
             divider1,
-            lengthImageLabel,
+            yearImageLabel,
             divider2,
-            genreImageLabel
+            lengthImageLabel
         )
         
-        addSubview(ratingView)
-        ratingView.snp.makeConstraints {
-            $0.top.equalTo(hStack.snp.bottom).offset(12)
-            $0.centerX.equalToSuperview()
-            $0.bottom.equalToSuperview()
-        }
+        vStack.addArrangedSubview(genreImageLabel)
+        
+        let infoHStack = UIStackView()
+        vStack.addArrangedSubview(infoHStack)
+        infoHStack.addArrangedSubviews(ratingView, ageView)
     }
     
     private func makeDivider() -> UILabel {
@@ -61,10 +70,12 @@ final class MovieInfoView: CustomView {
 
 extension MovieInfoView: Configurable {
     struct Model {
+        let country: String?
         let year: Int?
         let lenght: Int?
         let genre: String?
-        let rating: Double
+        let rating: Double?
+        let age: String?
     }
     
     func update(with model: Model?) {
@@ -73,56 +84,70 @@ extension MovieInfoView: Configurable {
             return
         }
         
+        countryLabel.isHidden = model.country == nil
+        countryLabel.update(
+            with: .init(
+                text: model.country ?? "",
+                font: .montserratMedium(ofSize: 12),
+                textColor: .appTextGrey,
+                numberOfLines: 1
+            )
+        )
+        
+        divider1.isHidden = countryLabel.isHidden
         yearImageLabel.isHidden = model.year == nil
         if let year = model.year {
             yearImageLabel.update(
                 with: .init(
-                    text: .init(
+                    image: .init(image: .calendar, tintColor: .appTextGrey, size: .init(width: 16, height: 16)),
+                    title: .init(
                         text: String(year),
                         font: .montserratMedium(ofSize: 12),
                         textColor: .appTextGrey,
                         numberOfLines: 1
                     ),
-                    image: .init(image: .calendar, tintColor: .appTextGrey, size: .init(width: 16, height: 16)),
                     spacing: 4
                 )
             )
         }
         
-        divider1.isHidden = yearImageLabel.isHidden
+        divider2.isHidden = yearImageLabel.isHidden
         lengthImageLabel.isHidden = model.lenght == nil
         if let length = model.lenght {
             lengthImageLabel.update(
                 with: .init(
-                    text: .init(
+                    image: .init(image: .clock, tintColor: .appTextGrey, size: .init(width: 16, height: 16)),
+                    title: .init(
                         text: "\(length) минут",
                         font: .montserratMedium(ofSize: 12),
                         textColor: .appTextGrey,
                         numberOfLines: 1
                     ),
-                    image: .init(image: .clock, tintColor: .appTextGrey, size: .init(width: 16, height: 16)),
                     spacing: 4
                 )
             )
         }
         
-        divider2.isHidden = lengthImageLabel.isHidden
         genreImageLabel.isHidden = model.genre == nil
         if let genre = model.genre {
             genreImageLabel.update(
                 with: .init(
-                    text: .init(
+                    image: .init(image: .film, tintColor: .appTextGrey, size: .init(width: 16, height: 16)),
+                    title: .init(
                         text: genre,
                         font: .montserratMedium(ofSize: 12),
                         textColor: .appTextGrey,
                         numberOfLines: 1
                     ),
-                    image: .init(image: .film, tintColor: .appTextGrey, size: .init(width: 16, height: 16)),
                     spacing: 4
                 )
             )
         }
         
-        ratingView.update(with: .init(rating: model.rating))
+        ratingView.isHidden = model.rating == nil
+        ratingView.update(with: .init(rating: model.rating ?? 0))
+        
+        ageView.isHidden = model.age == nil
+        ageView.update(with: .init(text: model.age ?? "", color: .appBlue))
     }
 }

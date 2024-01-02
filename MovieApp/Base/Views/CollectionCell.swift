@@ -25,16 +25,27 @@ class CollectionCell<View: Configurable>: UICollectionViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         view.update(with: nil)
+        subviews.first { $0 is SpoilerView }?.removeFromSuperview()
+        backgroundColor = .clear
     }
     
-    func update(with model: View.Model, height: CGFloat? = nil, didSelectHandler: (() -> Void)? = nil) {
+    func update(
+        with model: View.Model,
+        height: CGFloat? = nil,
+        insets: UIEdgeInsets = .zero,
+        didSelectHandler: (() -> Void)? = nil
+    ) {
         view.update(with: model)
         self.didSelectHandler = didSelectHandler
         
         if let height {
             stackView.snp.remakeConstraints {
                 $0.height.equalTo(height)
-                $0.edges.equalToSuperview()
+                $0.edges.equalToSuperview().inset(insets)
+            }
+        } else {
+            stackView.snp.updateConstraints {
+                $0.edges.equalToSuperview().inset(insets)
             }
         }
     }

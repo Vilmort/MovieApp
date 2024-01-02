@@ -2,7 +2,7 @@
 //  MovieDetailAssembly.swift
 //  MovieApp
 //
-//  Created by Victor Rubenko on 30.12.2023.
+//  Created by Victor on 30.12.2023.
 //
 
 import UIKit
@@ -21,6 +21,7 @@ final class MovieDetailAssembly: ModuleAssembly {
         controller.presenter = presenter
         presenter.view = controller
         presenter.router = router
+        router.controller = controller
         
         return controller
     }

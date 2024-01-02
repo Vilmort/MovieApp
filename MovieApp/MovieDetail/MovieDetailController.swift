@@ -2,21 +2,16 @@
 //  MovieDetailController.swift
 //  MovieApp
 //
-//  Created by Victor Rubenko on 30.12.2023.
+//  Created by Victor on 30.12.2023.
 //
 
 import UIKit
 import SnapKit
 
-private typealias TextCell = CollectionCell<UILabel>
-private typealias MovieInfoCell = CollectionCell<MovieInfoView>
-
 final class MovieDetailController: ViewController, MovieDetailControllerProtocol {
     
     var presenter: MovieDetailPresenterProtocol!
     
-    private var sections = [Section]()
-    private var model: Model = .default()
     private var posterSizeConstraint: Constraint?
     
     private let posterImage: UIImageView = {
@@ -27,39 +22,94 @@ final class MovieDetailController: ViewController, MovieDetailControllerProtocol
         return iv
     }()
     
-    private lazy var collectionView: UICollectionView = {
-        let cv = UICollectionView(frame: .zero, collectionViewLayout: makeLayout())
-        cv.delegate = self
-        cv.dataSource = self
+    private let backgroundImage: UIImageView = {
+        let iv = UIImageView()
+        iv.contentMode = .scaleAspectFill
+        iv.alpha = 0.3
+        return iv
+    }()
+    
+    private lazy var backgroundGradient: GradientView = {
+        let view = GradientView()
+        view.update(
+            with: .init(
+                colors: [UIColor.clear, view.backgroundColor ?? UIColor.appDark],
+                startPoint: .init(x: 0.5, y: 0),
+                endPoint: .init(x: 0.5, y: 1),
+                locations: nil
+            )
+        )
+        return view
+    }()
+    private lazy var builder = MovieDetailCollectionBuilder(collectionView)
+    
+    private let titleLabel = UILabel()
+    private var parentNavAppearance: UINavigationBarAppearance?
+    
+    private let collectionView: UICollectionView = {
+        let cv = UICollectionView(frame: .zero, collectionViewLayout: .init())
         cv.backgroundColor = .clear
+        cv.showsVerticalScrollIndicator = false
         cv.contentInset = .init(top: Constants.collectionTopOffset, left: .zero, bottom: .zero, right: .zero)
-        cv.register(MovieInfoCell.self, forCellWithReuseIdentifier: String(describing: MovieInfoCell.self))
-        cv.register(TextCell.self, forCellWithReuseIdentifier: String(describing: TextCell.self))
         return cv
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationItem.titleView = titleLabel
         configure()
         presenter.activate()
     }
     
-    func update(with model: Model) {
-        self.model = model
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
-        title = model.name
+        backgroundImage.isHidden = false
+        parentNavAppearance = navigationController?.navigationBar.scrollEdgeAppearance
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        backgroundImage.isHidden = true
+        guard let parentNavAppearance else {
+            return
+        }
+        navigationController?.navigationBar.scrollEdgeAppearance = parentNavAppearance
+    }
+    
+    func update(with model: Model) {
+        titleLabel.update(with: .init(text: model.name, font: .montserratMedium(ofSize: 14), textColor: .white.withAlphaComponent(0), numberOfLines: 1))
+        titleLabel.sizeToFit()
         posterImage.kf.setImage(with: model.poster)
-        sections = [.movieInfo]
+        backgroundImage.kf.setImage(with: model.backgroundImage)
+        
+        builder.reloadData(model)
         collectionView.reloadData()
+    }
+    
+    func showShare(_ url: URL) {
+        let vc = UIActivityViewController(activityItems: [url], applicationActivities: nil)
+        present(vc, animated: true)
     }
     
     private func configure() {
         view.backgroundColor = .appDark
+        
+        view.addSubview(backgroundImage)
+        backgroundImage.snp.makeConstraints {
+            $0.top.leading.trailing.equalToSuperview()
+            $0.height.equalTo(Constants.collectionTopOffset + (navigationController?.navigationBar.frame.height ?? 0) + (UIApplication.shared.keyWindow?.safeAreaInsets.top ?? 0))
+        }
+        view.addSubview(backgroundGradient)
+        backgroundGradient.snp.makeConstraints {
+            $0.edges.equalTo(backgroundImage)
+        }
+        
         view.addSubview(collectionView)
         collectionView.snp.makeConstraints {
-            $0.leading.trailing.bottom.equalToSuperview()
-            $0.top.equalTo(view.safeAreaLayoutGuide)
+            $0.edges.equalToSuperview()
         }
         
         view.addSubview(posterImage)
@@ -68,80 +118,43 @@ final class MovieDetailController: ViewController, MovieDetailControllerProtocol
             $0.centerX.equalToSuperview()
             $0.top.equalTo(view.safeAreaLayoutGuide).offset(24)
         }
-    }
-}
-
-extension MovieDetailController: UICollectionViewDelegate, UICollectionViewDataSource {
-    
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        sections.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        switch sections[section] {
-        case .cast:
-            return model.cast?.count ?? 0
-        default:
-            return 1
-        }
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        switch sections[indexPath.section] {
-        case .movieInfo:
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: MovieInfoCell.self), for: indexPath) as! MovieInfoCell
-            cell.update(
-                with: .init(
-                    year: model.year,
-                    lenght: model.length,
-                    genre: model.genre,
-                    rating: model.rating ?? 0
-                )
-            )
-            return cell
-        default:
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: TextCell.self), for: indexPath) as! TextCell
-            cell.update(with: .init(text: "123 123 123", font: .MontserratBold(ofSize: 15), textColor: .appGreen, numberOfLines: 1))
-            return cell
-        }
-    }
-    
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let yOffset = abs(scrollView.contentOffset.y)
-        if yOffset > Constants.collectionTopOffset {
-            let k = yOffset / Constants.collectionTopOffset
-            posterImage.snp.updateConstraints {
-                $0.top.equalTo(view.safeAreaLayoutGuide).offset(24)
-                $0.size.equalTo(CGSize(width: Constants.posterWidth * k, height: Constants.posterHeight * k))
-            }
-        } else {
-            posterImage.snp.updateConstraints {
-                $0.top.equalTo(view.safeAreaLayoutGuide).offset(24 + yOffset - Constants.collectionTopOffset)
-            }
-        }
-    }
-}
-
-extension MovieDetailController {
-    private func makeLayout() -> UICollectionViewCompositionalLayout {
-        .init {
-            sectionIndex, _ in
+        
+        builder.scrollViewDidScroll = {
+            [weak self] scrollView in
             
-            var item = NSCollectionLayoutItem(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .estimated(1)))
-            var group = NSCollectionLayoutGroup.horizontal(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .estimated(1)), subitems: [item])
-            
-            switch self.sections[sectionIndex] {
-            case .movieInfo, .actions, .plot:
-                break
-            case .cast:
-                item = NSCollectionLayoutItem(layoutSize: .init(widthDimension: .estimated(1), heightDimension: .estimated(1)))
-                group = NSCollectionLayoutGroup.horizontal(layoutSize: .init(widthDimension: .estimated(1), heightDimension: .estimated(1)), subitems: [item])
-                let section = NSCollectionLayoutSection(group: group)
-                section.orthogonalScrollingBehavior = .continuous
-                return section
+            guard let self else {
+                return
             }
-            let section = NSCollectionLayoutSection(group: group)
-            return section
+            
+            let yOffset = scrollView.contentOffset.y * -1
+            let safeArea = (UIApplication.shared.keyWindow?.safeAreaInsets.top ?? 0) + (navigationController?.navigationBar.bounds.height ?? 0)
+            let treshold = Constants.collectionTopOffset + safeArea - 5
+            if yOffset > treshold {
+                let k = yOffset / treshold
+                posterImage.snp.updateConstraints {
+                    $0.top.equalTo(self.view.safeAreaLayoutGuide).offset(24)
+                    $0.size.equalTo(CGSize(width: Constants.posterWidth * k, height: Constants.posterHeight * k))
+                }
+            } else {
+                posterImage.snp.updateConstraints {
+                    $0.top.equalTo(self.view.safeAreaLayoutGuide).offset(24 + yOffset - treshold)
+                }
+            }
+            if yOffset < 50 {
+                let appearance = UINavigationBarAppearance()
+                appearance.configureWithOpaqueBackground()
+                let value = (yOffset - 50) * -1 / 50
+                let alpha = value > 1 ? 1 : value
+                appearance.backgroundColor = .appDark.withAlphaComponent(alpha)
+                titleLabel.textColor = .white.withAlphaComponent(alpha)
+                navigationController?.navigationBar.scrollEdgeAppearance = appearance
+            } else {
+                let appearance = UINavigationBarAppearance()
+                appearance.configureWithTransparentBackground()
+                navigationController?.navigationBar.scrollEdgeAppearance = appearance
+                titleLabel.textColor = .white.withAlphaComponent(.zero)
+            }
+            backgroundImage.alpha = [(yOffset - Constants.collectionTopOffset * 0.35) / treshold, 0.45].min()!
         }
     }
 }
@@ -155,27 +168,46 @@ extension MovieDetailController {
             let role: String?
         }
         
+        struct Fact {
+            let text: String
+            let spoiler: Bool
+        }
+        
+        struct SimilarMovie {
+            let imageURL: URL?
+            let name: String
+            let didSelectHandler: (() -> Void)?
+        }
+        
         let poster: URL?
         let name: String
+        let country: String?
         let year: Int?
         let length: Int?
         let genre: String?
         let rating: Double?
+        let age: String?
         let plot: String?
         let cast: [CastMember]?
-        let trailerAction: (() -> Void)?
+        let images: [URL]
+        let facts: [Fact]
+        let videos: [String]
+        let similarMovies: [SimilarMovie]
+        let watchAction: (() -> Void)?
         let shareAction: (() -> Void)?
-        
-        static func `default`() -> Self {
-            .init(poster: nil, name: "", year: nil, length: nil, genre: nil, rating: nil, plot: nil, cast: nil, trailerAction: nil, shareAction: nil)
-        }
+        let backgroundImage: URL?
     }
     
     enum Section {
-        case movieInfo
+        case text(text: String, font: UIFont)
+        case movieInfo(MovieInfoView.Model)
         case actions
-        case plot
-        case cast
+        case cast(header: String?)
+        case images(header: String?)
+        case facts(header: String?)
+        case videos(header: String?)
+        case similarMovies(header: String?)
+        case space(CGFloat)
     }
 }
 
@@ -188,5 +220,11 @@ private enum Constants {
     }
     static var collectionTopOffset: CGFloat {
         posterHeight + 24 + 16
+    }
+    static var videoWidth: CGFloat {
+        (UIScreen.main.bounds.width - 32) * 0.85
+    }
+    static var videoHeight: CGFloat {
+        videoWidth * 0.56
     }
 }

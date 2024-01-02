@@ -12,6 +12,8 @@
 		770178622B3B255E00874D42 /* KPListSearchEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770178612B3B255E00874D42 /* KPListSearchEntity.swift */; };
 		770178642B3B25F000874D42 /* SubEntities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770178632B3B25F000874D42 /* SubEntities.swift */; };
 		770178662B3B27A600874D42 /* KPListSearchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770178652B3B27A600874D42 /* KPListSearchRequest.swift */; };
+		779C13FB2B44232C00EC849D /* KPImagesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779C13FA2B44232C00EC849D /* KPImagesRequest.swift */; };
+		779C13FD2B4423F100EC849D /* KPImagesEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779C13FC2B4423F100EC849D /* KPImagesEntity.swift */; };
 		77D1BADD2B3A25B2001C5F99 /* KPNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77D1BAD42B3A25B2001C5F99 /* KPNetwork.framework */; };
 		77D1BAE22B3A25B2001C5F99 /* KPNetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D1BAE12B3A25B2001C5F99 /* KPNetworkTests.swift */; };
 		77D1BAE32B3A25B2001C5F99 /* KPNetwork.h in Headers */ = {isa = PBXBuildFile; fileRef = 77D1BAD72B3A25B2001C5F99 /* KPNetwork.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -38,6 +40,8 @@
 		770178612B3B255E00874D42 /* KPListSearchEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KPListSearchEntity.swift; sourceTree = "<group>"; };
 		770178632B3B25F000874D42 /* SubEntities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubEntities.swift; sourceTree = "<group>"; };
 		770178652B3B27A600874D42 /* KPListSearchRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KPListSearchRequest.swift; sourceTree = "<group>"; };
+		779C13FA2B44232C00EC849D /* KPImagesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KPImagesRequest.swift; sourceTree = "<group>"; };
+		779C13FC2B4423F100EC849D /* KPImagesEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KPImagesEntity.swift; sourceTree = "<group>"; };
 		77D1BAD42B3A25B2001C5F99 /* KPNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KPNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		77D1BAD72B3A25B2001C5F99 /* KPNetwork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KPNetwork.h; sourceTree = "<group>"; };
 		77D1BADC2B3A25B2001C5F99 /* KPNetworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KPNetworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,6 +117,7 @@
 				77D1BAF42B3A31CD001C5F99 /* KPMovieRequest.swift */,
 				770178592B3B183F00874D42 /* KPMovieSearchRequest.swift */,
 				770178652B3B27A600874D42 /* KPListSearchRequest.swift */,
+				779C13FA2B44232C00EC849D /* KPImagesRequest.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -123,6 +128,7 @@
 				77D1BAF72B3A31DC001C5F99 /* KPMovieEntity.swift */,
 				770178572B3B183500874D42 /* KPMovieSearchEntity.swift */,
 				770178612B3B255E00874D42 /* KPListSearchEntity.swift */,
+				779C13FC2B4423F100EC849D /* KPImagesEntity.swift */,
 				770178632B3B25F000874D42 /* SubEntities.swift */,
 			);
 			path = Entities;
@@ -245,7 +251,9 @@
 				77D1BAEF2B3A25EF001C5F99 /* KPNetworkClient.swift in Sources */,
 				770178622B3B255E00874D42 /* KPListSearchEntity.swift in Sources */,
 				770178662B3B27A600874D42 /* KPListSearchRequest.swift in Sources */,
+				779C13FB2B44232C00EC849D /* KPImagesRequest.swift in Sources */,
 				770178582B3B183500874D42 /* KPMovieSearchEntity.swift in Sources */,
+				779C13FD2B4423F100EC849D /* KPImagesEntity.swift in Sources */,
 				77D1BAF52B3A31CD001C5F99 /* KPMovieRequest.swift in Sources */,
 				770178642B3B25F000874D42 /* SubEntities.swift in Sources */,
 			);
