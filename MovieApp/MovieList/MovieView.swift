@@ -10,9 +10,9 @@ import UIKit
 final class MovieView: CustomView {
     private let imageView = UIImageView()
     private let nameLabel = UILabel()
-    private let yearImageLabel = ImageLabelView()
-    private let lenghtImageLabel = ImageLabelView()
-    private let genreImageLabel = ImageLabelView()
+    private let yearImageLabel = ImageTitleSubtitleView()
+    private let lenghtImageLabel = ImageTitleSubtitleView()
+    private let genreImageLabel = ImageTitleSubtitleView()
     private let ratingView = MovieRatingSmallView()
     private let infoStack = UIStackView()
     private let ageView = MovieAgeView()
@@ -59,7 +59,7 @@ extension MovieView: Configurable {
         let lenght: Int?
         let genre: String?
         let rating: Double?
-        let ageRating: Int?
+        let ageRating: String?
     }
     
     func update(with model: Model?) {
@@ -87,16 +87,16 @@ extension MovieView: Configurable {
         if let year = model.year {
             yearImageLabel.update(
                 with: .init(
-                    text: .init(
-                        text: "\(year)",
-                        font: .montserratMedium(ofSize: 14),
-                        textColor: .appTextGrey,
-                        numberOfLines: 1
-                    ),
                     image: .init(
                         image: .calendar,
                         tintColor: .appTextGrey,
                         size: .init(width: 16, height: 16)
+                    ),
+                    title: .init(
+                        text: "\(year)",
+                        font: .montserratMedium(ofSize: 14),
+                        textColor: .appTextGrey,
+                        numberOfLines: 1
                     ),
                     spacing: 4
                 )
@@ -107,16 +107,16 @@ extension MovieView: Configurable {
         if let lenght = model.lenght {
             lenghtImageLabel.update(
                 with: .init(
-                    text: .init(
-                        text: "\(lenght) minutes",
-                        font: .montserratMedium(ofSize: 14),
-                        textColor: .appTextGrey,
-                        numberOfLines: 1
-                    ),
                     image: .init(
                         image: .clock,
                         tintColor: .appTextGrey,
                         size: .init(width: 16, height: 16)
+                    ),
+                    title: .init(
+                        text: "\(lenght) minutes",
+                        font: .montserratMedium(ofSize: 14),
+                        textColor: .appTextGrey,
+                        numberOfLines: 1
                     ),
                     spacing: 4
                 )
@@ -127,16 +127,16 @@ extension MovieView: Configurable {
         if let genre = model.genre {
             genreImageLabel.update(
                 with: .init(
-                    text: .init(
-                        text: "\(genre)".capitalized,
-                        font: .montserratMedium(ofSize: 12),
-                        textColor: .appTextGrey,
-                        numberOfLines: 1
-                    ),
                     image: .init(
                         image: .film,
                         tintColor: .appTextGrey,
                         size: .init(width: 16, height: 16)
+                    ),
+                    title: .init(
+                        text: genre,
+                        font: .montserratMedium(ofSize: 12),
+                        textColor: .appTextGrey,
+                        numberOfLines: 1
                     ),
                     spacing: 4
                 )
@@ -147,6 +147,6 @@ extension MovieView: Configurable {
         ratingView.update(with: .init(rating: model.rating ?? 0))
         
         ageView.isHidden = model.ageRating == nil
-        ageView.update(with: .init(text: "\(model.ageRating ?? 0)+", color: .appBlue))
+        ageView.update(with: .init(text: model.ageRating ?? "", color: .appBlue))
     }
 }

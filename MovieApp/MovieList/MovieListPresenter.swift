@@ -73,9 +73,9 @@ final class MovieListPresenter: MovieListPresenterProtocol {
                             name: movie.name ?? "",
                             year: movie.year,
                             lenght: movie.movieLength,
-                            genre: movie.genres?.first?.name,
+                            genre: movie.genres?.prefix(3).compactMap { $0.name?.capitalized }.joined(separator: ", "),
                             rating: movie.rating?.kp,
-                            ageRating: movie.ageRating
+                            ageRating: movie.ratingMpaa?.uppercased()
                         ),
                         didSelectHandler: {
                             [weak self] in

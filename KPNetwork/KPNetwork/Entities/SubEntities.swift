@@ -10,6 +10,7 @@ import Foundation
 public struct KPImage: Decodable {
     public let url: String?
     public let previewUrl: String?
+    public let type: String?
 }
 
 public enum KPMovieType: String, Decodable {
