@@ -89,9 +89,13 @@ final class MovieDetailController: ViewController, MovieDetailControllerProtocol
         collectionView.reloadData()
     }
     
-    func showShare(_ url: URL) {
-        let vc = UIActivityViewController(activityItems: [url], applicationActivities: nil)
-        present(vc, animated: true)
+    func showShare(_ shares: [(image: UIImage, action: () -> Void)]) {
+        let shareView = ShareView()
+        view.addSubview(shareView)
+        shareView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+        }
+        shareView.animate()
     }
     
     private func configure() {
