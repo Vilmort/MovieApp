@@ -8,8 +8,8 @@
 import Foundation
 
 public struct KPImage: Decodable {
-    let url: String?
-    let previewUrl: String?
+    public let url: String?
+    public let previewUrl: String?
 }
 
 public enum KPMovieType: String, Decodable {
@@ -21,119 +21,119 @@ public enum KPMovieType: String, Decodable {
 }
 
 public struct KPName: Decodable {
-    let name: String?
-    let language: String?
-    let type: String?
+    public let name: String?
+    public let language: String?
+    public let type: String?
 }
 
 public struct KPRating: Decodable {
-    let kp: Double?
-    let imdb: Double?
-    let filmCritics: Double?
-    let russianFilmCritics: Double?
-    let await: Double?
+    public let kp: Double?
+    public let imdb: Double?
+    public let filmCritics: Double?
+    public let russianFilmCritics: Double?
+    public let await: Double?
 }
 
 public struct KPVotes: Decodable {
-    let kp: Double?
-    let imdb: Double?
-    let filmCritics: Double?
-    let russianFilmCritics: Double?
-    let await: Double?
+    public let kp: Double?
+    public let imdb: Double?
+    public let filmCritics: Double?
+    public let russianFilmCritics: Double?
+    public let await: Double?
 }
 
 
 public struct KPAudience: Decodable {
-    let count: Int
-    let country: String
+    public let count: Int
+    public let country: String
 }
 
 public struct KPBudget: Decodable {
-    let value: Int?
-    let currency: String?
+    public let value: Int?
+    public let currency: String?
 }
 
 public struct KPExternalId: Decodable {
-    let kpHD, imdb: String?
+    public let kpHD, imdb: String?
 }
 
 public struct KPFact: Decodable {
-    let value, type: String?
-    let spoiler: Bool?
+    public let value, type: String?
+    public let spoiler: Bool?
 }
 
 public struct KPFees: Decodable {
-    let world, russia, usa: KPBudget?
+    public let world, russia, usa: KPBudget?
 }
 
 public struct KPImagesInfo: Decodable {
-    let postersCount, backdropsCount, framesCount: Int?
+    public let postersCount, backdropsCount, framesCount: Int?
 }
 
 public struct KPLogo: Decodable {
-    let url: String?
+    public let url: String?
 }
 
 public struct KPNetwork: Decodable {
-    let items: [KPNetworkItem]?
+    public let items: [KPNetworkItem]?
 }
 
 public struct KPNetworkItem: Decodable {
-    let name: String?
-    let logo: KPLogo?
+    public let name: String?
+    public let logo: KPLogo?
 }
 
 public struct KPPerson: Decodable {
-    let id: Int
-    let photo: String?
-    let name, enName: String?
-    let description: String?
-    let profession: String?
-    let enProfession: String?
+    public let id: Int
+    public let photo: String?
+    public let name, enName: String?
+    public let description: String?
+    public let profession: String?
+    public let enProfession: String?
 }
 
 public struct KPPremiere: Decodable {
-    let country, world, russia, digital: String?
-    let cinema, bluray, dvd: String?
+    public let country, world, russia, digital: String?
+    public let cinema, bluray, dvd: String?
 }
 
 public struct KPReleaseYear: Decodable {
-    let start, end: Int?
+    public let start, end: Int?
 }
 
 public struct KPReviewInfo: Codable {
-    let count, positiveCount: Int?
-    let percentage: String?
+    public let count, positiveCount: Int?
+    public let percentage: String?
 }
 
 public struct KPSeasonsInfo: Codable {
-    let number, episodesCount: Int?
+    public let number, episodesCount: Int?
 }
 
 public struct KPSequelsAndPrequel: Decodable {
-    let id: Int
-    let rating: KPRating?
-    let year: Int?
-    let name, enName, alternativeName, type: String?
-    let poster: KPImage?
+    public let id: Int
+    public let rating: KPRating?
+    public let year: Int?
+    public let name, enName, alternativeName, type: String?
+    public let poster: KPImage?
 }
 
 public struct KPVideos: Decodable {
-    let trailers, teasers: [KPVideo]?
+    public let trailers, teasers: [KPVideo]?
 }
 
 public struct KPVideo: Decodable {
-    let url: String?
-    let name, site, type: String?
-    let size: Int?
+    public let url: String?
+    public let name, site, type: String?
+    public let size: Int?
 }
 
 public struct KPWatchability: Decodable {
-    let items: [KPWatchabilityItem]?
+    public let items: [KPWatchabilityItem]?
 }
 
 public struct KPWatchabilityItem: Decodable {
-    let name: String?
-    let logo: KPLogo?
-    let url: String?
+    public let name: String?
+    public let logo: KPLogo?
+    public let url: String?
 }
