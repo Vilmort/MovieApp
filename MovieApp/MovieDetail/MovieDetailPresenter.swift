@@ -16,12 +16,17 @@ final class MovieDetailPresenter: MovieDetailPresenterProtocol {
     
     private let id: Int
     private let networkService: KPNetworkClient
-    private let shareService: ShareService = .shared
+    private let shareService: ShareService
     private var imagesResponse: KPImagesEntity?
     
-    init(_ id: Int, networkService: KPNetworkClient = DIContainer.shared.networkService) {
+    init(
+        _ id: Int,
+        networkService: KPNetworkClient = DIContainer.shared.networkService,
+        shareService: ShareService = DIContainer.shared.shareService
+    ) {
         self.id = id
         self.networkService = networkService
+        self.shareService = shareService
     }
     
     func activate() {

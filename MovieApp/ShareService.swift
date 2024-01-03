@@ -8,9 +8,6 @@
 import UIKit
 
 final class ShareService {
-    static let shared = ShareService()
-    
-    private init () { }
     private var coveringWindow: UIWindow?
     
     private func getAvailableServices() -> [App] {
