@@ -17,22 +17,35 @@ final class MovieDetailPresenter: MovieDetailPresenterProtocol {
     private let id: Int
     private let networkService: KPNetworkClient
     private let shareService: ShareService
+    private let persistentService: PersistentServiceProtocol
     private var imagesResponse: KPImagesEntity?
+    
+    private var isInWishlist: Bool {
+        persistentService.getWishlist().contains(where: { $0.id == id })
+    }
     
     init(
         _ id: Int,
         networkService: KPNetworkClient = DIContainer.shared.networkService,
+        persistentService: PersistentServiceProtocol = DIContainer.shared.persistentService,
         shareService: ShareService = DIContainer.shared.shareService
     ) {
         self.id = id
         self.networkService = networkService
+        self.persistentService = persistentService
         self.shareService = shareService
     }
     
     func activate() {
+        view?.configureWishlistButton(isInWishlist)
         Task {
             await loadData()
         }
+    }
+    
+    func didTapWishlistButton() {
+        isInWishlist ? persistentService.removeFromWishlist(id) : persistentService.addToWishlist(id)
+        view?.configureWishlistButton(isInWishlist)
     }
     
     @MainActor
