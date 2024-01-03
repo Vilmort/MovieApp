@@ -16,6 +16,7 @@ final class MovieDetailPresenter: MovieDetailPresenterProtocol {
     
     private let id: Int
     private let networkService: KPNetworkClient
+    private let shareService: ShareService = .shared
     private var imagesResponse: KPImagesEntity?
     
     init(_ id: Int, networkService: KPNetworkClient = DIContainer.shared.networkService) {
@@ -94,7 +95,7 @@ final class MovieDetailPresenter: MovieDetailPresenterProtocol {
                 shareAction: {
                     [weak self] in
                     
-                    self?.view?.showShare(URL(string: "https://www.kinopoisk.ru/film/\(model.id)")!)
+                    self?.shareService.showShare("https://www.kinopoisk.ru/film/\(model.id)")
                 },
                 backgroundImage: URL(string: model.backdrop?.url ?? "")
             )
