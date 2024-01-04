@@ -9,7 +9,7 @@ import UIKit
 import SnapKit
 
 final class MovieDetailController: ViewController, MovieDetailControllerProtocol {
-    
+
     var presenter: MovieDetailPresenterProtocol!
     
     private var posterSizeConstraint: Constraint?
@@ -98,6 +98,17 @@ final class MovieDetailController: ViewController, MovieDetailControllerProtocol
         shareView.animate()
     }
     
+    func configureWishlistButton(_ isInWishlist: Bool) {
+        let button = UIBarButtonItem(
+            image: .heart,
+            style: .plain,
+            target: self,
+            action: #selector(didTapWishlistButton)
+        )
+        button.tintColor = isInWishlist ? .red : .white
+        navigationItem.rightBarButtonItem = button
+    }
+    
     private func configure() {
         view.backgroundColor = .appDark
         
@@ -160,6 +171,11 @@ final class MovieDetailController: ViewController, MovieDetailControllerProtocol
             }
             backgroundImage.alpha = [(yOffset - Constants.collectionTopOffset * 0.35) / treshold, 0.45].min()!
         }
+    }
+    
+    @objc
+    private func didTapWishlistButton() {
+        presenter.didTapWishlistButton()
     }
 }
 
