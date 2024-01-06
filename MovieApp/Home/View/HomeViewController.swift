@@ -302,7 +302,6 @@ final class HomeViewController: UIViewController, HomeViewProtocol {
             homeCollectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
     }
-
 }
 extension HomeViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
