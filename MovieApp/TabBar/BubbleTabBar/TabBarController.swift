@@ -105,7 +105,7 @@ open class TabBarController: UITabBarController, TabBarViewProtocol  {
         viewController.tabBarItem.title = title
         viewController.tabBarItem.image = image
         let vc = UINavigationController(rootViewController: viewController)
-  return vc
+        return vc
     }
     
  
