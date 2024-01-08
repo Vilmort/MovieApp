@@ -15,6 +15,7 @@ final class MovieDetailPresenter: MovieDetailPresenterProtocol {
     var router: MovieDetailRouter?
     
     private let id: Int
+    private var movieResponse: KPMovieEntity?
     private let networkService: KPNetworkClient
     private let shareService: ShareService
     private let persistentService: PersistentServiceProtocol
@@ -36,10 +37,29 @@ final class MovieDetailPresenter: MovieDetailPresenterProtocol {
         self.shareService = shareService
     }
     
+    convenience init(
+        entity: KPMovieEntity,
+        networkService: KPNetworkClient = DIContainer.shared.networkService,
+        persistentService: PersistentServiceProtocol = DIContainer.shared.persistentService,
+        shareService: ShareService = DIContainer.shared.shareService
+    ) {
+        self.init(
+            entity.id,
+            networkService: networkService,
+            persistentService: persistentService,
+            shareService: shareService
+        )
+        self.movieResponse = entity
+    }
+    
     func activate() {
         view?.configureWishlistButton(isInWishlist)
         Task {
-            await loadData()
+            if movieResponse != nil {
+                await loadPartialData()
+            } else {
+                await loadData()
+            }
         }
     }
     
@@ -59,7 +79,8 @@ final class MovieDetailPresenter: MovieDetailPresenterProtocol {
         
         switch result.0 {
         case .success(let response):
-            updateUI(response)
+            movieResponse = response
+            updateUI()
         case .failure(let error):
             print(error)
             showError()
@@ -68,7 +89,18 @@ final class MovieDetailPresenter: MovieDetailPresenterProtocol {
         view?.hideLoading()
     }
     
-    private func updateUI(_ model: KPMovieEntity) {
+    @MainActor
+    private func loadPartialData() async {
+        view?.showLoading()
+        imagesResponse = try? await networkService.sendRequest(request: KPImagesRequest(id: id, limit: 15)).get()
+        view?.hideLoading()
+        updateUI()
+    }
+    
+    private func updateUI() {
+        guard let model = movieResponse else {
+            return
+        }
         let cast: [Model.CastMember] = (model.persons ?? []).map {
             .init(imageURL: URL(string: $0.photo ?? ""), name: $0.name, role: $0.profession)
         }

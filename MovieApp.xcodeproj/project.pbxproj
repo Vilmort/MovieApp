@@ -35,9 +35,7 @@
 		0B7F05522B3984DD00AAC7A7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F05512B3984DD00AAC7A7 /* HomeViewController.swift */; };
 		0B7F05542B3985CC00AAC7A7 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F05532B3985CC00AAC7A7 /* SearchViewController.swift */; };
 		0B7F05582B39860B00AAC7A7 /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F05572B39860B00AAC7A7 /* SearchPresenter.swift */; };
-		0B7F055A2B3986D800AAC7A7 /* TreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F05592B3986D800AAC7A7 /* TreeViewController.swift */; };
 		0B7F055D2B39874C00AAC7A7 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F055C2B39874C00AAC7A7 /* ProfileViewController.swift */; };
-		0B7F05612B3AD45B00AAC7A7 /* TreePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F05602B3AD45B00AAC7A7 /* TreePresenter.swift */; };
 		0B7F05642B3AD50C00AAC7A7 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F05632B3AD50C00AAC7A7 /* ProfilePresenter.swift */; };
 		0B7F05722B3B6DB100AAC7A7 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F056F2B3B6DB100AAC7A7 /* TabBar.swift */; };
 		0B7F05732B3B6DB100AAC7A7 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F05702B3B6DB100AAC7A7 /* TabBarController.swift */; };
@@ -81,6 +79,14 @@
 		77BA69F12B4609C6003C6B4B /* WishlistRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BA69F02B4609C6003C6B4B /* WishlistRouter.swift */; };
 		77BA69F32B4609CB003C6B4B /* WishlistAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BA69F22B4609CB003C6B4B /* WishlistAssembly.swift */; };
 		77BA69F52B460B58003C6B4B /* PersistentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BA69F42B460B58003C6B4B /* PersistentService.swift */; };
+		77BFC63F2B4B4BD40029BDE8 /* SuggestionsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BFC63E2B4B4BD40029BDE8 /* SuggestionsController.swift */; };
+		77BFC6422B4B4BE00029BDE8 /* SuggestionsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BFC6412B4B4BE00029BDE8 /* SuggestionsProtocols.swift */; };
+		77BFC6442B4B4BE30029BDE8 /* SuggestionsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BFC6432B4B4BE30029BDE8 /* SuggestionsPresenter.swift */; };
+		77BFC6462B4B4BE70029BDE8 /* SuggestionsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BFC6452B4B4BE70029BDE8 /* SuggestionsRouter.swift */; };
+		77BFC6482B4B4BEC0029BDE8 /* SuggestionsAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BFC6472B4B4BEC0029BDE8 /* SuggestionsAssembly.swift */; };
+		77BFC64E2B4B52F10029BDE8 /* tree.json in Resources */ = {isa = PBXBuildFile; fileRef = 77BFC64D2B4B52F10029BDE8 /* tree.json */; };
+		77BFC6502B4B63140029BDE8 /* suggestion.json in Resources */ = {isa = PBXBuildFile; fileRef = 77BFC64F2B4B63140029BDE8 /* suggestion.json */; };
+		77BFC6522B4B63E70029BDE8 /* SuggestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BFC6512B4B63E70029BDE8 /* SuggestionView.swift */; };
 		77C997982B3B724800D39210 /* MovieListsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C997972B3B724800D39210 /* MovieListsPresenter.swift */; };
 		77C9979A2B3B725000D39210 /* MovieListsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C997992B3B725000D39210 /* MovieListsController.swift */; };
 		77C9979C2B3B727100D39210 /* MovieListsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C9979B2B3B727100D39210 /* MovieListsRouter.swift */; };
@@ -166,9 +172,7 @@
 		0B7F05512B3984DD00AAC7A7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		0B7F05532B3985CC00AAC7A7 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		0B7F05572B39860B00AAC7A7 /* SearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
-		0B7F05592B3986D800AAC7A7 /* TreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeViewController.swift; sourceTree = "<group>"; };
 		0B7F055C2B39874C00AAC7A7 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		0B7F05602B3AD45B00AAC7A7 /* TreePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreePresenter.swift; sourceTree = "<group>"; };
 		0B7F05632B3AD50C00AAC7A7 /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
 		0B7F056F2B3B6DB100AAC7A7 /* TabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TabBar.swift; path = BubbleTabBar/TabBar.swift; sourceTree = "<group>"; };
 		0B7F05702B3B6DB100AAC7A7 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TabBarController.swift; path = BubbleTabBar/TabBarController.swift; sourceTree = "<group>"; };
@@ -209,6 +213,14 @@
 		77BA69F02B4609C6003C6B4B /* WishlistRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistRouter.swift; sourceTree = "<group>"; };
 		77BA69F22B4609CB003C6B4B /* WishlistAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistAssembly.swift; sourceTree = "<group>"; };
 		77BA69F42B460B58003C6B4B /* PersistentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentService.swift; sourceTree = "<group>"; };
+		77BFC63E2B4B4BD40029BDE8 /* SuggestionsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsController.swift; sourceTree = "<group>"; };
+		77BFC6412B4B4BE00029BDE8 /* SuggestionsProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsProtocols.swift; sourceTree = "<group>"; };
+		77BFC6432B4B4BE30029BDE8 /* SuggestionsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsPresenter.swift; sourceTree = "<group>"; };
+		77BFC6452B4B4BE70029BDE8 /* SuggestionsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsRouter.swift; sourceTree = "<group>"; };
+		77BFC6472B4B4BEC0029BDE8 /* SuggestionsAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsAssembly.swift; sourceTree = "<group>"; };
+		77BFC64D2B4B52F10029BDE8 /* tree.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tree.json; sourceTree = "<group>"; };
+		77BFC64F2B4B63140029BDE8 /* suggestion.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = suggestion.json; sourceTree = "<group>"; };
+		77BFC6512B4B63E70029BDE8 /* SuggestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionView.swift; sourceTree = "<group>"; };
 		77C997972B3B724800D39210 /* MovieListsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListsPresenter.swift; sourceTree = "<group>"; };
 		77C997992B3B725000D39210 /* MovieListsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListsController.swift; sourceTree = "<group>"; };
 		77C9979B2B3B727100D39210 /* MovieListsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListsRouter.swift; sourceTree = "<group>"; };
@@ -282,7 +294,7 @@
 		0B7F04EC2B38714F00AAC7A7 /* MovieApp */ = {
 			isa = PBXGroup;
 			children = (
-				0B7F05352B387D3700AAC7A7 /* Tree */,
+				77BFC6402B4B4BD80029BDE8 /* Suggestions */,
 				0B7F05322B387C7200AAC7A7 /* Profile */,
 				0B7F05312B387C5800AAC7A7 /* Search */,
 				77BA69EB2B4609B3003C6B4B /* Wishlist */,
@@ -293,7 +305,7 @@
 				0B7F052B2B387BD900AAC7A7 /* Onboarding */,
 				0B7F05132B38764E00AAC7A7 /* Builder */,
 				0B7F05112B38744C00AAC7A7 /* TabBar */,
-				0B7F05062B3872CE00AAC7A7 /* Services */,
+				77BFC63D2B4B4B940029BDE8 /* Services */,
 				0B7F05032B38723800AAC7A7 /* Extensions */,
 				0B7F05022B38722A00AAC7A7 /* Aplication */,
 				77C997A12B3B72C500D39210 /* Base */,
@@ -333,17 +345,6 @@
 				0B7F050F2B3873EE00AAC7A7 /* UILabel+.swift */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		0B7F05062B3872CE00AAC7A7 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				77D1BB492B3AEC86001C5F99 /* DIContainer.swift */,
-				0B7F059C2B3C6B2C00AAC7A7 /* UDService.swift */,
-				77BA69E12B44CC72003C6B4B /* ShareService.swift */,
-				77BA69F42B460B58003C6B4B /* PersistentService.swift */,
-			);
-			name = Services;
 			sourceTree = "<group>";
 		};
 		0B7F05112B38744C00AAC7A7 /* TabBar */ = {
@@ -412,15 +413,6 @@
 			path = PrivacyPolicy;
 			sourceTree = "<group>";
 		};
-		0B7F05352B387D3700AAC7A7 /* Tree */ = {
-			isa = PBXGroup;
-			children = (
-				0B7F055F2B3AD44500AAC7A7 /* Presenter */,
-				0B7F055B2B39870800AAC7A7 /* View */,
-			);
-			path = Tree;
-			sourceTree = "<group>";
-		};
 		0B7F05362B387D4800AAC7A7 /* Notifications */ = {
 			isa = PBXGroup;
 			children = (
@@ -479,28 +471,12 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
-		0B7F055B2B39870800AAC7A7 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				0B7F05592B3986D800AAC7A7 /* TreeViewController.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		0B7F055E2B39877F00AAC7A7 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				0B7F055C2B39874C00AAC7A7 /* ProfileViewController.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		0B7F055F2B3AD44500AAC7A7 /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				0B7F05602B3AD45B00AAC7A7 /* TreePresenter.swift */,
-			);
-			path = Presenter;
 			sourceTree = "<group>";
 		};
 		0B7F05622B3AD4F800AAC7A7 /* Presenter */ = {
@@ -570,6 +546,38 @@
 			path = Wishlist;
 			sourceTree = "<group>";
 		};
+		77BFC63D2B4B4B940029BDE8 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				77D1BB492B3AEC86001C5F99 /* DIContainer.swift */,
+				0B7F059C2B3C6B2C00AAC7A7 /* UDService.swift */,
+				77BA69E12B44CC72003C6B4B /* ShareService.swift */,
+				77BA69F42B460B58003C6B4B /* PersistentService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		77BFC6402B4B4BD80029BDE8 /* Suggestions */ = {
+			isa = PBXGroup;
+			children = (
+				77BFC63E2B4B4BD40029BDE8 /* SuggestionsController.swift */,
+				77BFC6432B4B4BE30029BDE8 /* SuggestionsPresenter.swift */,
+				77BFC6472B4B4BEC0029BDE8 /* SuggestionsAssembly.swift */,
+				77BFC6452B4B4BE70029BDE8 /* SuggestionsRouter.swift */,
+				77BFC6412B4B4BE00029BDE8 /* SuggestionsProtocols.swift */,
+				77BFC6532B4B63EA0029BDE8 /* Views */,
+			);
+			path = Suggestions;
+			sourceTree = "<group>";
+		};
+		77BFC6532B4B63EA0029BDE8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				77BFC6512B4B63E70029BDE8 /* SuggestionView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		77C997962B3B723700D39210 /* MovieLists */ = {
 			isa = PBXGroup;
 			children = (
@@ -601,8 +609,10 @@
 			isa = PBXGroup;
 			children = (
 				773BB9702B3C43F100AD0412 /* error.json */,
+				77BFC64D2B4B52F10029BDE8 /* tree.json */,
 				773BB9712B3C43F100AD0412 /* loading.json */,
 				0B7F05A02B3C6BBF00AAC7A7 /* OnboardingNext.json */,
+				77BFC64F2B4B63140029BDE8 /* suggestion.json */,
 			);
 			path = Lottie;
 			sourceTree = "<group>";
@@ -783,11 +793,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B7F054A2B39772300AAC7A7 /* Montserrat-Regular.ttf in Resources */,
+				77BFC64E2B4B52F10029BDE8 /* tree.json in Resources */,
 				0B7F04FA2B38715000AAC7A7 /* LaunchScreen.storyboard in Resources */,
 				0B7F05462B39770700AAC7A7 /* Montserrat-ExtraBold.ttf in Resources */,
 				0B7F054C2B39772D00AAC7A7 /* Montserrat-Medium.ttf in Resources */,
 				773BB9722B3C43F100AD0412 /* error.json in Resources */,
 				0B7F05482B39771500AAC7A7 /* Montserrat-SemiBold.ttf in Resources */,
+				77BFC6502B4B63140029BDE8 /* suggestion.json in Resources */,
 				0B7F04F72B38715000AAC7A7 /* Assets.xcassets in Resources */,
 				0B7F05A12B3C6BBF00AAC7A7 /* OnboardingNext.json in Resources */,
 				0B7F05442B3976EE00AAC7A7 /* Montserrat-Bold.ttf in Resources */,
@@ -803,6 +815,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7718F3732B3CED3B007F5E49 /* MovieAgeView.swift in Sources */,
+				77BFC63F2B4B4BD40029BDE8 /* SuggestionsController.swift in Sources */,
 				77C9979A2B3B725000D39210 /* MovieListsController.swift in Sources */,
 				77C997AF2B3B74D600D39210 /* CustomView.swift in Sources */,
 				779C13DB2B43537800EC849D /* CollectionReusableView.swift in Sources */,
@@ -821,6 +834,7 @@
 				77C997C22B3B7DF400D39210 /* UILabel+Extension.swift in Sources */,
 				779C13EB2B43FCEA00EC849D /* YoutubeView.swift in Sources */,
 				7718F3692B3CD7DD007F5E49 /* MovieListProtocols.swift in Sources */,
+				77BFC6522B4B63E70029BDE8 /* SuggestionView.swift in Sources */,
 				7718F3632B3CD7C3007F5E49 /* MovieListController.swift in Sources */,
 				7718F36B2B3CDA1A007F5E49 /* MovieView.swift in Sources */,
 				779C13F92B441A1B00EC849D /* MovieActionsView.swift in Sources */,
@@ -838,7 +852,6 @@
 				77C997BC2B3B7BC800D39210 /* TableCell.swift in Sources */,
 				77C9979C2B3B727100D39210 /* MovieListsRouter.swift in Sources */,
 				77DFB2062B3F704F00167D3A /* MovieDetailRouter.swift in Sources */,
-				0B7F05612B3AD45B00AAC7A7 /* TreePresenter.swift in Sources */,
 				0B7F055D2B39874C00AAC7A7 /* ProfileViewController.swift in Sources */,
 				7728A3A02B4618A700AE0B6B /* WishlistMovieView.swift in Sources */,
 				77C9979E2B3B727A00D39210 /* MovieListsAssembly.swift in Sources */,
@@ -863,21 +876,24 @@
 				0B7F04F02B38714F00AAC7A7 /* SceneDelegate.swift in Sources */,
 				7718F36F2B3CDB8F007F5E49 /* UIImageView+Extension.swift in Sources */,
 				0B7F05522B3984DD00AAC7A7 /* HomeViewController.swift in Sources */,
+				77BFC6422B4B4BE00029BDE8 /* SuggestionsProtocols.swift in Sources */,
 				0B7F05152B38765800AAC7A7 /* Builder.swift in Sources */,
 				77C997BA2B3B7AAB00D39210 /* CollectionCell.swift in Sources */,
 				779C13F52B44151400EC849D /* MovieDetailBuilder.swift in Sources */,
 				77C997C72B3C11CD00D39210 /* Router.swift in Sources */,
+				77BFC6462B4B4BE70029BDE8 /* SuggestionsRouter.swift in Sources */,
 				779C13F72B44193200EC849D /* UIApplication+Extension.swift in Sources */,
 				7718F3672B3CD7D7007F5E49 /* MovieListAssembly.swift in Sources */,
 				77C997C92B3C151300D39210 /* ErrorPresenting.swift in Sources */,
 				77DFB2082B3F705600167D3A /* MovieDetailAssembly.swift in Sources */,
 				779C13E12B435F3100EC849D /* UIView+Extension.swift in Sources */,
 				0B7F05992B3C6AEA00AAC7A7 /* OnboardingModel.swift in Sources */,
-				0B7F055A2B3986D800AAC7A7 /* TreeViewController.swift in Sources */,
 				77DFB2112B3F8CC800167D3A /* NavigationController.swift in Sources */,
 				77BA69ED2B4609BD003C6B4B /* WishlistPresenter.swift in Sources */,
+				77BFC6482B4B4BEC0029BDE8 /* SuggestionsAssembly.swift in Sources */,
 				77C997B82B3B7A8C00D39210 /* Configurable.swift in Sources */,
 				77BA69EA2B4609B0003C6B4B /* WishlistProtocols.swift in Sources */,
+				77BFC6442B4B4BE30029BDE8 /* SuggestionsPresenter.swift in Sources */,
 				77BA69EF2B4609C2003C6B4B /* WishlistController.swift in Sources */,
 				0B7F05642B3AD50C00AAC7A7 /* ProfilePresenter.swift in Sources */,
 				0B7F05732B3B6DB100AAC7A7 /* TabBarController.swift in Sources */,

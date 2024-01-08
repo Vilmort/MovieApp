@@ -78,11 +78,5 @@ class OnboardingPresenter: OnboardingPresenterProtocol {
         let transform = CGAffineTransform(scaleX: percentHorizontalOffset,
                                                y: percentHorizontalOffset)
         return transform
-        
-        
     }
-    
-    
-    
-    
 }

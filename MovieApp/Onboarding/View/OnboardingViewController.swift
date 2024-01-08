@@ -97,15 +97,14 @@ class OnboardingViewController: UIViewController, OnboardingViewProtocol {
     
     private func goToHomeScreen() {
         presenter.safeUserDefaults()
-        let vc = Builder.createTabBar()
-        navigationController?.pushViewController(vc, animated: true)
-        navigationController?.navigationBar.isHidden = true
+        UIApplication.shared.keyWindow?.rootViewController = Builder.createTabBar()
     }
     //MARK: - Actions
     
     @objc private func nextSlide() {
         let nextPageIndex = currentPageIndex + 1
         guard nextPageIndex < slides.count else {
+            goToHomeScreen()
             return
         }
         let xOffset = scrollView.frame.width * CGFloat(nextPageIndex)
