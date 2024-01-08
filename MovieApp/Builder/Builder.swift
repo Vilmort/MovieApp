@@ -36,10 +36,7 @@ final class Builder {
     
     // Tree
     static func createTree() -> UIViewController {
-        let view = TreeViewController()
-        let presenter = TreePresenter(view: view)
-        view.presenter = presenter
-        return view
+        SuggestionsAssembly().build()
     }
     
     // Profile
@@ -56,6 +53,4 @@ final class Builder {
         view.presenter = presenter
         return view
     }
-    
-    
 }

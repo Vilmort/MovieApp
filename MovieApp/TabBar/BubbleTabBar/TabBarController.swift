@@ -104,7 +104,7 @@ open class TabBarController: UITabBarController, TabBarViewProtocol  {
     private func generateVC(_ viewController: UIViewController, _ title: String?, _ image: UIImage?) -> UIViewController {
         viewController.tabBarItem.title = title
         viewController.tabBarItem.image = image
-        let vc = UINavigationController(rootViewController: viewController)
+        let vc = NavigationController(rootViewController: viewController)
   return vc
     }
     
