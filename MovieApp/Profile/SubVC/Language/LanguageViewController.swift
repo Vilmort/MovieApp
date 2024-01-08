@@ -105,12 +105,14 @@ final class LanguageViewController: ViewController, LanguageVCProtocol {
     
     @objc
     private func didTapBackButtonToHome() {
-        let vc = Builder.createTabBar()
-        vc.modalPresentationStyle = .fullScreen
-        vc.navigationController?.tabBarController?.selectedIndex = 3
-        present(vc , animated: false)
+        if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+           let windowDelegate = windowScene.delegate as? SceneDelegate {
+            let vc = Builder.createTabBar()
+            vc.tabBarController?.selectedIndex = 3
+            let window = windowDelegate.window
+            window?.rootViewController = vc
+        }
     }
-    
 }
 
 // MARK: - UITableViewDataSource
