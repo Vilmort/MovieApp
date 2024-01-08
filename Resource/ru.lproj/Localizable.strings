@@ -1,0 +1,68 @@
+/* 
+  Localizable.strings
+  MovieApp
+
+  Created by Vanopr on 05.01.2024.
+  
+*/
+
+/* Common */
+"Search a title" = "Искать название";
+"Hello" = "Привет";
+"See all" = "Посмотреть все";
+"Genres" = "Жанры";
+"Categories" = "Категории";
+"Movie List" = "Список фильмов";
+"Popular Movie" = "Популярные фильмы";
+"All" = "Все";
+"Home" = "Главная";
+"Search" = "Поиск";
+"Tree" = "Елка";
+"Profile" = "Профиль";
+"Notifications" = "Уведомления";
+"Language" = "Язык";
+"Available Languages" = "Доступные языки";
+"Messages Notifications" = "Уведомления о сообщениях";
+"Show Notifications" = "Показывать уведомления";
+"General" = "Общее";
+"More" = "Дополнительно";
+"Login" = "Логин";
+"Legal and Policies" = "Правовая информация и политика";
+"About Us" = "О нас";
+"Edit Profile" = "Редактировать профиль";
+"Privacy Policy" = "Политика конфиденциальности";
+"Full Name" = "Полное имя";
+"Save Changes" = "Сохранить изменения";
+"* Required field" = "* Обязательное поле";
+"Enter your email" = "Введите ваш email";
+"Enter your name" = "Введите ваше имя";
+"We are Sorry, We Can Not Find The Movie" = "Извините, мы не можем найти фильм";
+"Find your movie by Type title, categories, years, etc" = "Найдите свой фильм по названию, категории, году выпуска, и т.д.";
+"Upcoming Movie" = "Предстоящие фильмы";
+"Recent Movie" = "Недавние фильмы";
+"Cancel" = "Отмена";
+"Information we collect" = "Информация, которую мы собираем";
+"How we use your information" = "Как мы используем вашу информацию";
+"Security" = "Безопасность";
+"Children's privacy" = "Детская конфиденциальность";
+"Contact us" = "Связаться с нами";
+"Thank you" = "Спасибо вам";
+"TeamLeader" = "Тимлид";
+"IOS Developer" = "IOS Разработчик";
+"Explore a Variety of Genres" = "Исследуйте разнообразие жанров";
+"Immerse yourself in a variety of cinema - from thrilling action films to heartwarming dramas. MovieApp offers a wide selection of genres to ensure there's something for everyone" = "Погрузитесь в разнообразие кинематографа - от захватывающих боевиков до трогательных драм. MovieApp предлагает широкий выбор жанров, чтобы удовлетворить вкусы каждого";
+"Personalized Recommendations" = "Персонализированные рекомендации";
+"Based on your preferences, MovieApp creates personalized recommendations. Let us guess what will interest you and enjoy new cinematic discoveries." = "На основе ваших предпочтений MovieApp создает персонализированные рекомендации. Дайте нам угадать, что вас заинтересует, и наслаждайтесь новыми кинематографическими открытиями.";
+"Be at the Center of Cinema Events" = "Будьте в центре кинематографических событий";
+"Stay tuned for news, trailers and reviews. MovieApp shares with you all the latest film events so that you are always up to date." = "Следите за новостями, трейлерами и обзорами. MovieApp делится с вами всеми последними событиями в мире кино, чтобы вы всегда были в курсе.";
+"Welcome to MovieApp, your premier destination for an unparalleled cinematic experience. MovieApp is committed to safeguarding your privacy and ensuring the security of your personal information. This Privacy Policy outlines how we collect, use, and protect your data. By using MovieApp, you agree to the terms outlined in this policy." = "Добро пожаловать в MovieApp, ваш первоклассный источник непревзойденного кинематографического опыта. MovieApp стремится обеспечивать конфиденциальность вашей информации и гарантировать безопасность ваших личных данных. Настоящая Политика конфиденциальности описывает, как мы собираем, используем и защищаем ваши данные. Используя MovieApp, вы соглашаетесь с условиями, изложенными в данной политике.";
+"Account Information: To enhance your experience, we collect registration details, including your name, email, and profile information.
+Usage Information: We gather data on your interactions with MovieApp, such as viewing history and preferences.
+Device Information: Information about your device, operating system, and unique identifiers may be collected." = "Информация об учетной записи. Чтобы улучшить ваш опыт, мы собираем регистрационные данные, включая ваше имя, адрес электронной почты и информацию профиля. Информация об использовании: мы собираем данные о вашем взаимодействии с MovieApp, например историю просмотров и предпочтения. Информация об устройстве: может собираться информация о вашем устройстве, операционной системе и уникальных идентификаторах.";
+"We use the collected data to provide, personalize, and improve MovieApp services.
+Information is processed for transactions, customer support, and to analyze usage patterns for feature enhancement." = "Мы используем собранные данные для предоставления, персонализации и улучшения услуг MovieApp.
+Информация обрабатывается для транзакций, поддержки клиентов и анализа моделей использования для улучшения функций.";
+"Industry-standard measures are implemented to protect your information from unauthorized access, alteration, or disclosure." = "Для защиты вашей информации от несанкционированного доступа, изменения или раскрытия применяются стандартные отраслевые меры.";
+"MovieApp is not intended for users under 13, and we do not knowingly collect information from children." = "MovieApp не предназначено для пользователей младше 13 лет, и мы сознательно не собираем информацию от детей.";
+"If you have any questions or concerns about this Privacy Policy, please contact us at [https://github.com/Vanopr]." = "Если у вас есть какие-либо вопросы или сомнения по поводу настоящей Политики конфиденциальности, свяжитесь с нами по адресу [https://github.com/Vanopr].";
+"Thank you for choosing MovieApp. We are committed to providing you with an exceptional and secure movie-watching experience." = "Благодарим вас за выбор MovieApp. Мы стремимся предоставить вам исключительные и безопасные впечатления от просмотра фильмов.";

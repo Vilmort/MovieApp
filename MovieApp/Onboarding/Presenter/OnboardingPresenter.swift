@@ -12,9 +12,10 @@ protocol OnboardingViewProtocol: AnyObject {}
 
 protocol OnboardingPresenterProtocol: AnyObject {
     var onboardingModels: [OnboardingModel] { get }
-    init(view: OnboardingViewProtocol)
+    init(view: OnboardingViewProtocol, router: OnboardingRouterProtocol)
     func safeUserDefaults()
     func createSlides() -> [OnboardingView]
+    func goToHomeScreen()
     func ifSkipButtonHidden(id: Int) -> Bool
     func firstTransform(when percentHorizontalOffset: CGFloat) -> CGAffineTransform
     func secondTransform(when percentHorizontalOffset: CGFloat) -> CGAffineTransform
@@ -24,15 +25,22 @@ protocol OnboardingPresenterProtocol: AnyObject {
 
 class OnboardingPresenter: OnboardingPresenterProtocol {
     var onboardingModels: [OnboardingModel] = [
-        OnboardingModel(title: "Исследуйте Разнообразие Жанров", description: "Погрузитесь в разнообразие кинематографа — от захватывающих боевиков до трогательных драм. MovieApp предлагает широкий выбор жанров, чтобы каждый нашел что-то по своему вкусу.", image: .onboarding1),
-        OnboardingModel(title: "Персонализированные Рекомендации", description: "На основе ваших предпочтений MovieApp создает персонализированные рекомендации. Позвольте нам угадать, что вас заинтересует, и порадуйтесь новым кинематографическим открытиям.", image: .onboarding2),
-        OnboardingModel(title: "Будьте В Центре Кинособытий", description: "Следите за новостями, трейлерами и обзорами. MovieApp делится с вами всеми актуальными кинособытиями, чтобы вы всегда были в курсе.", image: .onboarding3)
+        OnboardingModel(title: "Explore a Variety of Genres".localized,
+                        description: "Immerse yourself in a variety of cinema - from thrilling action films to heartwarming dramas. MovieApp offers a wide selection of genres to ensure there's something for everyone".localized, 
+                        image: .onboarding1),
+        OnboardingModel(title: "Personalized Recommendations".localized,
+                        description: "Based on your preferences, MovieApp creates personalized recommendations. Let us guess what will interest you and enjoy new cinematic discoveries.".localized,
+                        image: .onboarding2),
+        OnboardingModel(title: "Be at the Center of Cinema Events".localized,
+                        description: "Stay tuned for news, trailers and reviews. MovieApp shares with you all the latest film events so that you are always up to date.".localized,
+                        image: .onboarding3)
     ]
     
     weak var view: OnboardingViewProtocol!
-    
-    required init(view: OnboardingViewProtocol) {
+    private var router: OnboardingRouterProtocol?
+    required init(view: OnboardingViewProtocol, router: OnboardingRouterProtocol) {
         self.view = view
+        self.router = router
     }
     
     func safeUserDefaults() {
@@ -74,9 +82,16 @@ class OnboardingPresenter: OnboardingPresenterProtocol {
                                           y: (1 - percentHorizontalOffset) / 0.5)
         return transform
     }
+    
     func forthTransform(when percentHorizontalOffset: CGFloat) -> CGAffineTransform {
         let transform = CGAffineTransform(scaleX: percentHorizontalOffset,
                                                y: percentHorizontalOffset)
         return transform
     }
+    
+    func goToHomeScreen() {
+        router?.showTabBarVc()
+    }
+    
+    
 }

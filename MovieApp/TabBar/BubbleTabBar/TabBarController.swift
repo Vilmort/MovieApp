@@ -8,12 +8,12 @@
 
 import UIKit
 
-open class TabBarController: UITabBarController, TabBarViewProtocol  {
+ class TabBarController: UITabBarController, TabBarViewProtocol  {
 
     fileprivate var shouldSelectOnTabBar = true
     
     var presenter: TabBarPresenterProtocol!
-    private let customTabBar: TabBar
+    let customTabBar: TabBar
     
     init(customTabBar: TabBar) {
         self.customTabBar = customTabBar
@@ -50,15 +50,15 @@ open class TabBarController: UITabBarController, TabBarViewProtocol  {
             tabBar.select(itemAt: selectedIndex, animated: false)
         }
     }
+     
+     override func viewWillAppear(_ animated: Bool) {
+         super.viewWillAppear(animated)
+     }
 
     open override func viewDidLoad() {
         super.viewDidLoad()
         self.setValue(customTabBar, forKey: "tabBar")
         createTabBar()
-    }
-
-    open override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
     }
 
     private var _barHeight: CGFloat = 74
@@ -117,10 +117,10 @@ open class TabBarController: UITabBarController, TabBarViewProtocol  {
         let profileVC = Builder.createProfile()
         
         viewControllers = [
-            generateVC(homeVC, "Home", .home),
-            generateVC(searchVC, "Search", .search),
-            generateVC(treeVC, "Tree", .puzzle),
-            generateVC(profileVC, "Profile", .profile)
+            generateVC(homeVC, "Home".localized, .home),
+            generateVC(searchVC, "Search".localized, .search),
+            generateVC(treeVC, "Tree".localized, .puzzle),
+            generateVC(profileVC, "Profile".localized, .profileTab)
         ]
     }
 

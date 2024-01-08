@@ -42,14 +42,19 @@ final class Builder {
     // Profile
     static func createProfile() -> UIViewController {
         let view = ProfileViewController()
-        let presenter = ProfilePresenter(view: view)
+        let router = ProfileRouter()
+        router.controller = view
+        let realmService = RealmService()
+        let presenter = ProfilePresenter(view: view, router: router, realmService: realmService)
         view.presenter = presenter
         return view
     }
     
     static func createOnboarding() -> UIViewController {
         let view = OnboardingViewController()
-        let presenter = OnboardingPresenter(view: view)
+        let router = OnboardingRouter()
+        router.controller = view
+        let presenter = OnboardingPresenter(view: view, router: router)
         view.presenter = presenter
         return view
     }

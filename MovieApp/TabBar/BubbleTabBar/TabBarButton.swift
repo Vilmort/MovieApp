@@ -62,8 +62,8 @@ public class CBTabBarButton: UIControl {
 
     public var item: UITabBarItem? {
         didSet {
+            tabLabel.text = item?.title?.localized
             tabImage.image = currentImage
-            tabLabel.text = item?.title
         }
     }
 
@@ -78,7 +78,7 @@ public class CBTabBarButton: UIControl {
     }
 
     private var tabImage = UIImageView()
-    private var tabLabel = UILabel()
+    var tabLabel = UILabel()
     private var tabBg = UIView()
 
     private let bgHeight: CGFloat = 42.0
