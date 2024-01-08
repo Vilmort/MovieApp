@@ -30,11 +30,8 @@ class CategoriesCell:UICollectionViewCell{
     }
     //MARK: - UI Setup
     private func setupUI(){
-        self.addSubviews(titleCategories)
-        
+        self.addSubviews(titleCategories)        
         titleCategories.translatesAutoresizingMaskIntoConstraints = false
-
-        
         NSLayoutConstraint.activate([
             titleCategories.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             titleCategories.centerYAnchor.constraint(equalTo: self.centerYAnchor),

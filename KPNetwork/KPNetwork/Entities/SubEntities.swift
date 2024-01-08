@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct KPImage: Decodable {
+public struct KPImage: Decodable, Equatable, Hashable {
     public let url: String?
     public let previewUrl: String?
     public let type: String?

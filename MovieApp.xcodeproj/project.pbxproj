@@ -85,6 +85,7 @@
 		0BE74ADE2B4C20B9002ADDAC /* HomePresenterMy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE74ADD2B4C20B9002ADDAC /* HomePresenterMy.swift */; };
 		0BE74AE02B4C2412002ADDAC /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE74ADF2B4C2412002ADDAC /* HeaderView.swift */; };
 		0BE74AE22B4C275E002ADDAC /* UICollectionView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE74AE12B4C275E002ADDAC /* UICollectionView+.swift */; };
+		0BE74AE42B4C9FE7002ADDAC /* HomeAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE74AE32B4C9FE7002ADDAC /* HomeAssembly.swift */; };
 		7718F3602B3CD77F007F5E49 /* MovieListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7718F35F2B3CD77F007F5E49 /* MovieListPresenter.swift */; };
 		7718F3632B3CD7C3007F5E49 /* MovieListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7718F3622B3CD7C3007F5E49 /* MovieListController.swift */; };
 		7718F3652B3CD7C7007F5E49 /* MovieListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7718F3642B3CD7C7007F5E49 /* MovieListRouter.swift */; };
@@ -264,6 +265,7 @@
 		0BE74ADD2B4C20B9002ADDAC /* HomePresenterMy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterMy.swift; sourceTree = "<group>"; };
 		0BE74ADF2B4C2412002ADDAC /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		0BE74AE12B4C275E002ADDAC /* UICollectionView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+.swift"; sourceTree = "<group>"; };
+		0BE74AE32B4C9FE7002ADDAC /* HomeAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAssembly.swift; sourceTree = "<group>"; };
 		7718F35F2B3CD77F007F5E49 /* MovieListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListPresenter.swift; sourceTree = "<group>"; };
 		7718F3622B3CD7C3007F5E49 /* MovieListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListController.swift; sourceTree = "<group>"; };
 		7718F3642B3CD7C7007F5E49 /* MovieListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListRouter.swift; sourceTree = "<group>"; };
@@ -546,6 +548,7 @@
 		0B7F05502B3984C500AAC7A7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0BE74AE32B4C9FE7002ADDAC /* HomeAssembly.swift */,
 				0BE74AD72B4C1A13002ADDAC /* HomeCollectionView.swift */,
 				0BE74ADB2B4C1AE9002ADDAC /* HomeViewControllerMy.swift */,
 				0BE74ADD2B4C20B9002ADDAC /* HomePresenterMy.swift */,
@@ -1041,6 +1044,7 @@
 				0B7F059D2B3C6B2C00AAC7A7 /* UDService.swift in Sources */,
 				0BE74AD82B4C1A13002ADDAC /* HomeCollectionView.swift in Sources */,
 				77C997C22B3B7DF400D39210 /* UILabel+Extension.swift in Sources */,
+				0BE74AE42B4C9FE7002ADDAC /* HomeAssembly.swift in Sources */,
 				779C13EB2B43FCEA00EC849D /* YoutubeView.swift in Sources */,
 				7718F3692B3CD7DD007F5E49 /* MovieListProtocols.swift in Sources */,
 				77BFC6522B4B63E70029BDE8 /* SuggestionView.swift in Sources */,

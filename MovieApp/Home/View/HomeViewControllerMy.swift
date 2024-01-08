@@ -6,11 +6,17 @@
 //
 
 import UIKit
+import KPNetwork
 
-final class HomeViewControllerMy: UIViewController {
+protocol HomeVCProtocol: AnyObject, LoadingPresenting, ErrorPresenting  {
+    func updateUI(lists: [KPListSearchEntity.KPList])
+}
+
+final class HomeViewControllerMy: ViewController {
+    var presenter: HomePresenterProtocolMy
+
     //MARK: - Private properties
     private let collectionView: HomeViewProtocol2
-    private let presenter: HomePresenterProtocolMy
     private lazy var dataSource: UICollectionViewDiffableDataSource<Section, Item> = makeDataSource()
     
     private var popularCategoriesArray:[PopularCategoriesModel] = [.firstPopularCategory,.secondPopularCategory,.thirdPopularCategory ]
@@ -20,6 +26,7 @@ final class HomeViewControllerMy: UIViewController {
                                                     .secondPopulaFilm,
                                                     .thirdPopulaFilm]
 
+    var lists = [KPListSearchEntity.KPList]()
     
     //MARK: - init(_:)
     init(
@@ -40,12 +47,12 @@ final class HomeViewControllerMy: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(collectionView)
+        presenter.viewDidLoad()
         setupConstraints()
         dataSource.supplementaryViewProvider = makeHeaderRegistration().headerProvider
         collectionView.collectionView.dataSource = dataSource
         collectionView.collectionView.delegate = self
         view.backgroundColor = .appDark
-        presenter.viewDidLoad()
         collectionDidLoad()
     }
     
@@ -67,7 +74,7 @@ final class HomeViewControllerMy: UIViewController {
         
         snapshot.appendSections(Section.allCases)
         snapshot.appendItems(
-            popularCategoriesArray.map(Item.popularCategories),
+            lists.map(Item.popularCategories),
             toSection: .categories
         )
         
@@ -114,7 +121,7 @@ extension HomeViewControllerMy {
     }
     
      enum Item: Hashable {
-        case popularCategories(PopularCategoriesModel)
+        case popularCategories(KPListSearchEntity.KPList)
         case categories(CategoriesModel)
         case mostPopular(MostPopularFilmsModel)
     }
@@ -153,9 +160,9 @@ private extension HomeViewControllerMy {
         }
     }
     
-    func makeCategoryCellRegistration() -> UICollectionView.CellRegistration<PopularCategoryCell, PopularCategoriesModel> {
+    func makeCategoryCellRegistration() -> UICollectionView.CellRegistration<PopularCategoryCell, KPListSearchEntity.KPList> {
         .init { cell, _, category in
-            cell.configure(for: category)
+            cell.configure(with: category)
         }
     }
     
@@ -193,8 +200,14 @@ private extension HomeViewControllerMy {
             }
         }
     }
-    
 }
+extension HomeViewControllerMy: HomeVCProtocol {
+    func updateUI(lists: [KPListSearchEntity.KPList]) {
+        self.lists = lists
+collectionDidLoad()
+    }
+}
+
 
 
 

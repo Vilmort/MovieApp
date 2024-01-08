@@ -218,7 +218,7 @@ final class HomeViewController: UIViewController, HomeViewProtocol {
             switch itemIdentifier{
             case.popularCategories(let model):
                 guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PopularCategoryCell.identifier, for: indexPath) as? PopularCategoryCell else {return UICollectionViewCell()}
-                cell.configure(for: model)
+//                cell.configure(for: model)
                 cell.layer.cornerRadius = 16
                 cell.backgroundColor = .appBlue
                 return cell
