@@ -44,8 +44,6 @@ If you have any questions or concerns about this Privacy Policy, please contact 
 Thank you for choosing MovieApp. We are committed to providing you with an exceptional and secure movie-watching experience.
 """.localized
   
-    
-    
      func getSectionsInfo() -> [PrivacyInfoModel] {
          let about = PrivacyInfoModel(title: "About Us".localized, description: aboutUs)
          let info =  PrivacyInfoModel(title: "Information we collect".localized, description: informationWeCollect)

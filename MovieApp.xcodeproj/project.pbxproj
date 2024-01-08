@@ -54,7 +54,6 @@
 		0B7F05B62B45E8C400AAC7A7 /* PrivacyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F05B52B45E8C400AAC7A7 /* PrivacyViewController.swift */; };
 		0B7F05BA2B45F78A00AAC7A7 /* ProfileBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F05B92B45F78A00AAC7A7 /* ProfileBuilder.swift */; };
 		0B7F05C82B46990700AAC7A7 /* ImageSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F05C72B46990700AAC7A7 /* ImageSelectionViewController.swift */; };
-		0B7F05CA2B46D84100AAC7A7 /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F05C92B46D84100AAC7A7 /* RealmService.swift */; };
 		0B7F05CD2B46D91300AAC7A7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F05CC2B46D91300AAC7A7 /* User.swift */; };
 		0B7F05CF2B47018500AAC7A7 /* OnboardingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F05CE2B47018500AAC7A7 /* OnboardingRouter.swift */; };
 		0B7F05D32B4705B000AAC7A7 /* NotificationsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F05D22B4705AF00AAC7A7 /* NotificationsPresenter.swift */; };
@@ -64,6 +63,15 @@
 		0B7F05E22B47136100AAC7A7 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F05E12B47136100AAC7A7 /* Team.swift */; };
 		0BE74A9E2B482959002ADDAC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0BE74AA02B482959002ADDAC /* Localizable.strings */; };
 		0BE74AA32B4829CD002ADDAC /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE74AA22B4829CD002ADDAC /* String+.swift */; };
+		0BE74AAF2B4BFE00002ADDAC /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE74AAE2B4BFE00002ADDAC /* RealmService.swift */; };
+		0BE74AB02B4BFF91002ADDAC /* PrivacyInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F05B72B45EA4600AAC7A7 /* PrivacyInfoModel.swift */; };
+		0BE74AB12B4BFFA4002ADDAC /* ProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F05B12B45E6EB00AAC7A7 /* ProfileRouter.swift */; };
+		0BE74AB22B4BFFB5002ADDAC /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F05C32B467D9000AAC7A7 /* EditProfileViewController.swift */; };
+		0BE74AB32B4BFFB9002ADDAC /* EditProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F05C52B467DD500AAC7A7 /* EditProfilePresenter.swift */; };
+		0BE74AB42B4BFFC7002ADDAC /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F05D02B47058B00AAC7A7 /* NotificationsViewController.swift */; };
+		0BE74AB52B4BFFDD002ADDAC /* LanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F05D42B47096200AAC7A7 /* LanguageViewController.swift */; };
+		0BE74AB62B4BFFE0002ADDAC /* LanguagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F05D62B47098700AAC7A7 /* LanguagePresenter.swift */; };
+		0BE74AB72B4BFFF0002ADDAC /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F05DB2B4710C200AAC7A7 /* AboutViewController.swift */; };
 		7718F3602B3CD77F007F5E49 /* MovieListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7718F35F2B3CD77F007F5E49 /* MovieListPresenter.swift */; };
 		7718F3632B3CD7C3007F5E49 /* MovieListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7718F3622B3CD7C3007F5E49 /* MovieListController.swift */; };
 		7718F3652B3CD7C7007F5E49 /* MovieListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7718F3642B3CD7C7007F5E49 /* MovieListRouter.swift */; };
@@ -229,6 +237,7 @@
 		0BE74A9F2B482959002ADDAC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0BE74AA12B48295C002ADDAC /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0BE74AA22B4829CD002ADDAC /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
+		0BE74AAE2B4BFE00002ADDAC /* RealmService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
 		7718F35F2B3CD77F007F5E49 /* MovieListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListPresenter.swift; sourceTree = "<group>"; };
 		7718F3622B3CD7C3007F5E49 /* MovieListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListController.swift; sourceTree = "<group>"; };
 		7718F3642B3CD7C7007F5E49 /* MovieListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListRouter.swift; sourceTree = "<group>"; };
@@ -689,6 +698,7 @@
 				0B7F059C2B3C6B2C00AAC7A7 /* UDService.swift */,
 				77BA69E12B44CC72003C6B4B /* ShareService.swift */,
 				77BA69F42B460B58003C6B4B /* PersistentService.swift */,
+				0BE74AAE2B4BFE00002ADDAC /* RealmService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -955,6 +965,7 @@
 				77BFC63F2B4B4BD40029BDE8 /* SuggestionsController.swift in Sources */,
 				77C9979A2B3B725000D39210 /* MovieListsController.swift in Sources */,
 				77C997AF2B3B74D600D39210 /* CustomView.swift in Sources */,
+				0BE74AB02B4BFF91002ADDAC /* PrivacyInfoModel.swift in Sources */,
 				779C13DB2B43537800EC849D /* CollectionReusableView.swift in Sources */,
 				77C997A72B3B73BB00D39210 /* LoadingPresenting.swift in Sources */,
 				0B7F05102B3873EE00AAC7A7 /* UILabel+.swift in Sources */,
@@ -978,7 +989,6 @@
 				0B7F05D32B4705B000AAC7A7 /* NotificationsPresenter.swift in Sources */,
 				779C13F92B441A1B00EC849D /* MovieActionsView.swift in Sources */,
 				77C997A02B3B72B100D39210 /* ModuleAssembly.swift in Sources */,
-				0B7F05CA2B46D84100AAC7A7 /* RealmService.swift in Sources */,
 				77C997C52B3B8F0D00D39210 /* HorizontalPicker.swift in Sources */,
 				0B7F050C2B3873AF00AAC7A7 /* UIFont+.swift in Sources */,
 				77BA69E02B44C65B003C6B4B /* ShareView.swift in Sources */,
@@ -1006,6 +1016,7 @@
 				0B7F05172B3876C100AAC7A7 /* TabBarPreseneter.swift in Sources */,
 				0B7F05082B38735A00AAC7A7 /* UIImage+.swift in Sources */,
 				0B7F050E2B3873D000AAC7A7 /* UIStackView+.swift in Sources */,
+				0BE74AB32B4BFFB9002ADDAC /* EditProfilePresenter.swift in Sources */,
 				77D1BB4A2B3AEC86001C5F99 /* DIContainer.swift in Sources */,
 				779C13DF2B435DAD00EC849D /* SpoilerView.swift in Sources */,
 				77C997982B3B724800D39210 /* MovieListsPresenter.swift in Sources */,
@@ -1018,10 +1029,13 @@
 				0B7F05BA2B45F78A00AAC7A7 /* ProfileBuilder.swift in Sources */,
 				0BE74AA32B4829CD002ADDAC /* String+.swift in Sources */,
 				0B7F05E02B47122E00AAC7A7 /* TeamViewCell.swift in Sources */,
+				0BE74AB62B4BFFE0002ADDAC /* LanguagePresenter.swift in Sources */,
 				0B7F05E22B47136100AAC7A7 /* Team.swift in Sources */,
 				0B7F05742B3B6DB100AAC7A7 /* TabBarButton.swift in Sources */,
+				0BE74AB12B4BFFA4002ADDAC /* ProfileRouter.swift in Sources */,
 				77BA69F12B4609C6003C6B4B /* WishlistRouter.swift in Sources */,
 				77C997A52B3B736A00D39210 /* ViewController.swift in Sources */,
+				0BE74AB52B4BFFDD002ADDAC /* LanguageViewController.swift in Sources */,
 				0B7F04F02B38714F00AAC7A7 /* SceneDelegate.swift in Sources */,
 				0B7F05DE2B4710D100AAC7A7 /* AboutUsPresenter.swift in Sources */,
 				0B7F05AB2B459F4E00AAC7A7 /* UserView.swift in Sources */,
@@ -1036,8 +1050,10 @@
 				77C997C72B3C11CD00D39210 /* Router.swift in Sources */,
 				77BFC6462B4B4BE70029BDE8 /* SuggestionsRouter.swift in Sources */,
 				779C13F72B44193200EC849D /* UIApplication+Extension.swift in Sources */,
+				0BE74AB22B4BFFB5002ADDAC /* EditProfileViewController.swift in Sources */,
 				0B7F05A92B4599B200AAC7A7 /* PrivacyInfo.swift in Sources */,
 				7718F3672B3CD7D7007F5E49 /* MovieListAssembly.swift in Sources */,
+				0BE74AAF2B4BFE00002ADDAC /* RealmService.swift in Sources */,
 				77C997C92B3C151300D39210 /* ErrorPresenting.swift in Sources */,
 				77DFB2082B3F705600167D3A /* MovieDetailAssembly.swift in Sources */,
 				779C13E12B435F3100EC849D /* UIView+Extension.swift in Sources */,
@@ -1046,12 +1062,14 @@
 				77BA69ED2B4609BD003C6B4B /* WishlistPresenter.swift in Sources */,
 				77BFC6482B4B4BEC0029BDE8 /* SuggestionsAssembly.swift in Sources */,
 				77C997B82B3B7A8C00D39210 /* Configurable.swift in Sources */,
+				0BE74AB42B4BFFC7002ADDAC /* NotificationsViewController.swift in Sources */,
 				77BA69EA2B4609B0003C6B4B /* WishlistProtocols.swift in Sources */,
 				77BFC6442B4B4BE30029BDE8 /* SuggestionsPresenter.swift in Sources */,
 				77BA69EF2B4609C2003C6B4B /* WishlistController.swift in Sources */,
 				0B7F05642B3AD50C00AAC7A7 /* ProfilePresenter.swift in Sources */,
 				0B7F05732B3B6DB100AAC7A7 /* TabBarController.swift in Sources */,
 				0B7F05542B3985CC00AAC7A7 /* SearchViewController.swift in Sources */,
+				0BE74AB72B4BFFF0002ADDAC /* AboutViewController.swift in Sources */,
 				77C997AD2B3B74C800D39210 /* LoadingView.swift in Sources */,
 				0B7F05722B3B6DB100AAC7A7 /* TabBar.swift in Sources */,
 			);
