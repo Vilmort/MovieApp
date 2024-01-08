@@ -24,7 +24,7 @@ public struct KPMovieRequest: KPNetworkRequest {
         .GET
     }
     
-    public var parameters: [String : String] {
+    public var parameters: [String : Any] {
         [:]
     }
 }

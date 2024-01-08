@@ -35,6 +35,12 @@ final class MovieRatingSmallView: CustomView {
 extension MovieRatingSmallView: Configurable {
     struct Model {
         let rating: Double
+        let withBlur: Bool
+        
+        init(rating: Double, withBlur: Bool = true) {
+            self.rating = rating
+            self.withBlur = withBlur
+        }
     }
     
     func update(with model: Model?) {
@@ -58,5 +64,6 @@ extension MovieRatingSmallView: Configurable {
                 spacing: 4
             )
         )
+        blurView.isHidden = !model.withBlur
     }
 }

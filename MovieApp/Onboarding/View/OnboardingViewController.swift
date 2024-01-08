@@ -105,6 +105,7 @@ class OnboardingViewController: ViewController, OnboardingViewProtocol {
     @objc private func nextSlide() {
         let nextPageIndex = currentPageIndex + 1
         guard nextPageIndex < slides.count else {
+            goToHomeScreen()
             return
         }
         let xOffset = scrollView.frame.width * CGFloat(nextPageIndex)

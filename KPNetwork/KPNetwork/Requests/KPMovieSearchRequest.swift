@@ -24,10 +24,10 @@ public struct KPMovieSearchRequest: KPNetworkRequest {
         if let limit {
             parameters["limit"] = "\(limit)"
         }
-        parameters["id"] = id?.joined(separator: ",")
+        parameters["id"] = id
         parameters["type"] = type?.rawValue
-        parameters["lists"] = lists?.joined(separator: ",")
-        parameters["genres.name"] = genres?.joined(separator: ",")
+        parameters["lists"] = lists
+        parameters["genres.name"] = genres
     }
     
     public var url: String {
@@ -38,5 +38,5 @@ public struct KPMovieSearchRequest: KPNetworkRequest {
         .GET
     }
     
-    public var parameters: [String : String] = [:]
+    public var parameters: [String : Any] = [:]
 }

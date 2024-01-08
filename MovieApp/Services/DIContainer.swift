@@ -13,6 +13,8 @@ final class DIContainer {
     static let shared = DIContainer()
     
     let networkService: KPNetworkClient
+    let shareService: ShareService
+    let persistentService: PersistentServiceProtocol
     
     init() {
         self.networkService = DefaultKPNetworkClient(
@@ -23,5 +25,7 @@ final class DIContainer {
                 "F6QX0P1-FQTMPFY-PWNT126-KXFHWZK"
             ]
         )
+        self.shareService = ShareService()
+        self.persistentService = PersistentService()
     }
 }

@@ -16,5 +16,5 @@ public protocol KPNetworkRequest {
     
     var url: String { get }
     var method: KPHTTPMethod { get }
-    var parameters: [String: String] { get }
+    var parameters: [String: Any] { get }
 }

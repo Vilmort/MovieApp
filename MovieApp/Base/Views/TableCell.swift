@@ -28,14 +28,30 @@ class TableCell<View: Configurable>: UITableViewCell {
         view.update(with: nil)
     }
     
-    func update(with model: View.Model, height: CGFloat? = nil, didSelectHandler: (() -> Void)? = nil) {
+    override func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
+        if touch.view?.isKind(of: UIButton.self) == true {
+            return false
+        }
+        return true
+    }
+    
+    func update(
+        with model: View.Model,
+        height: CGFloat? = nil,
+        insets: UIEdgeInsets = .zero,
+        didSelectHandler: (() -> Void)? = nil
+    ) {
         view.update(with: model)
         self.didSelectHandler = didSelectHandler
         
         if let height {
             stackView.snp.remakeConstraints {
                 $0.height.equalTo(height)
-                $0.edges.equalToSuperview()
+                $0.edges.equalToSuperview().inset(insets)
+            }
+        } else {
+            stackView.snp.remakeConstraints {
+                $0.edges.equalToSuperview().inset(insets)
             }
         }
     }
@@ -52,6 +68,7 @@ class TableCell<View: Configurable>: UITableViewCell {
         
         let tapGR = UITapGestureRecognizer(target: self, action: #selector(didSelect))
         tapGR.cancelsTouchesInView = false
+        tapGR.delegate = self
         addGestureRecognizer(tapGR)
     }
     

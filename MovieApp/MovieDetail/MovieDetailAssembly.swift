@@ -6,16 +6,29 @@
 //
 
 import UIKit
+import KPNetwork
 
 final class MovieDetailAssembly: ModuleAssembly {
     let id: Int
+    let entity: KPMovieEntity?
     
     init(id: Int) {
         self.id = id
+        self.entity = nil
+    }
+    
+    init(entity: KPMovieEntity) {
+        self.entity = entity
+        self.id = entity.id
     }
     
     func build() -> UIViewController {
-        let presenter = MovieDetailPresenter(id)
+        let presenter: MovieDetailPresenter
+        if let entity {
+            presenter = MovieDetailPresenter(entity: entity)
+        } else {
+            presenter = MovieDetailPresenter(id)
+        }
         let controller = MovieDetailController()
         let router = MovieDetailRouter()
         controller.presenter = presenter

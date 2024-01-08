@@ -31,8 +31,19 @@ public actor DefaultKPNetworkClient: KPNetworkClient {
             return .failure(.invalidURL)
         }
         if !request.parameters.isEmpty {
-            urlComponents.queryItems = request.parameters.map {
-                URLQueryItem(name: $0.key, value: $0.value)
+            urlComponents.queryItems = request.parameters.compactMap {
+                if let value = $0.value as? String {
+                    return URLQueryItem(name: $0.key, value: value)
+                } else {
+                    return nil
+                }
+            }
+            request.parameters.forEach {
+                item in
+                
+                if let value = item.value as? [String] {
+                    urlComponents.queryItems?.append(contentsOf: value.map { .init(name: item.key, value: $0) })
+                }
             }
         }
         guard let url = urlComponents.url else {
@@ -58,7 +69,7 @@ public actor DefaultKPNetworkClient: KPNetworkClient {
                     return .failure(.invalidDecoding)
                 }
                 return .success(decoded)
-            case 401:
+            case 401, 403:
                 do {
                     try await setNextToken()
                     return await sendRequest(request: request)
