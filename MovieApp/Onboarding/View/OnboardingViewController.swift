@@ -9,7 +9,7 @@ import UIKit
 import SnapKit
 import Lottie
 
-class OnboardingViewController: UIViewController, OnboardingViewProtocol {
+class OnboardingViewController: ViewController, OnboardingViewProtocol {
     
     var presenter: OnboardingPresenterProtocol!
     
@@ -47,6 +47,7 @@ class OnboardingViewController: UIViewController, OnboardingViewProtocol {
         slides = presenter.createSlides()
         setupSlidesScrollView(slides: slides)
         setupAnimationButton()
+        navigationController?.navigationBar.isHidden = true
     }
     
     private func setupAnimationButton() {
@@ -97,9 +98,7 @@ class OnboardingViewController: UIViewController, OnboardingViewProtocol {
     
     private func goToHomeScreen() {
         presenter.safeUserDefaults()
-        let vc = Builder.createTabBar()
-        navigationController?.pushViewController(vc, animated: true)
-        navigationController?.navigationBar.isHidden = true
+        presenter.goToHomeScreen()
     }
     //MARK: - Actions
     

@@ -9,7 +9,7 @@ import UIKit
 
 open class TabBar: UITabBar {
     
-    private var buttons: [CBTabBarButton] = []
+    var buttons: [CBTabBarButton] = []
     public var animationDuration: Double = 0.3
     
     open override var selectedItem: UITabBarItem? {
@@ -177,3 +177,4 @@ open class TabBar: UITabBar {
     }
     
 }
+

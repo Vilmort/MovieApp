@@ -48,6 +48,32 @@
 		0B7F059B2B3C6AEA00AAC7A7 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F05972B3C6AE900AAC7A7 /* OnboardingView.swift */; };
 		0B7F059D2B3C6B2C00AAC7A7 /* UDService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F059C2B3C6B2C00AAC7A7 /* UDService.swift */; };
 		0B7F05A12B3C6BBF00AAC7A7 /* OnboardingNext.json in Resources */ = {isa = PBXBuildFile; fileRef = 0B7F05A02B3C6BBF00AAC7A7 /* OnboardingNext.json */; };
+		0B7F05A92B4599B200AAC7A7 /* PrivacyInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F05A82B4599B200AAC7A7 /* PrivacyInfo.swift */; };
+		0B7F05AB2B459F4E00AAC7A7 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F05AA2B459F4E00AAC7A7 /* UserView.swift */; };
+		0B7F05AE2B45A7A400AAC7A7 /* GeneralView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F05AD2B45A7A400AAC7A7 /* GeneralView.swift */; };
+		0B7F05B02B45A89C00AAC7A7 /* CustomSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F05AF2B45A89B00AAC7A7 /* CustomSettingsView.swift */; };
+		0B7F05B22B45E6EB00AAC7A7 /* ProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F05B12B45E6EB00AAC7A7 /* ProfileRouter.swift */; };
+		0B7F05B42B45E8A700AAC7A7 /* PrivacyPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F05B32B45E8A700AAC7A7 /* PrivacyPresenter.swift */; };
+		0B7F05B62B45E8C400AAC7A7 /* PrivacyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F05B52B45E8C400AAC7A7 /* PrivacyViewController.swift */; };
+		0B7F05B82B45EA4600AAC7A7 /* PrivacyInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F05B72B45EA4600AAC7A7 /* PrivacyInfoModel.swift */; };
+		0B7F05BA2B45F78A00AAC7A7 /* ProfileBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F05B92B45F78A00AAC7A7 /* ProfileBuilder.swift */; };
+		0B7F05C42B467D9000AAC7A7 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F05C32B467D9000AAC7A7 /* EditProfileViewController.swift */; };
+		0B7F05C62B467DD500AAC7A7 /* EditProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F05C52B467DD500AAC7A7 /* EditProfilePresenter.swift */; };
+		0B7F05C82B46990700AAC7A7 /* ImageSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F05C72B46990700AAC7A7 /* ImageSelectionViewController.swift */; };
+		0B7F05CA2B46D84100AAC7A7 /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F05C92B46D84100AAC7A7 /* RealmService.swift */; };
+		0B7F05CD2B46D91300AAC7A7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F05CC2B46D91300AAC7A7 /* User.swift */; };
+		0B7F05CF2B47018500AAC7A7 /* OnboardingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F05CE2B47018500AAC7A7 /* OnboardingRouter.swift */; };
+		0B7F05D12B47058B00AAC7A7 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F05D02B47058B00AAC7A7 /* NotificationsViewController.swift */; };
+		0B7F05D32B4705B000AAC7A7 /* NotificationsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F05D22B4705AF00AAC7A7 /* NotificationsPresenter.swift */; };
+		0B7F05D52B47096200AAC7A7 /* LanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F05D42B47096200AAC7A7 /* LanguageViewController.swift */; };
+		0B7F05D72B47098700AAC7A7 /* LanguagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F05D62B47098700AAC7A7 /* LanguagePresenter.swift */; };
+		0B7F05D92B4709B900AAC7A7 /* LanguageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F05D82B4709B900AAC7A7 /* LanguageCell.swift */; };
+		0B7F05DC2B4710C200AAC7A7 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F05DB2B4710C200AAC7A7 /* AboutViewController.swift */; };
+		0B7F05DE2B4710D100AAC7A7 /* AboutUsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F05DD2B4710D100AAC7A7 /* AboutUsPresenter.swift */; };
+		0B7F05E02B47122E00AAC7A7 /* TeamViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F05DF2B47122E00AAC7A7 /* TeamViewCell.swift */; };
+		0B7F05E22B47136100AAC7A7 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F05E12B47136100AAC7A7 /* Team.swift */; };
+		0BE74A9E2B482959002ADDAC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0BE74AA02B482959002ADDAC /* Localizable.strings */; };
+		0BE74AA32B4829CD002ADDAC /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE74AA22B4829CD002ADDAC /* String+.swift */; };
 		7718F3602B3CD77F007F5E49 /* MovieListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7718F35F2B3CD77F007F5E49 /* MovieListPresenter.swift */; };
 		7718F3632B3CD7C3007F5E49 /* MovieListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7718F3622B3CD7C3007F5E49 /* MovieListController.swift */; };
 		7718F3652B3CD7C7007F5E49 /* MovieListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7718F3642B3CD7C7007F5E49 /* MovieListRouter.swift */; };
@@ -138,7 +164,6 @@
 		0B7F04ED2B38714F00AAC7A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0B7F04EF2B38714F00AAC7A7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		0B7F04F62B38715000AAC7A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		0B7F04F92B38715000AAC7A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0B7F04FB2B38715000AAC7A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B7F05042B38729600AAC7A7 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		0B7F05072B38735A00AAC7A7 /* UIImage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
@@ -170,6 +195,35 @@
 		0B7F05972B3C6AE900AAC7A7 /* OnboardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		0B7F059C2B3C6B2C00AAC7A7 /* UDService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UDService.swift; sourceTree = "<group>"; };
 		0B7F05A02B3C6BBF00AAC7A7 /* OnboardingNext.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = OnboardingNext.json; sourceTree = "<group>"; };
+		0B7F05A82B4599B200AAC7A7 /* PrivacyInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyInfo.swift; sourceTree = "<group>"; };
+		0B7F05AA2B459F4E00AAC7A7 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
+		0B7F05AD2B45A7A400AAC7A7 /* GeneralView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralView.swift; sourceTree = "<group>"; };
+		0B7F05AF2B45A89B00AAC7A7 /* CustomSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSettingsView.swift; sourceTree = "<group>"; };
+		0B7F05B12B45E6EB00AAC7A7 /* ProfileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRouter.swift; sourceTree = "<group>"; };
+		0B7F05B32B45E8A700AAC7A7 /* PrivacyPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPresenter.swift; sourceTree = "<group>"; };
+		0B7F05B52B45E8C400AAC7A7 /* PrivacyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyViewController.swift; sourceTree = "<group>"; };
+		0B7F05B72B45EA4600AAC7A7 /* PrivacyInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyInfoModel.swift; sourceTree = "<group>"; };
+		0B7F05B92B45F78A00AAC7A7 /* ProfileBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileBuilder.swift; sourceTree = "<group>"; };
+		0B7F05C32B467D9000AAC7A7 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		0B7F05C52B467DD500AAC7A7 /* EditProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfilePresenter.swift; sourceTree = "<group>"; };
+		0B7F05C72B46990700AAC7A7 /* ImageSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSelectionViewController.swift; sourceTree = "<group>"; };
+		0B7F05C92B46D84100AAC7A7 /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
+		0B7F05CC2B46D91300AAC7A7 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		0B7F05CE2B47018500AAC7A7 /* OnboardingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingRouter.swift; sourceTree = "<group>"; };
+		0B7F05D02B47058B00AAC7A7 /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
+		0B7F05D22B4705AF00AAC7A7 /* NotificationsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsPresenter.swift; sourceTree = "<group>"; };
+		0B7F05D42B47096200AAC7A7 /* LanguageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageViewController.swift; sourceTree = "<group>"; };
+		0B7F05D62B47098700AAC7A7 /* LanguagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguagePresenter.swift; sourceTree = "<group>"; };
+		0B7F05D82B4709B900AAC7A7 /* LanguageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageCell.swift; sourceTree = "<group>"; };
+		0B7F05DB2B4710C200AAC7A7 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		0B7F05DD2B4710D100AAC7A7 /* AboutUsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsPresenter.swift; sourceTree = "<group>"; };
+		0B7F05DF2B47122E00AAC7A7 /* TeamViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamViewCell.swift; sourceTree = "<group>"; };
+		0B7F05E12B47136100AAC7A7 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		0BE74A9A2B4828F3002ADDAC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0BE74A9B2B482900002ADDAC /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ru; path = ru.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0BE74A9F2B482959002ADDAC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		0BE74AA12B48295C002ADDAC /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		0BE74AA22B4829CD002ADDAC /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		7718F35F2B3CD77F007F5E49 /* MovieListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListPresenter.swift; sourceTree = "<group>"; };
 		7718F3622B3CD7C3007F5E49 /* MovieListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListController.swift; sourceTree = "<group>"; };
 		7718F3642B3CD7C7007F5E49 /* MovieListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListRouter.swift; sourceTree = "<group>"; };
@@ -292,6 +346,7 @@
 				0B7F05382B3974E100AAC7A7 /* Fonts */,
 				0B7F04F62B38715000AAC7A7 /* Assets.xcassets */,
 				0B7F04F82B38715000AAC7A7 /* LaunchScreen.storyboard */,
+				0BE74AA02B482959002ADDAC /* Localizable.strings */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -315,6 +370,7 @@
 				0B7F050B2B3873AF00AAC7A7 /* UIFont+.swift */,
 				0B7F050D2B3873D000AAC7A7 /* UIStackView+.swift */,
 				0B7F050F2B3873EE00AAC7A7 /* UILabel+.swift */,
+				0BE74AA22B4829CD002ADDAC /* String+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -325,6 +381,7 @@
 				77D1BB492B3AEC86001C5F99 /* DIContainer.swift */,
 				0B7F059C2B3C6B2C00AAC7A7 /* UDService.swift */,
 				77BA69E12B44CC72003C6B4B /* ShareService.swift */,
+				0B7F05C92B46D84100AAC7A7 /* RealmService.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -386,11 +443,12 @@
 		0B7F05322B387C7200AAC7A7 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				0B7F05CB2B46D90500AAC7A7 /* Model */,
+				0B7F05B12B45E6EB00AAC7A7 /* ProfileRouter.swift */,
+				0B7F05B92B45F78A00AAC7A7 /* ProfileBuilder.swift */,
 				0B7F055E2B39877F00AAC7A7 /* View */,
 				0B7F05622B3AD4F800AAC7A7 /* Presenter */,
-				0B7F05372B387D5300AAC7A7 /* Language */,
-				0B7F05362B387D4800AAC7A7 /* Notifications */,
-				0B7F05332B387CBD00AAC7A7 /* PrivacyPolicy */,
+				0B7F05BF2B467C9200AAC7A7 /* SubVC */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -398,6 +456,9 @@
 		0B7F05332B387CBD00AAC7A7 /* PrivacyPolicy */ = {
 			isa = PBXGroup;
 			children = (
+				0B7F05C02B467CD900AAC7A7 /* Presenter */,
+				0B7F05C12B467CE600AAC7A7 /* View */,
+				0B7F05C22B467CF100AAC7A7 /* Model */,
 			);
 			path = PrivacyPolicy;
 			sourceTree = "<group>";
@@ -414,6 +475,8 @@
 		0B7F05362B387D4800AAC7A7 /* Notifications */ = {
 			isa = PBXGroup;
 			children = (
+				0B7F05D02B47058B00AAC7A7 /* NotificationsViewController.swift */,
+				0B7F05D22B4705AF00AAC7A7 /* NotificationsPresenter.swift */,
 			);
 			path = Notifications;
 			sourceTree = "<group>";
@@ -421,6 +484,9 @@
 		0B7F05372B387D5300AAC7A7 /* Language */ = {
 			isa = PBXGroup;
 			children = (
+				0B7F05D42B47096200AAC7A7 /* LanguageViewController.swift */,
+				0B7F05D62B47098700AAC7A7 /* LanguagePresenter.swift */,
+				0B7F05D82B4709B900AAC7A7 /* LanguageCell.swift */,
 			);
 			path = Language;
 			sourceTree = "<group>";
@@ -481,6 +547,9 @@
 			isa = PBXGroup;
 			children = (
 				0B7F055C2B39874C00AAC7A7 /* ProfileViewController.swift */,
+				0B7F05AA2B459F4E00AAC7A7 /* UserView.swift */,
+				0B7F05AD2B45A7A400AAC7A7 /* GeneralView.swift */,
+				0B7F05AF2B45A89B00AAC7A7 /* CustomSettingsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -522,8 +591,75 @@
 			children = (
 				0B7F05962B3C6AE900AAC7A7 /* OnboardingViewController.swift */,
 				0B7F05972B3C6AE900AAC7A7 /* OnboardingView.swift */,
+				0B7F05CE2B47018500AAC7A7 /* OnboardingRouter.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		0B7F05BE2B467C6D00AAC7A7 /* EditProfile */ = {
+			isa = PBXGroup;
+			children = (
+				0B7F05C32B467D9000AAC7A7 /* EditProfileViewController.swift */,
+				0B7F05C52B467DD500AAC7A7 /* EditProfilePresenter.swift */,
+				0B7F05C72B46990700AAC7A7 /* ImageSelectionViewController.swift */,
+			);
+			path = EditProfile;
+			sourceTree = "<group>";
+		};
+		0B7F05BF2B467C9200AAC7A7 /* SubVC */ = {
+			isa = PBXGroup;
+			children = (
+				0B7F05DA2B4710A800AAC7A7 /* AboutVC */,
+				0B7F05BE2B467C6D00AAC7A7 /* EditProfile */,
+				0B7F05372B387D5300AAC7A7 /* Language */,
+				0B7F05362B387D4800AAC7A7 /* Notifications */,
+				0B7F05332B387CBD00AAC7A7 /* PrivacyPolicy */,
+			);
+			path = SubVC;
+			sourceTree = "<group>";
+		};
+		0B7F05C02B467CD900AAC7A7 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				0B7F05B32B45E8A700AAC7A7 /* PrivacyPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		0B7F05C12B467CE600AAC7A7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0B7F05B52B45E8C400AAC7A7 /* PrivacyViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0B7F05C22B467CF100AAC7A7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0B7F05A82B4599B200AAC7A7 /* PrivacyInfo.swift */,
+				0B7F05B72B45EA4600AAC7A7 /* PrivacyInfoModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0B7F05CB2B46D90500AAC7A7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0B7F05CC2B46D91300AAC7A7 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0B7F05DA2B4710A800AAC7A7 /* AboutVC */ = {
+			isa = PBXGroup;
+			children = (
+				0B7F05DB2B4710C200AAC7A7 /* AboutViewController.swift */,
+				0B7F05DD2B4710D100AAC7A7 /* AboutUsPresenter.swift */,
+				0B7F05DF2B47122E00AAC7A7 /* TeamViewCell.swift */,
+				0B7F05E12B47136100AAC7A7 /* Team.swift */,
+			);
+			path = AboutVC;
 			sourceTree = "<group>";
 		};
 		7718F3612B3CD782007F5E49 /* MovieList */ = {
@@ -703,7 +839,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
+				ru,
 			);
 			mainGroup = 0B7F04E12B38714E00AAC7A7;
 			packageReferences = (
@@ -753,6 +889,7 @@
 			files = (
 				0B7F054A2B39772300AAC7A7 /* Montserrat-Regular.ttf in Resources */,
 				0B7F04FA2B38715000AAC7A7 /* LaunchScreen.storyboard in Resources */,
+				0BE74A9E2B482959002ADDAC /* Localizable.strings in Resources */,
 				0B7F05462B39770700AAC7A7 /* Montserrat-ExtraBold.ttf in Resources */,
 				0B7F054C2B39772D00AAC7A7 /* Montserrat-Medium.ttf in Resources */,
 				773BB9722B3C43F100AD0412 /* error.json in Resources */,
@@ -785,26 +922,33 @@
 				7718F3602B3CD77F007F5E49 /* MovieListPresenter.swift in Sources */,
 				0B7F059A2B3C6AEA00AAC7A7 /* OnboardingViewController.swift in Sources */,
 				0B7F054E2B3984AF00AAC7A7 /* HomePresenter.swift in Sources */,
+				0B7F05B02B45A89C00AAC7A7 /* CustomSettingsView.swift in Sources */,
 				0B7F059D2B3C6B2C00AAC7A7 /* UDService.swift in Sources */,
 				77C997C22B3B7DF400D39210 /* UILabel+Extension.swift in Sources */,
 				779C13EB2B43FCEA00EC849D /* YoutubeView.swift in Sources */,
 				7718F3692B3CD7DD007F5E49 /* MovieListProtocols.swift in Sources */,
 				7718F3632B3CD7C3007F5E49 /* MovieListController.swift in Sources */,
 				7718F36B2B3CDA1A007F5E49 /* MovieView.swift in Sources */,
+				0B7F05D32B4705B000AAC7A7 /* NotificationsPresenter.swift in Sources */,
 				779C13F92B441A1B00EC849D /* MovieActionsView.swift in Sources */,
 				77C997A02B3B72B100D39210 /* ModuleAssembly.swift in Sources */,
+				0B7F05CA2B46D84100AAC7A7 /* RealmService.swift in Sources */,
 				77C997C52B3B8F0D00D39210 /* HorizontalPicker.swift in Sources */,
 				0B7F050C2B3873AF00AAC7A7 /* UIFont+.swift in Sources */,
 				77BA69E02B44C65B003C6B4B /* ShareView.swift in Sources */,
 				0B7F05052B38729600AAC7A7 /* UIColor+.swift in Sources */,
 				77BA69E22B44CC72003C6B4B /* ShareService.swift in Sources */,
 				77DFB2002B3F703900167D3A /* MovieDetailProtocols.swift in Sources */,
+				0B7F05B42B45E8A700AAC7A7 /* PrivacyPresenter.swift in Sources */,
 				77C997C02B3B7DA000D39210 /* MovieListView.swift in Sources */,
 				77DFB2042B3F704700167D3A /* MovieDetailPresenter.swift in Sources */,
 				0B7F05982B3C6AEA00AAC7A7 /* OnboardingPresenter.swift in Sources */,
 				77C997BC2B3B7BC800D39210 /* TableCell.swift in Sources */,
+				0B7F05C82B46990700AAC7A7 /* ImageSelectionViewController.swift in Sources */,
 				77C9979C2B3B727100D39210 /* MovieListsRouter.swift in Sources */,
+				0B7F05B62B45E8C400AAC7A7 /* PrivacyViewController.swift in Sources */,
 				77DFB2062B3F704F00167D3A /* MovieDetailRouter.swift in Sources */,
+				0B7F05C62B467DD500AAC7A7 /* EditProfilePresenter.swift in Sources */,
 				0B7F05612B3AD45B00AAC7A7 /* TreePresenter.swift in Sources */,
 				0B7F055D2B39874C00AAC7A7 /* ProfileViewController.swift in Sources */,
 				77C9979E2B3B727A00D39210 /* MovieListsAssembly.swift in Sources */,
@@ -819,20 +963,37 @@
 				77D1BB4A2B3AEC86001C5F99 /* DIContainer.swift in Sources */,
 				779C13DF2B435DAD00EC849D /* SpoilerView.swift in Sources */,
 				77C997982B3B724800D39210 /* MovieListsPresenter.swift in Sources */,
+				0B7F05D92B4709B900AAC7A7 /* LanguageCell.swift in Sources */,
 				77C997CB2B3C157000D39210 /* ErrorView.swift in Sources */,
+				0B7F05CF2B47018500AAC7A7 /* OnboardingRouter.swift in Sources */,
 				0B7F04EE2B38714F00AAC7A7 /* AppDelegate.swift in Sources */,
 				7718F3652B3CD7C7007F5E49 /* MovieListRouter.swift in Sources */,
 				779C13E62B43F94F00EC849D /* GradientView.swift in Sources */,
+				0B7F05BA2B45F78A00AAC7A7 /* ProfileBuilder.swift in Sources */,
+				0BE74AA32B4829CD002ADDAC /* String+.swift in Sources */,
+				0B7F05E02B47122E00AAC7A7 /* TeamViewCell.swift in Sources */,
+				0B7F05E22B47136100AAC7A7 /* Team.swift in Sources */,
 				0B7F05742B3B6DB100AAC7A7 /* TabBarButton.swift in Sources */,
 				77C997A52B3B736A00D39210 /* ViewController.swift in Sources */,
 				0B7F04F02B38714F00AAC7A7 /* SceneDelegate.swift in Sources */,
+				0B7F05DE2B4710D100AAC7A7 /* AboutUsPresenter.swift in Sources */,
+				0B7F05AB2B459F4E00AAC7A7 /* UserView.swift in Sources */,
+				0B7F05CD2B46D91300AAC7A7 /* User.swift in Sources */,
 				7718F36F2B3CDB8F007F5E49 /* UIImageView+Extension.swift in Sources */,
+				0B7F05AE2B45A7A400AAC7A7 /* GeneralView.swift in Sources */,
 				0B7F05522B3984DD00AAC7A7 /* HomeViewController.swift in Sources */,
+				0B7F05D72B47098700AAC7A7 /* LanguagePresenter.swift in Sources */,
+				0B7F05D12B47058B00AAC7A7 /* NotificationsViewController.swift in Sources */,
+				0B7F05D52B47096200AAC7A7 /* LanguageViewController.swift in Sources */,
+				0B7F05B82B45EA4600AAC7A7 /* PrivacyInfoModel.swift in Sources */,
 				0B7F05152B38765800AAC7A7 /* Builder.swift in Sources */,
 				77C997BA2B3B7AAB00D39210 /* CollectionCell.swift in Sources */,
 				779C13F52B44151400EC849D /* MovieDetailBuilder.swift in Sources */,
 				77C997C72B3C11CD00D39210 /* Router.swift in Sources */,
+				0B7F05DC2B4710C200AAC7A7 /* AboutViewController.swift in Sources */,
+				0B7F05B22B45E6EB00AAC7A7 /* ProfileRouter.swift in Sources */,
 				779C13F72B44193200EC849D /* UIApplication+Extension.swift in Sources */,
+				0B7F05A92B4599B200AAC7A7 /* PrivacyInfo.swift in Sources */,
 				7718F3672B3CD7D7007F5E49 /* MovieListAssembly.swift in Sources */,
 				77C997C92B3C151300D39210 /* ErrorPresenting.swift in Sources */,
 				77DFB2082B3F705600167D3A /* MovieDetailAssembly.swift in Sources */,
@@ -840,6 +1001,7 @@
 				0B7F05992B3C6AEA00AAC7A7 /* OnboardingModel.swift in Sources */,
 				0B7F055A2B3986D800AAC7A7 /* TreeViewController.swift in Sources */,
 				77DFB2112B3F8CC800167D3A /* NavigationController.swift in Sources */,
+				0B7F05C42B467D9000AAC7A7 /* EditProfileViewController.swift in Sources */,
 				77C997B82B3B7A8C00D39210 /* Configurable.swift in Sources */,
 				0B7F05642B3AD50C00AAC7A7 /* ProfilePresenter.swift in Sources */,
 				0B7F05732B3B6DB100AAC7A7 /* TabBarController.swift in Sources */,
@@ -855,9 +1017,19 @@
 		0B7F04F82B38715000AAC7A7 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				0B7F04F92B38715000AAC7A7 /* Base */,
+				0BE74A9A2B4828F3002ADDAC /* en */,
+				0BE74A9B2B482900002ADDAC /* ru */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		0BE74AA02B482959002ADDAC /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0BE74A9F2B482959002ADDAC /* en */,
+				0BE74AA12B48295C002ADDAC /* ru */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -868,6 +1040,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -931,6 +1104,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
