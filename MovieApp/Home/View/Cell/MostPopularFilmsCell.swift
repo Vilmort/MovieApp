@@ -6,13 +6,14 @@
 //
 
 import UIKit
-
+import KPNetwork
+import Kingfisher
 class MostPopularFilmsCell:UICollectionViewCell{
     
     // MARK: - Variables
     static let identifier = "MostPopularFilmsCell"
     // MARK: - UI Components
-    private let titleMostPopularFilms = UILabel.makeLabel(font: .montserratSemiBold(ofSize: 14), color: .white, numberOfLines: 0)
+    private let titleMostPopularFilms = UILabel.makeLabel(font: .montserratSemiBold(ofSize: 14), color: .white, numberOfLines: 2)
     private let subtitleMostPopularFilms  = UILabel.makeLabel(font: .montserratMedium(ofSize: 10), color: .appTextGrey)
     private let imageMostPopularFilms :UIImageView = {
         let imageView = UIImageView()
@@ -32,11 +33,19 @@ class MostPopularFilmsCell:UICollectionViewCell{
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    func configure(for category:MostPopularFilmsModel){
-        titleMostPopularFilms.text = category.title
-        subtitleMostPopularFilms.text = category.subTitle
-        imageMostPopularFilms.image = UIImage(named: category.image)
-        starImageMostPopularFilms.image = UIImage(named: category.startImage)
+
+    func configure(with category:KPMovieSearchEntity.KPSearchMovie){
+        titleMostPopularFilms.text = category.name
+        subtitleMostPopularFilms.text = category.genres?[0].name?.capitalized
+        if let urlString = category.poster?.previewUrl{
+            let url = URL(string: urlString)
+            let image = imageMostPopularFilms.kf.setImage(with: url)
+            
+        }
+        if let rating = category.rating?.kp{
+            starImageMostPopularFilms.starTitleMostPopularFilms.text = String(format: "%.1f", rating)
+        }
+        
     }
     //MARK: - UI Setup
     private func setupUI(){
@@ -61,7 +70,7 @@ class MostPopularFilmsCell:UICollectionViewCell{
             
             subtitleMostPopularFilms.topAnchor.constraint(equalTo: titleMostPopularFilms.bottomAnchor, constant: 5),
             subtitleMostPopularFilms.leadingAnchor.constraint(equalTo: self.leadingAnchor,constant: 10),
-            subtitleMostPopularFilms.widthAnchor.constraint(equalToConstant: 34),
+            subtitleMostPopularFilms.widthAnchor.constraint(equalToConstant: 120),
             subtitleMostPopularFilms.heightAnchor.constraint(equalToConstant: 12),
             
             starImageMostPopularFilms.topAnchor.constraint(equalTo: imageMostPopularFilms.topAnchor,constant: 8),

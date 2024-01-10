@@ -10,7 +10,7 @@ import UIKit
 class MostPopularFilmsView:UIImageView{
     
     // MARK: - UI Components
-    private let starTitleMostPopularFilms:UILabel = .makeLabel(font: .montserratSemiBold(ofSize: 12), color:.appOrange)
+     let starTitleMostPopularFilms:UILabel = .makeLabel(font: .montserratSemiBold(ofSize: 12), color:.appOrange)
     
     private let starImageMostPopularFilms :UIImageView = {
         var imageView = UIImageView()

@@ -8,11 +8,11 @@
 
 import UIKit
 
-protocol HomeViewProtocol2: UIView {
+protocol HomeViewProtocol: UIView {
     var collectionView: UICollectionView { get }
 }
 
-final class HomeCollectionView: UIView, HomeViewProtocol2 {
+final class HomeCollectionView: UIView, HomeViewProtocol {
     
     //MARK: - Public properties
     let collectionView: UICollectionView = makeCollection()

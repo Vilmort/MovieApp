@@ -9,7 +9,7 @@ import Foundation
 import KPNetwork
 
 //MARK: - HomePresenterProtocol
-protocol HomePresenterProtocolMy: AnyObject {
+protocol HomePresenterProtocol: AnyObject {
     func viewDidLoad()
     func viewDidDisappear()
     func didSelectReceipt(at indexPath: IndexPath)
@@ -20,7 +20,7 @@ protocol HomePresenterDelegate: AnyObject {
 
 }
 
-final class HomePresenterMy: HomePresenterProtocolMy {
+final class HomePresenter: HomePresenterProtocol {
     weak var view: HomeVCProtocol?
     private let networkService: KPNetworkClient
     private var lists = [KPListSearchEntity.KPList]()

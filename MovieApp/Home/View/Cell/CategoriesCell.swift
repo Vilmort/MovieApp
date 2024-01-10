@@ -26,9 +26,8 @@ class CategoriesCell:UICollectionViewCell{
     }
     func configure(for category:KPMovieSearchEntity.KPSearchMovie){
         layer.cornerRadius = 15
-        
         titleCategories.text = category.genres?[0].name?.capitalized
-      
+        
     }
 
     //MARK: - UI Setup
