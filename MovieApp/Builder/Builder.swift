@@ -20,8 +20,10 @@ final class Builder {
     
 // Home
     static func createHome() -> UIViewController {
-        let view = HomeViewController()
-        let presenter = HomePresenter(view: view)
+        
+        let presenter = HomePresenter(networkService: DIContainer.shared.networkService)
+        let view = HomeViewController(homeView: HomeCollectionView(), presenter: presenter)
+        presenter.view = view
         view.presenter = presenter
         return view
     }
