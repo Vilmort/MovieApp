@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import KPNetwork
 
 class CategoriesCell:UICollectionViewCell{
     
@@ -23,11 +24,13 @@ class CategoriesCell:UICollectionViewCell{
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    func configure(for category:CategoriesModel){
+    func configure(for category:KPMovieSearchEntity.KPSearchMovie){
         layer.cornerRadius = 15
-        titleCategories.text = category.title
-
+        
+        titleCategories.text = category.genres?[0].name?.capitalized
+      
     }
+
     //MARK: - UI Setup
     private func setupUI(){
         self.addSubviews(titleCategories)        

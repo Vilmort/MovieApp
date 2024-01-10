@@ -10,6 +10,7 @@ import KPNetwork
 
 protocol HomeVCProtocol: AnyObject, LoadingPresenting, ErrorPresenting  {
     func updateUI(lists: [KPListSearchEntity.KPList])
+    func updateGenres(genres: [KPMovieSearchEntity.KPSearchMovie])
 }
 
 final class HomeViewControllerMy: ViewController {
@@ -27,7 +28,8 @@ final class HomeViewControllerMy: ViewController {
                                                     .thirdPopulaFilm]
 
     var lists = [KPListSearchEntity.KPList]()
-    
+    var genres = [KPMovieSearchEntity.KPSearchMovie]()
+
     //MARK: - init(_:)
     init(
         homeView: HomeViewProtocol2,
@@ -79,7 +81,7 @@ final class HomeViewControllerMy: ViewController {
         )
         
         snapshot.appendItems(
-            CategoriesArray.map(Item.categories),
+            genres.map(Item.categories),
             toSection: .genres
         )
         
@@ -122,7 +124,7 @@ extension HomeViewControllerMy {
     
      enum Item: Hashable {
         case popularCategories(KPListSearchEntity.KPList)
-        case categories(CategoriesModel)
+        case categories(KPMovieSearchEntity.KPSearchMovie)
         case mostPopular(MostPopularFilmsModel)
     }
 }
@@ -166,7 +168,7 @@ private extension HomeViewControllerMy {
         }
     }
     
-    func makeGenreCellRegistration() -> UICollectionView.CellRegistration<CategoriesCell, CategoriesModel> {
+    func makeGenreCellRegistration() -> UICollectionView.CellRegistration<CategoriesCell, KPMovieSearchEntity.KPSearchMovie> {
         .init {  cell, _, genre in
             cell.configure(for: genre)
         }
@@ -202,9 +204,14 @@ private extension HomeViewControllerMy {
     }
 }
 extension HomeViewControllerMy: HomeVCProtocol {
+    
     func updateUI(lists: [KPListSearchEntity.KPList]) {
         self.lists = lists
 collectionDidLoad()
+    }
+    func updateGenres(genres: [KPMovieSearchEntity.KPSearchMovie]) {
+        self.genres = genres
+        collectionDidLoad()
     }
 }
 

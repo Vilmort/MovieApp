@@ -13,7 +13,7 @@ public struct KPImage: Decodable, Equatable, Hashable {
     public let type: String?
 }
 
-public enum KPMovieType: String, Decodable {
+public enum KPMovieType: String, Decodable, Equatable, Hashable {
     case movie
     case tvSeries = "tv-series"
     case anime
@@ -21,13 +21,13 @@ public enum KPMovieType: String, Decodable {
     case animatedSeries = "animated-series"
 }
 
-public struct KPName: Decodable {
+public struct KPName: Decodable, Equatable, Hashable {
     public let name: String?
     public let language: String?
     public let type: String?
 }
 
-public struct KPRating: Decodable {
+public struct KPRating: Decodable, Equatable, Hashable {
     public let kp: Double?
     public let imdb: Double?
     public let filmCritics: Double?
@@ -35,7 +35,7 @@ public struct KPRating: Decodable {
     public let await: Double?
 }
 
-public struct KPVotes: Decodable {
+public struct KPVotes: Decodable , Equatable, Hashable{
     public let kp: Double?
     public let imdb: Double?
     public let filmCritics: Double?

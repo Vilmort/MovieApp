@@ -224,7 +224,7 @@ final class HomeViewController: UIViewController, HomeViewProtocol {
                 return cell
             case .categories(let model):
                 guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoriesCell.identifier, for: indexPath) as? CategoriesCell else {return UICollectionViewCell()}
-                cell.configure(for: model)
+//                cell.configure(for: model)
                 cell.layer.cornerRadius = 8
                 cell.backgroundColor = .appGreen
                 return cell

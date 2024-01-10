@@ -7,14 +7,14 @@
 
 import Foundation
 
-public struct KPMovieSearchEntity: Decodable {
+public struct KPMovieSearchEntity: Decodable, Equatable, Hashable {
     public let docs: [KPSearchMovie]
     public let total: Int
     public let limit: Int
     public let page: Int
     public let pages: Int
     
-    public struct KPSearchMovie: Decodable {
+    public struct KPSearchMovie: Decodable, Equatable, Hashable{
         public let id: Int
         public let name: String?
         public let alternativeName: String?
