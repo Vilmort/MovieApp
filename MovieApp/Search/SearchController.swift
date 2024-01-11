@@ -136,5 +136,6 @@ extension SearchController {
         let emptyQuery: Bool
         
         let didSelectMovie: ((Int) -> Void)?
+        let didSelectArtist: ((Int) -> Void)?
     }
 }

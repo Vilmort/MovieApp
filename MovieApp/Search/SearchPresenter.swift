@@ -28,14 +28,14 @@ final class SearchPresenter: SearchPresenterProtocol {
         guard !hasData else {
             return
         }
-        view.update(with: .init(movies: [], artists: [], emptyQuery: true, didSelectMovie: nil))
+        view.update(with: .init(movies: [], artists: [], emptyQuery: true, didSelectMovie: nil, didSelectArtist: nil))
     }
     
     func didEnterQuery(_ text: String?) {
         hasData = true
         view?.hideError()
         guard let text, !text.isEmpty else {
-            view?.update(with: .init(movies: [], artists: [], emptyQuery: true, didSelectMovie: nil))
+            view?.update(with: .init(movies: [], artists: [], emptyQuery: true, didSelectMovie: nil, didSelectArtist: nil))
             return
         }
         Task {
@@ -100,6 +100,11 @@ final class SearchPresenter: SearchPresenterProtocol {
                     [weak self] id in
                     
                     self?.router?.showMovieDetail(id)
+                },
+                didSelectArtist: {
+                    [weak self] id in
+                    
+                    self?.router?.showArtist(id)
                 }
             )
         )

@@ -12,6 +12,10 @@ final class MovieDetailRouter: Router, MovieDetailRouterProtocol {
         pushScreen(MovieDetailAssembly(id: id).build())
     }
     
+    func showArtist(_ id: Int) {
+        presentScreen(ArtistsAssembly(id: id).build())
+    }
+    
     func showMovieWebview(_ id: Int) {
         guard let url = URL(string: "https://www.kinopoisk.vip/film/\(id)") else {
             return

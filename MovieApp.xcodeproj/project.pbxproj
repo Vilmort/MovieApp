@@ -94,6 +94,11 @@
 		773BB9722B3C43F100AD0412 /* error.json in Resources */ = {isa = PBXBuildFile; fileRef = 773BB9702B3C43F100AD0412 /* error.json */; };
 		773BB9732B3C43F100AD0412 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 773BB9712B3C43F100AD0412 /* loading.json */; };
 		77584CF82B5085BC008D631D /* SearchBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77584CF72B5085BB008D631D /* SearchBuilder.swift */; };
+		77584D012B50A2A8008D631D /* ArtistProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77584D002B50A2A8008D631D /* ArtistProtocols.swift */; };
+		77584D032B50A2AE008D631D /* ArtistController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77584D022B50A2AE008D631D /* ArtistController.swift */; };
+		77584D052B50A2B5008D631D /* ArtistPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77584D042B50A2B5008D631D /* ArtistPresenter.swift */; };
+		77584D072B50A2CF008D631D /* ArtistRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77584D062B50A2CF008D631D /* ArtistRouter.swift */; };
+		77584D092B50A2D5008D631D /* ArtistsAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77584D082B50A2D5008D631D /* ArtistsAssembly.swift */; };
 		779C13DB2B43537800EC849D /* CollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779C13DA2B43537800EC849D /* CollectionReusableView.swift */; };
 		779C13DD2B435BE600EC849D /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779C13DC2B435BE600EC849D /* String+Extension.swift */; };
 		779C13DF2B435DAD00EC849D /* SpoilerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779C13DE2B435DAD00EC849D /* SpoilerView.swift */; };
@@ -272,6 +277,11 @@
 		773BB9702B3C43F100AD0412 /* error.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = error.json; sourceTree = "<group>"; };
 		773BB9712B3C43F100AD0412 /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
 		77584CF72B5085BB008D631D /* SearchBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBuilder.swift; sourceTree = "<group>"; };
+		77584D002B50A2A8008D631D /* ArtistProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistProtocols.swift; sourceTree = "<group>"; };
+		77584D022B50A2AE008D631D /* ArtistController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistController.swift; sourceTree = "<group>"; };
+		77584D042B50A2B5008D631D /* ArtistPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistPresenter.swift; sourceTree = "<group>"; };
+		77584D062B50A2CF008D631D /* ArtistRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistRouter.swift; sourceTree = "<group>"; };
+		77584D082B50A2D5008D631D /* ArtistsAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistsAssembly.swift; sourceTree = "<group>"; };
 		779C13DA2B43537800EC849D /* CollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionReusableView.swift; sourceTree = "<group>"; };
 		779C13DC2B435BE600EC849D /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		779C13DE2B435DAD00EC849D /* SpoilerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpoilerView.swift; sourceTree = "<group>"; };
@@ -393,6 +403,7 @@
 				0B7F05032B38723800AAC7A7 /* Extensions */,
 				0B7F05022B38722A00AAC7A7 /* Aplication */,
 				77C997A12B3B72C500D39210 /* Base */,
+				77584CFF2B50A297008D631D /* Artist */,
 			);
 			path = MovieApp;
 			sourceTree = "<group>";
@@ -691,6 +702,18 @@
 				773049702B4F5B25004FF857 /* HomeMovieView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		77584CFF2B50A297008D631D /* Artist */ = {
+			isa = PBXGroup;
+			children = (
+				77584D002B50A2A8008D631D /* ArtistProtocols.swift */,
+				77584D022B50A2AE008D631D /* ArtistController.swift */,
+				77584D042B50A2B5008D631D /* ArtistPresenter.swift */,
+				77584D062B50A2CF008D631D /* ArtistRouter.swift */,
+				77584D082B50A2D5008D631D /* ArtistsAssembly.swift */,
+			);
+			path = Artist;
 			sourceTree = "<group>";
 		};
 		77BA69EB2B4609B3003C6B4B /* Wishlist */ = {
@@ -1009,7 +1032,9 @@
 				7718F36B2B3CDA1A007F5E49 /* MovieView.swift in Sources */,
 				0B7F05D32B4705B000AAC7A7 /* NotificationsPresenter.swift in Sources */,
 				779C13F92B441A1B00EC849D /* MovieActionsView.swift in Sources */,
+				77584D092B50A2D5008D631D /* ArtistsAssembly.swift in Sources */,
 				77C997A02B3B72B100D39210 /* ModuleAssembly.swift in Sources */,
+				77584D052B50A2B5008D631D /* ArtistPresenter.swift in Sources */,
 				773049562B4F368A004FF857 /* HomeController.swift in Sources */,
 				77C997C52B3B8F0D00D39210 /* HorizontalPicker.swift in Sources */,
 				0B7F050C2B3873AF00AAC7A7 /* UIFont+.swift in Sources */,
@@ -1066,6 +1091,7 @@
 				0BE74AB52B4BFFDD002ADDAC /* LanguageViewController.swift in Sources */,
 				0B7F04F02B38714F00AAC7A7 /* SceneDelegate.swift in Sources */,
 				0B7F05DE2B4710D100AAC7A7 /* AboutUsPresenter.swift in Sources */,
+				77584D032B50A2AE008D631D /* ArtistController.swift in Sources */,
 				0B7F05AB2B459F4E00AAC7A7 /* UserView.swift in Sources */,
 				77E5D9442B50434200A8FC6A /* SearchProtocols.swift in Sources */,
 				0BE74ADA2B4C1A72002ADDAC /* NSCollectionLayoutSize+.swift in Sources */,
@@ -1073,8 +1099,10 @@
 				7718F36F2B3CDB8F007F5E49 /* UIImageView+Extension.swift in Sources */,
 				0B7F05AE2B45A7A400AAC7A7 /* GeneralView.swift in Sources */,
 				77BFC6422B4B4BE00029BDE8 /* SuggestionsProtocols.swift in Sources */,
+				77584D072B50A2CF008D631D /* ArtistRouter.swift in Sources */,
 				0B7F05152B38765800AAC7A7 /* Builder.swift in Sources */,
 				77C997BA2B3B7AAB00D39210 /* CollectionCell.swift in Sources */,
+				77584D012B50A2A8008D631D /* ArtistProtocols.swift in Sources */,
 				779C13F52B44151400EC849D /* MovieDetailBuilder.swift in Sources */,
 				77C997C72B3C11CD00D39210 /* Router.swift in Sources */,
 				77BFC6462B4B4BE70029BDE8 /* SuggestionsRouter.swift in Sources */,

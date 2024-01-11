@@ -19,6 +19,7 @@ final class SearchBuilder {
     private var dataSource: UICollectionViewDiffableDataSource<Section, Item>!
     private var snapshot = NSDiffableDataSourceSnapshot<Section, Item>()
     private var didSelectMovie: ((Int) -> Void)?
+    private var didSelectArtist: ((Int) -> Void)?
     
     init(_ collection: UICollectionView) {
         self.collection = collection
@@ -33,6 +34,8 @@ final class SearchBuilder {
     
     func reloadData(_ model: Model) {
         didSelectMovie = model.didSelectMovie
+        didSelectArtist = model.didSelectArtist
+        
         snapshot = NSDiffableDataSourceSnapshot<Section, Item>()
         if !model.artists.isEmpty {
             snapshot.appendSections([.artists])
@@ -76,7 +79,10 @@ final class SearchBuilder {
                             title: .init(text: self?.makeArtistNameString(artist.name) ?? NSAttributedString(), numberOfLines: 2, textAlignment: .center),
                             spacing: 8,
                             axis: .vertical
-                        )
+                        ),
+                        didSelectHandler: {
+                            self?.didSelectArtist?(artist.id)
+                        }
                     )
                     return cell
                 }

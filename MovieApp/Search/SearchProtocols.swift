@@ -20,4 +20,5 @@ protocol SearchPresenterProtocol: AnyObject {
 
 protocol SearchRouterProtocol: AnyObject {
     func showMovieDetail(_ id: Int)
+    func showArtist(_ id: Int)
 }
