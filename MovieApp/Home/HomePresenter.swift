@@ -61,6 +61,10 @@ final class HomePresenter: HomePresenterProtocol {
         router?.showProfile()
     }
     
+    func didTapSearch() {
+        router?.showSearch()
+    }
+    
     @MainActor
     private func updateUI(onlyPopular: Bool = false) {
         guard let listsResponse, let moviesResponse else {

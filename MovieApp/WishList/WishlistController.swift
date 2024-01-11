@@ -69,7 +69,6 @@ final class WishlistController: ViewController, WishlistControllerProtocol {
             with: .init(
                 image: .init(image: .folder, renderingMode: .alwaysOriginal, tintColor: nil),
                 title: .init(text: "There is no movie yet!", font: .montserratSemiBold(ofSize: 16), textColor: .white, numberOfLines: 0, alignment: .center),
-                subtitle: .init(text: "Find your movie by Type title, categories, years, etc", font: .montserratMedium(ofSize: 12), textColor: .white, numberOfLines: 0, alignment: .center),
                 spacing: 16,
                 axis: .vertical
             )

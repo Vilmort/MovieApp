@@ -23,6 +23,7 @@
 		77D1BAF32B3A2694001C5F99 /* KPNetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D1BAF22B3A2694001C5F99 /* KPNetworkRequest.swift */; };
 		77D1BAF52B3A31CD001C5F99 /* KPMovieRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D1BAF42B3A31CD001C5F99 /* KPMovieRequest.swift */; };
 		77D1BAF82B3A31DC001C5F99 /* KPMovieEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D1BAF72B3A31DC001C5F99 /* KPMovieEntity.swift */; };
+		77E5D94E2B50628400A8FC6A /* KPMovieSearchTitleRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E5D94D2B50628400A8FC6A /* KPMovieSearchTitleRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		77D1BAF22B3A2694001C5F99 /* KPNetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KPNetworkRequest.swift; sourceTree = "<group>"; };
 		77D1BAF42B3A31CD001C5F99 /* KPMovieRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KPMovieRequest.swift; sourceTree = "<group>"; };
 		77D1BAF72B3A31DC001C5F99 /* KPMovieEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KPMovieEntity.swift; sourceTree = "<group>"; };
+		77E5D94D2B50628400A8FC6A /* KPMovieSearchTitleRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KPMovieSearchTitleRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 				7730496B2B4F4E44004FF857 /* KPPossibleValuesRequest.swift */,
 				77D1BAF42B3A31CD001C5F99 /* KPMovieRequest.swift */,
 				770178592B3B183F00874D42 /* KPMovieSearchRequest.swift */,
+				77E5D94D2B50628400A8FC6A /* KPMovieSearchTitleRequest.swift */,
 				770178652B3B27A600874D42 /* KPListSearchRequest.swift */,
 				779C13FA2B44232C00EC849D /* KPImagesRequest.swift */,
 			);
@@ -255,6 +258,7 @@
 				7730496C2B4F4E44004FF857 /* KPPossibleValuesRequest.swift in Sources */,
 				770178622B3B255E00874D42 /* KPListSearchEntity.swift in Sources */,
 				770178662B3B27A600874D42 /* KPListSearchRequest.swift in Sources */,
+				77E5D94E2B50628400A8FC6A /* KPMovieSearchTitleRequest.swift in Sources */,
 				779C13FB2B44232C00EC849D /* KPImagesRequest.swift in Sources */,
 				770178582B3B183500874D42 /* KPMovieSearchEntity.swift in Sources */,
 				779C13FD2B4423F100EC849D /* KPImagesEntity.swift in Sources */,

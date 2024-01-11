@@ -73,4 +73,8 @@ extension ViewController: ErrorPresenting {
         errorView.backgroundColor = view.backgroundColor
         errorView.animation.play()
     }
+    
+    func hideError() {
+        errorView.removeFromSuperview()
+    }
 }

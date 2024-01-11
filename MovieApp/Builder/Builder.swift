@@ -25,10 +25,7 @@ final class Builder {
     
     // Search
     static func createSearch() -> UIViewController {
-        let view = SearchViewController()
-        let presenter = SearchPresenter(view: view)
-        view.presenter = presenter
-        return view
+        SearchAssembly().build()
     }
     
     // Tree
