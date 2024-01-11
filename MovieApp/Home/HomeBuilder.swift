@@ -89,17 +89,6 @@ final class HomeBuilder: NSObject, UICollectionViewDelegate, UICollectionViewDat
         }
     }
     
-    func reloadPopularMovies(_ model: HomeController.Model.PopularMovies) {
-        sections[2] = .popularMovies(
-            model: model,
-            header: .init(
-                title: "Popular movies",
-                seeAll: model.seeAllHandler
-            )
-        )
-        collection.reloadData()
-    }
-    
     func makeLayout() -> UICollectionViewCompositionalLayout {
         .init {
             sectionIndex, _ in
