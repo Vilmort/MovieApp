@@ -26,6 +26,7 @@ final class HomeBuilder: NSObject, UICollectionViewDelegate, UICollectionViewDat
         collection.register(CategoryCell.self, forCellWithReuseIdentifier: String(describing: CategoryCell.self))
         collection.register(GenresCell.self, forCellWithReuseIdentifier: String(describing: GenresCell.self))
         collection.register(MovieCell.self, forCellWithReuseIdentifier: String(describing: MovieCell.self))
+        collection.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "test")
         collection.register(TextButtonHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: String(describing: TextButtonHeader.self))
     }
     
@@ -116,17 +117,36 @@ final class HomeBuilder: NSObject, UICollectionViewDelegate, UICollectionViewDat
                 section = NSCollectionLayoutSection(group: group)
                 section.contentInsets = .init(top: 0, leading: 16, bottom: 0, trailing: 16)
                 section.interGroupSpacing = 12
-                section.boundarySupplementaryItems = [.init(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .estimated(1)), elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)]
+                section.boundarySupplementaryItems = [.init(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .absolute(52)), elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)]
                 section.orthogonalScrollingBehavior = .continuous
             case .genres:
-                section.boundarySupplementaryItems = [.init(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .estimated(1)), elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)]
+                item = NSCollectionLayoutItem(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1)))
+                group = NSCollectionLayoutGroup.horizontal(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .absolute(39)), subitems: [item])
+                section = NSCollectionLayoutSection(group: group)
+                section.boundarySupplementaryItems = [.init(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .absolute(52)), elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)]
             case .categories:
                 item = NSCollectionLayoutItem(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1)))
                 group = NSCollectionLayoutGroup.horizontal(layoutSize: .init(widthDimension: .fractionalWidth(0.78), heightDimension: .fractionalWidth(0.41)), subitems: [item])
                 section = NSCollectionLayoutSection(group: group)
                 section.orthogonalScrollingBehavior = .groupPagingCentered
                 section.interGroupSpacing = 12
-                section.boundarySupplementaryItems = [.init(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .estimated(1)), elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)]
+                section.boundarySupplementaryItems = [.init(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .absolute(52)), elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)]
+                section.visibleItemsInvalidationHandler = {
+                    (items, offset, environment) in
+                    
+                    items.forEach { item in
+                        
+                        guard item.representedElementKind == nil else {
+                            return
+                        }
+                        
+                        let distanceFromCenter = abs((item.frame.midX - offset.x) - environment.container.contentSize.width / 2)
+                        let minScale: CGFloat = 0.9
+                        let maxScale: CGFloat = 1
+                        let scale = max(maxScale - (distanceFromCenter / environment.container.contentSize.width) * 0.2, minScale)
+                        item.transform = CGAffineTransform(scaleX: 1, y: scale)
+                    }
+                }
             }
             return section
         }
