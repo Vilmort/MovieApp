@@ -11,11 +11,12 @@ final class HomeMovieView: CustomView {
     private let imageView = UIImageView()
     private let nameLabel = UILabel()
     private let genreLabel = UILabel()
+    private let ratingView = MovieRatingSmallView()
     
     override func configure() {
         backgroundColor = .appSoft
         
-        addSubviews(imageView, nameLabel, genreLabel)
+        addSubviews(imageView, nameLabel, genreLabel, ratingView)
         
         imageView.snp.makeConstraints {
             $0.top.leading.bottom.equalToSuperview()
@@ -32,6 +33,10 @@ final class HomeMovieView: CustomView {
             $0.bottom.equalToSuperview().offset(-12)
             $0.height.greaterThanOrEqualTo(12)
         }
+        
+        ratingView.snp.makeConstraints {
+            $0.top.trailing.equalToSuperview().inset(8)
+        }
     }
 }
 
@@ -40,11 +45,15 @@ extension HomeMovieView: Configurable {
         let image: UIImageView.Model
         let name: UILabel.Model
         let genre: UILabel.Model
+        let rating: Double?
     }
     
     func update(with model: Model?) {
         imageView.update(with: model?.image)
         nameLabel.update(with: model?.name)
         genreLabel.update(with: model?.genre)
+        
+        ratingView.isHidden = model?.rating == nil
+        ratingView.update(with: .init(rating: model?.rating ?? 0))
     }
 }

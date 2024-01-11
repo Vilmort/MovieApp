@@ -186,7 +186,8 @@ final class HomeBuilder: NSObject, UICollectionViewDelegate, UICollectionViewDat
                 with: .init(
                     image: .init(image: nil, url: movie.imageURL, tintColor: nil, contenMode: .scaleAspectFill, size: CGSize(width: 135, height: 178)),
                     name: .init(text: movie.title, font: .montserratSemiBold(ofSize: 14), textColor: .white, numberOfLines: 1),
-                    genre: .init(text: movie.genre ?? "", font: .montserratMedium(ofSize: 10), textColor: .appTextGrey, numberOfLines: 1)
+                    genre: .init(text: movie.genre ?? "", font: .montserratMedium(ofSize: 10), textColor: .appTextGrey, numberOfLines: 1),
+                    rating: movie.rating
                 ),
                 didSelectHandler: movie.didSelect
             )
