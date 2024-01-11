@@ -15,6 +15,7 @@ protocol HomePresenterProtocol: AnyObject {
     func activate()
     func didTapWishlistButton()
     func didTapProfile()
+    func didTapSearch()
 }
 
 protocol HomeRouterProtocol: AnyObject {
@@ -23,4 +24,5 @@ protocol HomeRouterProtocol: AnyObject {
     func showMovieLists()
     func showWishlist()
     func showProfile()
+    func showSearch()
 }

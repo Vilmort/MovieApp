@@ -14,4 +14,6 @@ protocol ErrorPresenting {
         actionTitle: String?,
         action: ((UIView) -> Void)?
     )
+    
+    func hideError()
 }

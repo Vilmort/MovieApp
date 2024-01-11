@@ -18,6 +18,7 @@ final class HomeController: ViewController, HomeViewProtocol {
         return cv
     }()
     private let profileView = ImageTitleSubtitleView()
+    private let searchTextField = SearchTextField()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,9 +53,20 @@ final class HomeController: ViewController, HomeViewProtocol {
     
     private func configure() {
         view.backgroundColor = .appDark
+        
+        view.addSubview(searchTextField)
+        searchTextField.snp.makeConstraints {
+            $0.top.equalTo(view.safeAreaLayoutGuide).offset(32)
+            $0.trailing.leading.equalToSuperview().inset(24)
+            $0.height.equalTo(41)
+        }
+        let tapGR = UITapGestureRecognizer(target: self, action: #selector(didTapSearch))
+        searchTextField.addGestureRecognizer(tapGR)
+        
         view.addSubview(collectionView)
         collectionView.snp.makeConstraints {
-            $0.edges.equalToSuperview()
+            $0.top.equalTo(searchTextField.snp.bottom)
+            $0.leading.trailing.bottom.equalToSuperview()
         }
     }
     
@@ -79,6 +91,11 @@ final class HomeController: ViewController, HomeViewProtocol {
     @objc
     private func didTapWishlistButton() {
         presenter.didTapWishlistButton()
+    }
+    
+    @objc
+    private func didTapSearch() {
+        presenter.didTapSearch()
     }
 }
 

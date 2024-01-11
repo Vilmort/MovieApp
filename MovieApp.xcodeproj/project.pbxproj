@@ -31,8 +31,6 @@
 		0B7F05482B39771500AAC7A7 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0B7F05472B39771500AAC7A7 /* Montserrat-SemiBold.ttf */; };
 		0B7F054A2B39772300AAC7A7 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0B7F05492B39772300AAC7A7 /* Montserrat-Regular.ttf */; };
 		0B7F054C2B39772D00AAC7A7 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0B7F054B2B39772D00AAC7A7 /* Montserrat-Medium.ttf */; };
-		0B7F05542B3985CC00AAC7A7 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F05532B3985CC00AAC7A7 /* SearchViewController.swift */; };
-		0B7F05582B39860B00AAC7A7 /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F05572B39860B00AAC7A7 /* SearchPresenter.swift */; };
 		0B7F055D2B39874C00AAC7A7 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F055C2B39874C00AAC7A7 /* ProfileViewController.swift */; };
 		0B7F05642B3AD50C00AAC7A7 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F05632B3AD50C00AAC7A7 /* ProfilePresenter.swift */; };
 		0B7F05722B3B6DB100AAC7A7 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F056F2B3B6DB100AAC7A7 /* TabBar.swift */; };
@@ -149,6 +147,13 @@
 		77DFB2082B3F705600167D3A /* MovieDetailAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DFB2072B3F705600167D3A /* MovieDetailAssembly.swift */; };
 		77DFB20A2B3F7D2E00167D3A /* MovieInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DFB2092B3F7D2E00167D3A /* MovieInfoView.swift */; };
 		77DFB2112B3F8CC800167D3A /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DFB2102B3F8CC800167D3A /* NavigationController.swift */; };
+		77E5D9442B50434200A8FC6A /* SearchProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E5D9432B50434200A8FC6A /* SearchProtocols.swift */; };
+		77E5D9462B5043CF00A8FC6A /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E5D9452B5043CF00A8FC6A /* SearchController.swift */; };
+		77E5D9482B50483F00A8FC6A /* SearchAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E5D9472B50483F00A8FC6A /* SearchAssembly.swift */; };
+		77E5D94A2B505A3400A8FC6A /* SearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E5D9492B505A3400A8FC6A /* SearchTextField.swift */; };
+		77E5D94C2B5060DF00A8FC6A /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E5D94B2B5060DF00A8FC6A /* SearchPresenter.swift */; };
+		77E5D9502B5064AE00A8FC6A /* SearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E5D94F2B5064AE00A8FC6A /* SearchRouter.swift */; };
+		77E5D9522B50695F00A8FC6A /* SearchTextFieldCancelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E5D9512B50695F00A8FC6A /* SearchTextFieldCancelView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -201,8 +206,6 @@
 		0B7F05472B39771500AAC7A7 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
 		0B7F05492B39772300AAC7A7 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		0B7F054B2B39772D00AAC7A7 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
-		0B7F05532B3985CC00AAC7A7 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		0B7F05572B39860B00AAC7A7 /* SearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
 		0B7F055C2B39874C00AAC7A7 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		0B7F05632B3AD50C00AAC7A7 /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
 		0B7F056F2B3B6DB100AAC7A7 /* TabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TabBar.swift; path = BubbleTabBar/TabBar.swift; sourceTree = "<group>"; };
@@ -321,6 +324,13 @@
 		77DFB2072B3F705600167D3A /* MovieDetailAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailAssembly.swift; sourceTree = "<group>"; };
 		77DFB2092B3F7D2E00167D3A /* MovieInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieInfoView.swift; sourceTree = "<group>"; };
 		77DFB2102B3F8CC800167D3A /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		77E5D9432B50434200A8FC6A /* SearchProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchProtocols.swift; sourceTree = "<group>"; };
+		77E5D9452B5043CF00A8FC6A /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
+		77E5D9472B50483F00A8FC6A /* SearchAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAssembly.swift; sourceTree = "<group>"; };
+		77E5D9492B505A3400A8FC6A /* SearchTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTextField.swift; sourceTree = "<group>"; };
+		77E5D94B2B5060DF00A8FC6A /* SearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
+		77E5D94F2B5064AE00A8FC6A /* SearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRouter.swift; sourceTree = "<group>"; };
+		77E5D9512B50695F00A8FC6A /* SearchTextFieldCancelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTextFieldCancelView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -468,8 +478,11 @@
 		0B7F05312B387C5800AAC7A7 /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				0B7F05562B3985E200AAC7A7 /* Presenter */,
-				0B7F05552B3985D800AAC7A7 /* View */,
+				77E5D9432B50434200A8FC6A /* SearchProtocols.swift */,
+				77E5D94B2B5060DF00A8FC6A /* SearchPresenter.swift */,
+				77E5D94F2B5064AE00A8FC6A /* SearchRouter.swift */,
+				77E5D9452B5043CF00A8FC6A /* SearchController.swift */,
+				77E5D9472B50483F00A8FC6A /* SearchAssembly.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -526,22 +539,6 @@
 				0B7F05432B3976EE00AAC7A7 /* Montserrat-Bold.ttf */,
 			);
 			path = Fonts;
-			sourceTree = "<group>";
-		};
-		0B7F05552B3985D800AAC7A7 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				0B7F05532B3985CC00AAC7A7 /* SearchViewController.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		0B7F05562B3985E200AAC7A7 /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				0B7F05572B39860B00AAC7A7 /* SearchPresenter.swift */,
-			);
-			path = Presenter;
 			sourceTree = "<group>";
 		};
 		0B7F055E2B39877F00AAC7A7 /* View */ = {
@@ -798,6 +795,8 @@
 				779C13F82B441A1B00EC849D /* MovieActionsView.swift */,
 				77BA69DF2B44C65B003C6B4B /* ShareView.swift */,
 				773049652B4F3A71004FF857 /* LabelButtonView.swift */,
+				77E5D9492B505A3400A8FC6A /* SearchTextField.swift */,
+				77E5D9512B50695F00A8FC6A /* SearchTextFieldCancelView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -986,12 +985,14 @@
 				77C997A72B3B73BB00D39210 /* LoadingPresenting.swift in Sources */,
 				0B7F05102B3873EE00AAC7A7 /* UILabel+.swift in Sources */,
 				0B7F050A2B38739200AAC7A7 /* UIView+.swift in Sources */,
+				77E5D9502B5064AE00A8FC6A /* SearchRouter.swift in Sources */,
 				77C997BE2B3B7C9B00D39210 /* SpaceView.swift in Sources */,
+				77E5D9462B5043CF00A8FC6A /* SearchController.swift in Sources */,
 				7730495C2B4F3696004FF857 /* HomeAssembly.swift in Sources */,
 				77BA69F32B4609CB003C6B4B /* WishlistAssembly.swift in Sources */,
+				77E5D9522B50695F00A8FC6A /* SearchTextFieldCancelView.swift in Sources */,
 				77DFB2022B3F704100167D3A /* MovieDetailController.swift in Sources */,
 				7718F3712B3CDE1E007F5E49 /* MovieRatingSmallView.swift in Sources */,
-				0B7F05582B39860B00AAC7A7 /* SearchPresenter.swift in Sources */,
 				7718F3602B3CD77F007F5E49 /* MovieListPresenter.swift in Sources */,
 				0B7F059A2B3C6AEA00AAC7A7 /* OnboardingViewController.swift in Sources */,
 				0B7F05B02B45A89C00AAC7A7 /* CustomSettingsView.swift in Sources */,
@@ -1038,11 +1039,13 @@
 				0BE74AB32B4BFFB9002ADDAC /* EditProfilePresenter.swift in Sources */,
 				77D1BB4A2B3AEC86001C5F99 /* DIContainer.swift in Sources */,
 				779C13DF2B435DAD00EC849D /* SpoilerView.swift in Sources */,
+				77E5D9482B50483F00A8FC6A /* SearchAssembly.swift in Sources */,
 				77C997982B3B724800D39210 /* MovieListsPresenter.swift in Sources */,
 				0B7F05D92B4709B900AAC7A7 /* LanguageCell.swift in Sources */,
 				77C997CB2B3C157000D39210 /* ErrorView.swift in Sources */,
 				773049542B4F3681004FF857 /* HomeProtocols.swift in Sources */,
 				0B7F05CF2B47018500AAC7A7 /* OnboardingRouter.swift in Sources */,
+				77E5D94A2B505A3400A8FC6A /* SearchTextField.swift in Sources */,
 				0B7F04EE2B38714F00AAC7A7 /* AppDelegate.swift in Sources */,
 				7718F3652B3CD7C7007F5E49 /* MovieListRouter.swift in Sources */,
 				779C13E62B43F94F00EC849D /* GradientView.swift in Sources */,
@@ -1053,12 +1056,14 @@
 				0B7F05E22B47136100AAC7A7 /* Team.swift in Sources */,
 				0B7F05742B3B6DB100AAC7A7 /* TabBarButton.swift in Sources */,
 				0BE74AB12B4BFFA4002ADDAC /* ProfileRouter.swift in Sources */,
+				77E5D94C2B5060DF00A8FC6A /* SearchPresenter.swift in Sources */,
 				77BA69F12B4609C6003C6B4B /* WishlistRouter.swift in Sources */,
 				77C997A52B3B736A00D39210 /* ViewController.swift in Sources */,
 				0BE74AB52B4BFFDD002ADDAC /* LanguageViewController.swift in Sources */,
 				0B7F04F02B38714F00AAC7A7 /* SceneDelegate.swift in Sources */,
 				0B7F05DE2B4710D100AAC7A7 /* AboutUsPresenter.swift in Sources */,
 				0B7F05AB2B459F4E00AAC7A7 /* UserView.swift in Sources */,
+				77E5D9442B50434200A8FC6A /* SearchProtocols.swift in Sources */,
 				0BE74ADA2B4C1A72002ADDAC /* NSCollectionLayoutSize+.swift in Sources */,
 				0B7F05CD2B46D91300AAC7A7 /* User.swift in Sources */,
 				7718F36F2B3CDB8F007F5E49 /* UIImageView+Extension.swift in Sources */,
@@ -1091,7 +1096,6 @@
 				0B7F05642B3AD50C00AAC7A7 /* ProfilePresenter.swift in Sources */,
 				773049682B4F41B7004FF857 /* HomeCategoryView.swift in Sources */,
 				0B7F05732B3B6DB100AAC7A7 /* TabBarController.swift in Sources */,
-				0B7F05542B3985CC00AAC7A7 /* SearchViewController.swift in Sources */,
 				0BE74AB72B4BFFF0002ADDAC /* AboutViewController.swift in Sources */,
 				77C997AD2B3B74C800D39210 /* LoadingView.swift in Sources */,
 				0B7F05722B3B6DB100AAC7A7 /* TabBar.swift in Sources */,

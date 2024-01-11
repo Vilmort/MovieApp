@@ -5,7 +5,7 @@
 //  Created by Victor on 10.01.2024.
 //
 
-import Foundation
+import UIKit
 
 final class HomeRouter: Router, HomeRouterProtocol {
     func showMovieLists() {
@@ -29,5 +29,17 @@ final class HomeRouter: Router, HomeRouterProtocol {
             return
         }
         tabBarController.selectedIndex = (tabBarController.viewControllers?.count ?? 1) - 1
+    }
+    
+    func showSearch() {
+        guard let tabBarController = controller?.tabBarController else {
+            return
+        }
+        guard let searchNavController = tabBarController.viewControllers?[1] as? UINavigationController,
+                let searchPresenter = (searchNavController.viewControllers.first as? SearchController)?.presenter else {
+            return
+        }
+        searchPresenter.setNeedsKeyboard()
+        tabBarController.selectedIndex = 1
     }
 }
