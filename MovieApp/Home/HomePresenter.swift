@@ -8,6 +8,8 @@
 import Foundation
 import KPNetwork
 
+private typealias ProfileModel = HomeController.Model.Profile
+
 final class HomePresenter: HomePresenterProtocol {
     
     weak var view: HomeViewProtocol?
@@ -53,6 +55,10 @@ final class HomePresenter: HomePresenterProtocol {
     
     func didTapWishlistButton() {
         router?.showWishlist()
+    }
+    
+    func didTapProfile() {
+        router?.showProfile()
     }
     
     @MainActor
@@ -154,10 +160,15 @@ final class HomePresenter: HomePresenterProtocol {
                             genre: self?.selectedGenre
                         )
                     }
-                )
+                ), 
+                profile: makeProfile()
             ),
             onlyPopular: onlyPopular
         )
+    }
+    
+    private func makeProfile() -> ProfileModel {
+        .init(image: .profilePicture1, text: "Hello, Smith")
     }
     
     private func didSelectGenre(_ genre: String) {

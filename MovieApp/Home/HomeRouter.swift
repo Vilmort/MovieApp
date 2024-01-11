@@ -23,4 +23,11 @@ final class HomeRouter: Router, HomeRouterProtocol {
     func showWishlist() {
         pushScreen(WishlistAssembly().build())
     }
+    
+    func showProfile() {
+        guard let tabBarController = controller?.tabBarController else {
+            return
+        }
+        tabBarController.selectedIndex = (tabBarController.viewControllers?.count ?? 1) - 1
+    }
 }

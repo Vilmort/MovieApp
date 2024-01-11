@@ -14,6 +14,7 @@ protocol HomeViewProtocol: AnyObject, LoadingPresenting, ErrorPresenting {
 protocol HomePresenterProtocol: AnyObject {
     func activate()
     func didTapWishlistButton()
+    func didTapProfile()
 }
 
 protocol HomeRouterProtocol: AnyObject {
@@ -21,4 +22,5 @@ protocol HomeRouterProtocol: AnyObject {
     func showMovieList(title: String, slug: String?, genre: String?)
     func showMovieLists()
     func showWishlist()
+    func showProfile()
 }
