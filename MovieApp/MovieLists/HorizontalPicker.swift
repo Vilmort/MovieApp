@@ -80,6 +80,7 @@ extension HorizontalPicker: Configurable {
         }
         
         let items: [Item]
+        let preselectedIndex: Int
     }
     
     func update(with model: Model?) {
@@ -87,7 +88,9 @@ extension HorizontalPicker: Configurable {
             return
         }
         self.items = model.items
+        self.selectedIndex = model.preselectedIndex
         collectionView.reloadData()
+        collectionView.scrollToItem(at: IndexPath(row: selectedIndex, section: 0), at: .centeredHorizontally, animated: true)
     }
 }
 

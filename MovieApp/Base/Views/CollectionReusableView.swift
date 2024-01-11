@@ -25,8 +25,11 @@ final class CollectionReusableView<View: Configurable>: UICollectionReusableView
         view.update(with: nil)
     }
     
-    func update(with model: View.Model) {
+    func update(with model: View.Model, insets: UIEdgeInsets = .zero) {
         view.update(with: model)
+        view.snp.remakeConstraints {
+            $0.edges.equalToSuperview().inset(insets)
+        }
     }
     
     private func configure() {

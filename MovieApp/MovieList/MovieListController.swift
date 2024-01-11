@@ -57,7 +57,12 @@ final class MovieListController: ViewController, MovieListControllerProtocol {
         emptyImage.isHidden = !items.isEmpty
         
         if model.updateGenres {
-            horizontalPicker.update(with: .init(items: model.genres))
+            horizontalPicker.update(
+                with: .init(
+                    items: model.genres,
+                    preselectedIndex: model.genrePreselectedIndex
+                )
+            )
         }
     }
     
@@ -112,6 +117,7 @@ extension MovieListController {
         }
         let movies: [Movie]
         let genres: [HorizontalPicker.Model.Item]
+        let genrePreselectedIndex: Int
         let updateGenres: Bool
     }
     

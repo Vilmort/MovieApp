@@ -138,3 +138,8 @@ public struct KPWatchabilityItem: Decodable {
     public let logo: KPLogo?
     public let url: String?
 }
+
+public struct KPPossibleValue: Decodable {
+    public let name: String
+    public let slug: String
+}

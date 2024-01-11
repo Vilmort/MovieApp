@@ -20,12 +20,7 @@ final class Builder {
     
 // Home
     static func createHome() -> UIViewController {
-        
-        let presenter = HomePresenter(networkService: DIContainer.shared.networkService)
-        let view = HomeViewController(homeView: HomeCollectionView(), presenter: presenter, navigationAndSearchBarView: NavigationAndSearchBarView())
-        presenter.view = view
-        view.presenter = presenter
-        return view
+        HomeAssembly().build()
     }
     
     // Search

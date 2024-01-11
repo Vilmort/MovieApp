@@ -71,7 +71,6 @@
 		0BE74AB62B4BFFE0002ADDAC /* LanguagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F05D62B47098700AAC7A7 /* LanguagePresenter.swift */; };
 		0BE74AB72B4BFFF0002ADDAC /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F05DB2B4710C200AAC7A7 /* AboutViewController.swift */; };
 		0BE74ADA2B4C1A72002ADDAC /* NSCollectionLayoutSize+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE74AD92B4C1A72002ADDAC /* NSCollectionLayoutSize+.swift */; };
-		0BE74AE22B4C275E002ADDAC /* UICollectionView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE74AE12B4C275E002ADDAC /* UICollectionView+.swift */; };
 		7718F3602B3CD77F007F5E49 /* MovieListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7718F35F2B3CD77F007F5E49 /* MovieListPresenter.swift */; };
 		7718F3632B3CD7C3007F5E49 /* MovieListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7718F3622B3CD7C3007F5E49 /* MovieListController.swift */; };
 		7718F3652B3CD7C7007F5E49 /* MovieListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7718F3642B3CD7C7007F5E49 /* MovieListRouter.swift */; };
@@ -91,6 +90,9 @@
 		7730495A2B4F3691004FF857 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773049592B4F3691004FF857 /* HomeRouter.swift */; };
 		7730495C2B4F3696004FF857 /* HomeAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7730495B2B4F3696004FF857 /* HomeAssembly.swift */; };
 		7730495E2B4F3777004FF857 /* HomeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7730495D2B4F3777004FF857 /* HomeBuilder.swift */; };
+		773049662B4F3A71004FF857 /* LabelButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773049652B4F3A71004FF857 /* LabelButtonView.swift */; };
+		773049682B4F41B7004FF857 /* HomeCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773049672B4F41B7004FF857 /* HomeCategoryView.swift */; };
+		773049712B4F5B25004FF857 /* HomeMovieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773049702B4F5B25004FF857 /* HomeMovieView.swift */; };
 		773BB9722B3C43F100AD0412 /* error.json in Resources */ = {isa = PBXBuildFile; fileRef = 773BB9702B3C43F100AD0412 /* error.json */; };
 		773BB9732B3C43F100AD0412 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 773BB9712B3C43F100AD0412 /* loading.json */; };
 		779C13DB2B43537800EC849D /* CollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779C13DA2B43537800EC849D /* CollectionReusableView.swift */; };
@@ -243,7 +245,6 @@
 		0BE74AA22B4829CD002ADDAC /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		0BE74AAE2B4BFE00002ADDAC /* RealmService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
 		0BE74AD92B4C1A72002ADDAC /* NSCollectionLayoutSize+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSCollectionLayoutSize+.swift"; sourceTree = "<group>"; };
-		0BE74AE12B4C275E002ADDAC /* UICollectionView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+.swift"; sourceTree = "<group>"; };
 		7718F35F2B3CD77F007F5E49 /* MovieListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListPresenter.swift; sourceTree = "<group>"; };
 		7718F3622B3CD7C3007F5E49 /* MovieListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListController.swift; sourceTree = "<group>"; };
 		7718F3642B3CD7C7007F5E49 /* MovieListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListRouter.swift; sourceTree = "<group>"; };
@@ -261,6 +262,9 @@
 		773049592B4F3691004FF857 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		7730495B2B4F3696004FF857 /* HomeAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAssembly.swift; sourceTree = "<group>"; };
 		7730495D2B4F3777004FF857 /* HomeBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBuilder.swift; sourceTree = "<group>"; };
+		773049652B4F3A71004FF857 /* LabelButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelButtonView.swift; sourceTree = "<group>"; };
+		773049672B4F41B7004FF857 /* HomeCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCategoryView.swift; sourceTree = "<group>"; };
+		773049702B4F5B25004FF857 /* HomeMovieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMovieView.swift; sourceTree = "<group>"; };
 		773BB9702B3C43F100AD0412 /* error.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = error.json; sourceTree = "<group>"; };
 		773BB9712B3C43F100AD0412 /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
 		779C13DA2B43537800EC849D /* CollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionReusableView.swift; sourceTree = "<group>"; };
@@ -414,7 +418,6 @@
 				0B7F050F2B3873EE00AAC7A7 /* UILabel+.swift */,
 				0BE74AA22B4829CD002ADDAC /* String+.swift */,
 				0BE74AD92B4C1A72002ADDAC /* NSCollectionLayoutSize+.swift */,
-				0BE74AE12B4C275E002ADDAC /* UICollectionView+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -457,6 +460,7 @@
 				773049572B4F368E004FF857 /* HomePresenter.swift */,
 				7730495B2B4F3696004FF857 /* HomeAssembly.swift */,
 				7730495D2B4F3777004FF857 /* HomeBuilder.swift */,
+				7730496F2B4F5B1D004FF857 /* View */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -680,6 +684,15 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		7730496F2B4F5B1D004FF857 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				773049672B4F41B7004FF857 /* HomeCategoryView.swift */,
+				773049702B4F5B25004FF857 /* HomeMovieView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		77BA69EB2B4609B3003C6B4B /* Wishlist */ = {
 			isa = PBXGroup;
 			children = (
@@ -784,6 +797,7 @@
 				779C13EA2B43FCEA00EC849D /* YoutubeView.swift */,
 				779C13F82B441A1B00EC849D /* MovieActionsView.swift */,
 				77BA69DF2B44C65B003C6B4B /* ShareView.swift */,
+				773049652B4F3A71004FF857 /* LabelButtonView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1058,7 +1072,6 @@
 				779C13F72B44193200EC849D /* UIApplication+Extension.swift in Sources */,
 				0BE74AB22B4BFFB5002ADDAC /* EditProfileViewController.swift in Sources */,
 				0B7F05A92B4599B200AAC7A7 /* PrivacyInfo.swift in Sources */,
-				0BE74AE22B4C275E002ADDAC /* UICollectionView+.swift in Sources */,
 				7718F3672B3CD7D7007F5E49 /* MovieListAssembly.swift in Sources */,
 				0BE74AAF2B4BFE00002ADDAC /* RealmService.swift in Sources */,
 				77C997C92B3C151300D39210 /* ErrorPresenting.swift in Sources */,
@@ -1069,17 +1082,20 @@
 				77BA69ED2B4609BD003C6B4B /* WishlistPresenter.swift in Sources */,
 				77BFC6482B4B4BEC0029BDE8 /* SuggestionsAssembly.swift in Sources */,
 				7730495E2B4F3777004FF857 /* HomeBuilder.swift in Sources */,
+				773049712B4F5B25004FF857 /* HomeMovieView.swift in Sources */,
 				77C997B82B3B7A8C00D39210 /* Configurable.swift in Sources */,
 				0BE74AB42B4BFFC7002ADDAC /* NotificationsViewController.swift in Sources */,
 				77BA69EA2B4609B0003C6B4B /* WishlistProtocols.swift in Sources */,
 				77BFC6442B4B4BE30029BDE8 /* SuggestionsPresenter.swift in Sources */,
 				77BA69EF2B4609C2003C6B4B /* WishlistController.swift in Sources */,
 				0B7F05642B3AD50C00AAC7A7 /* ProfilePresenter.swift in Sources */,
+				773049682B4F41B7004FF857 /* HomeCategoryView.swift in Sources */,
 				0B7F05732B3B6DB100AAC7A7 /* TabBarController.swift in Sources */,
 				0B7F05542B3985CC00AAC7A7 /* SearchViewController.swift in Sources */,
 				0BE74AB72B4BFFF0002ADDAC /* AboutViewController.swift in Sources */,
 				77C997AD2B3B74C800D39210 /* LoadingView.swift in Sources */,
 				0B7F05722B3B6DB100AAC7A7 /* TabBar.swift in Sources */,
+				773049662B4F3A71004FF857 /* LabelButtonView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
