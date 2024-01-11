@@ -26,7 +26,6 @@ final class HomeBuilder: NSObject, UICollectionViewDelegate, UICollectionViewDat
         collection.register(CategoryCell.self, forCellWithReuseIdentifier: String(describing: CategoryCell.self))
         collection.register(GenresCell.self, forCellWithReuseIdentifier: String(describing: GenresCell.self))
         collection.register(MovieCell.self, forCellWithReuseIdentifier: String(describing: MovieCell.self))
-        collection.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "test")
         collection.register(TextButtonHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: String(describing: TextButtonHeader.self))
     }
     

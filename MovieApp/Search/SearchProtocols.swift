@@ -8,7 +8,7 @@
 import Foundation
 
 protocol SearchViewProtocol: AnyObject, ErrorPresenting, LoadingPresenting {
-    func update(with model: SearchController.Model)
+    func update(with model: SearchBuilder.Model)
     func showKeyboard()
 }
 

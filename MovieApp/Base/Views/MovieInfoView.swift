@@ -118,7 +118,7 @@ extension MovieInfoView: Configurable {
                 with: .init(
                     image: .init(image: .clock, tintColor: .appTextGrey, size: .init(width: 16, height: 16)),
                     title: .init(
-                        text: "\(length) минут",
+                        text: "\(length) мин.",
                         font: .montserratMedium(ofSize: 12),
                         textColor: .appTextGrey,
                         numberOfLines: 1
@@ -137,9 +137,11 @@ extension MovieInfoView: Configurable {
                         text: genre,
                         font: .montserratMedium(ofSize: 12),
                         textColor: .appTextGrey,
-                        numberOfLines: 1
+                        numberOfLines: 0,
+                        alignment: .center
                     ),
-                    spacing: 4
+                    spacing: 4,
+                    alignment: .top
                 )
             )
         }
