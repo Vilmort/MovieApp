@@ -27,7 +27,9 @@ public actor DefaultKPNetworkClient: KPNetworkClient {
         guard let currentToken else {
             return .failure(.invalidToken)
         }
-        guard var urlComponents = URLComponents(string: baseURL + request.url) else {
+        
+        let fullURL = request.url.starts(with: "http") ? request.url : baseURL + request.url
+        guard var urlComponents = URLComponents(string: fullURL) else {
             return .failure(.invalidURL)
         }
         if !request.parameters.isEmpty {

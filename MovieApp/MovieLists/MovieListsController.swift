@@ -52,7 +52,7 @@ final class MovieListsController: ViewController, MovieListsViewProtocol {
         if model.updateCategories {
             listPicker.update(
                 with: .init(
-                    items: model.categories
+                    items: model.categories, preselectedIndex: 0
                 )
             )
         }

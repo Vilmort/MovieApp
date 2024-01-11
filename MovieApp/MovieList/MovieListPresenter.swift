@@ -15,18 +15,18 @@ final class MovieListPresenter: MovieListPresenterProtocol {
     
     private let networkService: KPNetworkClient
     private var slug: [String]?
-    private var genre: [String]?
+    private var genre: String?
     private var movies = [KPMovieSearchEntity.KPSearchMovie]()
-    private var genres = ["All", "Фантастика", "Триллер"]
+    private var genres: [String] {
+        ["All"] + Set(movies.compactMap { $0.genres }.flatMap { $0 }.compactMap { $0.name?.capitalized }).sorted()
+    }
     private var firstLoad = true
     
     init(slug: String?, genre: String?, networkService: KPNetworkClient) {
         if let slug {
             self.slug = [slug]
         }
-        if let genre {
-            self.genre = [genre]
-        }
+        self.genre = genre
         self.networkService = networkService
     }
     
@@ -43,8 +43,7 @@ final class MovieListPresenter: MovieListPresenterProtocol {
         }
         let result = await networkService.sendRequest(
             request: KPMovieSearchRequest(
-                limit: 50,
-                genres: genre,
+                limit: 250,
                 lists: slug
             )
         )
@@ -62,6 +61,14 @@ final class MovieListPresenter: MovieListPresenterProtocol {
     
     @MainActor
     func updateUI() async {
+        
+        var movies = movies
+        var genrePreselectedIndex = 0
+        if let genre {
+            movies = movies.filter { ($0.genres ?? []).compactMap { $0.name }.contains(genre) }
+            genrePreselectedIndex = genres.map { $0.lowercased() }.firstIndex(of: genre) ?? 0
+        }
+        
         view?.update(
             with: .init(
                 movies: movies.map {
@@ -96,6 +103,7 @@ final class MovieListPresenter: MovieListPresenterProtocol {
                         }
                     )
                 },
+                genrePreselectedIndex: genrePreselectedIndex,
                 updateGenres: firstLoad
             )
         )
@@ -124,10 +132,10 @@ final class MovieListPresenter: MovieListPresenterProtocol {
         if genre == "All" {
             self.genre = nil
         } else {
-            self.genre = [genre.lowercased()]
+            self.genre = genre.lowercased()
         }
         Task {
-            await loadData()
+            await updateUI()
         }
     }
 }
