@@ -36,7 +36,7 @@ final class AboutUsViewController: ViewController, AboutViewControllerProtocol {
         view.addSubview(collection)
         collection.dataSource = self
         collection.delegate = self
-        title = "Team"
+        title = "Team".localized
         collection.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
             make.left.equalToSuperview()
