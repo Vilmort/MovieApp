@@ -143,3 +143,14 @@ public struct KPPossibleValue: Decodable {
     public let name: String
     public let slug: String
 }
+
+public struct KPArtist: Decodable {
+    public let id: Int
+    public let name: String?
+    public let enName: String?
+    public let photo: String?
+    public let sex: String?
+    public let birthday: String?
+    public let death: String?
+    public let age: Int?
+}

@@ -8,7 +8,7 @@
 import Foundation
 
 protocol SearchViewProtocol: AnyObject, ErrorPresenting, LoadingPresenting {
-    func update(with model: SearchController.Model)
+    func update(with model: SearchBuilder.Model)
     func showKeyboard()
 }
 
@@ -20,4 +20,5 @@ protocol SearchPresenterProtocol: AnyObject {
 
 protocol SearchRouterProtocol: AnyObject {
     func showMovieDetail(_ id: Int)
+    func showArtist(_ id: Int)
 }

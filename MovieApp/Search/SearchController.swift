@@ -17,20 +17,15 @@ final class SearchController: ViewController, SearchViewProtocol {
     private let searchTextField = SearchTextFieldCancelView()
     private let emptyView = ImageTitleSubtitleView()
     
-    private lazy var tableView: UITableView = {
-        let tv = UITableView()
-        tv.separatorStyle = .none
-        tv.showsVerticalScrollIndicator = false
-        tv.delegate = self
-        tv.dataSource = self
-        tv.estimatedRowHeight = UITableView.automaticDimension
-        tv.backgroundColor = .clear
-        tv.register(SpaceCell.self, forCellReuseIdentifier: String(describing: SpaceCell.self))
-        tv.register(MovieCell.self, forCellReuseIdentifier: String(describing: MovieCell.self))
-        tv.keyboardDismissMode = .onDrag
-        return tv
+    private lazy var builder = SearchBuilder(collectionView)
+    private let collectionView: UICollectionView = {
+        let cv = UICollectionView(frame: .zero, collectionViewLayout: .init())
+        cv.backgroundColor = .clear
+        cv.showsVerticalScrollIndicator = false
+        cv.showsHorizontalScrollIndicator = false
+        cv.keyboardDismissMode = .onDrag
+        return cv
     }()
-    private var items = [Item]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,7 +44,7 @@ final class SearchController: ViewController, SearchViewProtocol {
         if model.emptyQuery {
             emptyView.isHidden = false
         } else {
-            emptyView.isHidden = !model.movies.isEmpty
+            emptyView.isHidden = !model.movies.isEmpty || !model.artists.isEmpty
         }
         
         emptyView.update(
@@ -68,14 +63,7 @@ final class SearchController: ViewController, SearchViewProtocol {
             )
         )
         
-        items = []
-        model.movies.forEach {
-            items += [
-                .movie($0),
-                .space(16)
-            ]
-        }
-        tableView.reloadData()
+        builder.reloadData(model)
     }
     
     func showKeyboard() {
@@ -109,13 +97,12 @@ final class SearchController: ViewController, SearchViewProtocol {
             $0.leading.trailing.equalToSuperview().inset(24)
         }
         
-        view.addSubview(tableView)
-        tableView.snp.makeConstraints {
+        view.addSubview(collectionView)
+        collectionView.snp.makeConstraints {
             $0.top.equalTo(view.safeAreaLayoutGuide)
-            $0.bottom.equalToSuperview()
-            $0.leading.trailing.equalToSuperview().inset(24)
+            $0.leading.trailing.bottom.equalToSuperview()
         }
-        tableView.contentInset = .init(top: 32, left: .zero, bottom: .zero, right: .zero)
+        collectionView.contentInset = .init(top: 8, left: .zero, bottom: .zero, right: .zero)
         
         let tapGR = UITapGestureRecognizer()
         tapGR.cancelsTouchesInView = false
@@ -130,40 +117,25 @@ final class SearchController: ViewController, SearchViewProtocol {
     }
 }
 
-extension SearchController: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let item = items[indexPath.row]
-        switch item {
-        case .movie(let movie):
-            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: MovieCell.self), for: indexPath) as! MovieCell
-            cell.update(with: movie.model, didSelectHandler: movie.didSelect)
-            cell.selectionStyle = .none
-            return cell
-        case .space(let height):
-            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: SpaceCell.self), for: indexPath) as! SpaceCell
-            cell.update(with: .init(height: height))
-            cell.selectionStyle = .none
-            return cell
-        }
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        items.count
-    }
-}
-
 extension SearchController {
     struct Model {
-        struct Movie {
+        
+        struct Movie: Hashable {
+            let id: Int
             let model: MovieView.Model
-            let didSelect: () -> Void
         }
+        
+        struct Artist: Hashable {
+            let id: Int
+            let name: String
+            let imageURL: URL?
+        }
+        
         let movies: [Movie]
+        let artists: [Artist]
         let emptyQuery: Bool
-    }
-    
-    enum Item {
-        case space(CGFloat)
-        case movie(Model.Movie)
+        
+        let didSelectMovie: ((Int) -> Void)?
+        let didSelectArtist: ((Int) -> Void)?
     }
 }

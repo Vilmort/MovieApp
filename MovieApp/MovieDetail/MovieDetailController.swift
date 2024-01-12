@@ -186,6 +186,7 @@ extension MovieDetailController {
             let imageURL: URL?
             let name: String?
             let role: String?
+            let didSelectHandler: (() -> Void)?
         }
         
         struct Fact {

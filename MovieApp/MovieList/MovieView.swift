@@ -52,7 +52,7 @@ final class MovieView: CustomView {
 }
 
 extension MovieView: Configurable {
-    struct Model {
+    struct Model: Hashable {
         let imageURL: URL?
         let name: String
         let year: Int?

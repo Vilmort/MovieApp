@@ -102,7 +102,18 @@ final class MovieDetailPresenter: MovieDetailPresenterProtocol {
             return
         }
         let cast: [Model.CastMember] = (model.persons ?? []).map {
-            .init(imageURL: URL(string: $0.photo ?? ""), name: $0.name, role: $0.profession)
+            artist in
+            
+            .init(
+                imageURL: URL(string: artist.photo ?? ""),
+                name: artist.name,
+                role: artist.profession,
+                didSelectHandler: {
+                    [weak self] in
+                    
+                    self?.router?.showArtist(artist.id)
+                }
+            )
         }
         let facts: [Model.Fact] = (model.facts ?? []).map { .init(text: $0.value?.stripHTML() ?? "", spoiler: $0.spoiler ?? true) }
         let videos = Array(Set((model.videos?.trailers ?? []).compactMap { $0.url }))

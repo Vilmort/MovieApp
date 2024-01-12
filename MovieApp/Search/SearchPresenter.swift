@@ -14,6 +14,7 @@ final class SearchPresenter: SearchPresenterProtocol {
     
     private let networkService: KPNetworkClient
     private var showKeyboardOnStart = false
+    private var hasData = false
     
     init(networkService: KPNetworkClient = DIContainer.shared.networkService) {
         self.networkService = networkService
@@ -24,13 +25,17 @@ final class SearchPresenter: SearchPresenterProtocol {
             showKeyboardOnStart = false
             view?.showKeyboard()
         }
-        view.update(with: .init(movies: [], emptyQuery: true))
+        guard !hasData else {
+            return
+        }
+        view.update(with: .init(movies: [], artists: [], emptyQuery: true, didSelectMovie: nil, didSelectArtist: nil))
     }
     
     func didEnterQuery(_ text: String?) {
+        hasData = true
         view?.hideError()
         guard let text, !text.isEmpty else {
-            view?.update(with: .init(movies: [], emptyQuery: true))
+            view?.update(with: .init(movies: [], artists: [], emptyQuery: true, didSelectMovie: nil, didSelectArtist: nil))
             return
         }
         Task {
@@ -45,36 +50,16 @@ final class SearchPresenter: SearchPresenterProtocol {
     @MainActor
     func sendSearchRequest(_ query: String) async {
         view?.showLoading()
-        switch await networkService.sendRequest(request: KPMovieSearchTitleRequest(limit: 250, query: query)) {
-        case .success(let response):
-            view?.hideLoading()
-            view?.update(
-                with: .init(
-                    movies: response.docs.filter { $0.poster?.previewUrl != nil }.map {
-                        movie in
-                        
-                        return .init(
-                            model: .init(
-                                imageURL: URL(string: movie.poster?.previewUrl ?? ""),
-                                name: movie.name ?? "",
-                                year: movie.year,
-                                lenght: movie.movieLength,
-                                genre: (movie.genres ?? []).compactMap { $0.name }.joined(separator: ", "),
-                                rating: movie.rating?.kp,
-                                ageRating: movie.ratingMpaa?.uppercased()
-                            ),
-                            didSelect: {
-                                [weak self] in
-                                
-                                self?.router?.showMovieDetail(movie.id)
-                            }
-                        )
-                    },
-                    emptyQuery: false
-                )
-            )
-        case .failure:
-            view?.hideLoading()
+        async let moviesRequest = networkService.sendRequest(request: KPMovieSearchTitleRequest(limit: 250, query: query))
+        async let artistsRequest = networkService.sendRequest(request: KPArtistSearchNameRequest(limit: 250, query: query))
+        
+        let result = await (moviesRequest, artistsRequest)
+        let movies = try? result.0.get().docs.filter { $0.poster?.previewUrl != nil }
+        let artists = try? result.1.get().docs.filter { $0.photo != nil && $0.photo?.isEmpty == false }
+        
+        view?.hideLoading()
+        
+        if movies == nil && artists == nil {
             view?.showError(
                 "Не удалось получить список фильмов",
                 message: "Попробуйте еще раз",
@@ -88,6 +73,40 @@ final class SearchPresenter: SearchPresenterProtocol {
                     }
                 }
             )
+            return
         }
+        
+        view?.update(
+            with: .init(
+                movies: (movies ?? []).map {
+                    .init(
+                        id: $0.id,
+                        model: .init(
+                            imageURL: URL(string: $0.poster?.previewUrl ?? ""),
+                            name: $0.name ?? "",
+                            year: $0.year,
+                            lenght: $0.movieLength,
+                            genre: ($0.genres ?? []).compactMap { $0.name }.joined(separator: ", "),
+                            rating: $0.rating?.kp,
+                            ageRating: $0.ratingMpaa?.uppercased()
+                        )
+                    )
+                },
+                artists: (artists ?? []).map {
+                    .init(id: $0.id, name: $0.name ?? $0.enName ?? "", imageURL: URL(string: $0.photo ?? ""))
+                },
+                emptyQuery: false,
+                didSelectMovie: {
+                    [weak self] id in
+                    
+                    self?.router?.showMovieDetail(id)
+                },
+                didSelectArtist: {
+                    [weak self] id in
+                    
+                    self?.router?.showArtist(id)
+                }
+            )
+        )
     }
 }

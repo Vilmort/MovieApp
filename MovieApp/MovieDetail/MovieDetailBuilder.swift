@@ -19,7 +19,7 @@ private typealias MovieActionsCell = CollectionCell<MovieActionsView>
 final class MovieDetailCollectionBuilder: NSObject, UICollectionViewDelegate, UICollectionViewDataSource {
     
     private var sections = [MovieDetailController.Section]()
-    private var cast = [ImageTitleSubtitleView.Model]()
+    private var cast = [(model: ImageTitleSubtitleView.Model, didSelectHandler: (() -> Void)?)]()
     private var images = [UIImageView.Model]()
     private var facts = [(model: UILabel.Model, spoiler: Bool)]()
     private var videos = [String]()
@@ -59,12 +59,15 @@ final class MovieDetailCollectionBuilder: NSObject, UICollectionViewDelegate, UI
         }
         if let cast = model.cast {
             self.cast = cast.map {
-                .init(
+                (
+                    model: .init(
                     image: .init(image: nil, url: $0.imageURL, renderingMode: .alwaysOriginal, tintColor: nil, size: .init(width: 40, height: 60), cornerRadius: 10),
                     title: .init(text: $0.name ?? "", font: .montserratRegular(ofSize: 12), textColor: .white, numberOfLines: 1),
                     subtitle: .init(text: $0.role ?? "", font: .montserratRegular(ofSize: 12), textColor: .white, numberOfLines: 1),
                     spacing: 4
-                )
+                ),
+                    didSelectHandler: $0.didSelectHandler
+                    )
             }
             sections += [.cast(header: "Съёмочная группа"), .space(16)]
         }
@@ -238,7 +241,8 @@ final class MovieDetailCollectionBuilder: NSObject, UICollectionViewDelegate, UI
             return cell
         case .cast:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: CastCell.self), for: indexPath) as! CastCell
-            cell.update(with: cast[indexPath.row])
+            let artist = cast[indexPath.row]
+            cell.update(with: artist.model, didSelectHandler: artist.didSelectHandler)
             return cell
         case .images:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: ImageCell.self), for: indexPath) as! ImageCell

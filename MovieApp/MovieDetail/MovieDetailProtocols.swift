@@ -20,4 +20,5 @@ protocol MovieDetailPresenterProtocol: AnyObject {
 
 protocol MovieDetailRouterProtocol: AnyObject {
     func showMovie(_ id: Int)
+    func showArtist(_ id: Int)
 }

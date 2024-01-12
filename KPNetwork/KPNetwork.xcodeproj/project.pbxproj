@@ -13,6 +13,10 @@
 		770178642B3B25F000874D42 /* SubEntities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770178632B3B25F000874D42 /* SubEntities.swift */; };
 		770178662B3B27A600874D42 /* KPListSearchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770178652B3B27A600874D42 /* KPListSearchRequest.swift */; };
 		7730496C2B4F4E44004FF857 /* KPPossibleValuesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7730496B2B4F4E44004FF857 /* KPPossibleValuesRequest.swift */; };
+		77584CFA2B509313008D631D /* KPArtistSearchNameRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77584CF92B509313008D631D /* KPArtistSearchNameRequest.swift */; };
+		77584CFC2B509369008D631D /* KPArtistSearchEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77584CFB2B509369008D631D /* KPArtistSearchEntity.swift */; };
+		77584D0B2B50A463008D631D /* KPArtistRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77584D0A2B50A463008D631D /* KPArtistRequest.swift */; };
+		77584D0D2B50A46C008D631D /* KPArtistEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77584D0C2B50A46C008D631D /* KPArtistEntity.swift */; };
 		779C13FB2B44232C00EC849D /* KPImagesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779C13FA2B44232C00EC849D /* KPImagesRequest.swift */; };
 		779C13FD2B4423F100EC849D /* KPImagesEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779C13FC2B4423F100EC849D /* KPImagesEntity.swift */; };
 		77D1BADD2B3A25B2001C5F99 /* KPNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77D1BAD42B3A25B2001C5F99 /* KPNetwork.framework */; };
@@ -43,6 +47,10 @@
 		770178632B3B25F000874D42 /* SubEntities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubEntities.swift; sourceTree = "<group>"; };
 		770178652B3B27A600874D42 /* KPListSearchRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KPListSearchRequest.swift; sourceTree = "<group>"; };
 		7730496B2B4F4E44004FF857 /* KPPossibleValuesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KPPossibleValuesRequest.swift; sourceTree = "<group>"; };
+		77584CF92B509313008D631D /* KPArtistSearchNameRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KPArtistSearchNameRequest.swift; sourceTree = "<group>"; };
+		77584CFB2B509369008D631D /* KPArtistSearchEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KPArtistSearchEntity.swift; sourceTree = "<group>"; };
+		77584D0A2B50A463008D631D /* KPArtistRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KPArtistRequest.swift; sourceTree = "<group>"; };
+		77584D0C2B50A46C008D631D /* KPArtistEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KPArtistEntity.swift; sourceTree = "<group>"; };
 		779C13FA2B44232C00EC849D /* KPImagesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KPImagesRequest.swift; sourceTree = "<group>"; };
 		779C13FC2B4423F100EC849D /* KPImagesEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KPImagesEntity.swift; sourceTree = "<group>"; };
 		77D1BAD42B3A25B2001C5F99 /* KPNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KPNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -119,11 +127,13 @@
 			isa = PBXGroup;
 			children = (
 				7730496B2B4F4E44004FF857 /* KPPossibleValuesRequest.swift */,
+				77584D0A2B50A463008D631D /* KPArtistRequest.swift */,
 				77D1BAF42B3A31CD001C5F99 /* KPMovieRequest.swift */,
 				770178592B3B183F00874D42 /* KPMovieSearchRequest.swift */,
 				77E5D94D2B50628400A8FC6A /* KPMovieSearchTitleRequest.swift */,
 				770178652B3B27A600874D42 /* KPListSearchRequest.swift */,
 				779C13FA2B44232C00EC849D /* KPImagesRequest.swift */,
+				77584CF92B509313008D631D /* KPArtistSearchNameRequest.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -133,9 +143,11 @@
 			children = (
 				77D1BAF72B3A31DC001C5F99 /* KPMovieEntity.swift */,
 				770178572B3B183500874D42 /* KPMovieSearchEntity.swift */,
+				77584CFB2B509369008D631D /* KPArtistSearchEntity.swift */,
 				770178612B3B255E00874D42 /* KPListSearchEntity.swift */,
 				779C13FC2B4423F100EC849D /* KPImagesEntity.swift */,
 				770178632B3B25F000874D42 /* SubEntities.swift */,
+				77584D0C2B50A46C008D631D /* KPArtistEntity.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -252,6 +264,7 @@
 			files = (
 				77D1BAF32B3A2694001C5F99 /* KPNetworkRequest.swift in Sources */,
 				77D1BAF12B3A263D001C5F99 /* KPNetworkError.swift in Sources */,
+				77584D0D2B50A46C008D631D /* KPArtistEntity.swift in Sources */,
 				7701785A2B3B183F00874D42 /* KPMovieSearchRequest.swift in Sources */,
 				77D1BAF82B3A31DC001C5F99 /* KPMovieEntity.swift in Sources */,
 				77D1BAEF2B3A25EF001C5F99 /* KPNetworkClient.swift in Sources */,
@@ -260,10 +273,13 @@
 				770178662B3B27A600874D42 /* KPListSearchRequest.swift in Sources */,
 				77E5D94E2B50628400A8FC6A /* KPMovieSearchTitleRequest.swift in Sources */,
 				779C13FB2B44232C00EC849D /* KPImagesRequest.swift in Sources */,
+				77584CFC2B509369008D631D /* KPArtistSearchEntity.swift in Sources */,
 				770178582B3B183500874D42 /* KPMovieSearchEntity.swift in Sources */,
+				77584CFA2B509313008D631D /* KPArtistSearchNameRequest.swift in Sources */,
 				779C13FD2B4423F100EC849D /* KPImagesEntity.swift in Sources */,
 				77D1BAF52B3A31CD001C5F99 /* KPMovieRequest.swift in Sources */,
 				770178642B3B25F000874D42 /* SubEntities.swift in Sources */,
+				77584D0B2B50A463008D631D /* KPArtistRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
