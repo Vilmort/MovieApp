@@ -42,7 +42,7 @@ final class SearchTextField: UITextField {
         self.leftView = leftView
         self.leftViewMode = .always
         self.attributedPlaceholder = NSAttributedString(
-            string: "Search movie...",
+            string: "Search movie or artist...".localized,
             attributes: [.font: UIFont.montserratMedium(ofSize: 14), .foregroundColor: UIColor.appTextGrey]
         )
         self.backgroundColor = .appSoft

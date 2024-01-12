@@ -20,7 +20,7 @@ final class HomePresenter: HomePresenterProtocol {
     private var listsResponse: KPListSearchEntity?
     private var moviesResponse: KPMovieSearchEntity?
     private var genres: [String] {
-        ["All"] + Set((moviesResponse?.docs ?? []).compactMap { $0.genres }.flatMap { $0 }.compactMap { $0.name?.capitalized }).sorted()
+        ["All".localized] + Set((moviesResponse?.docs ?? []).compactMap { $0.genres }.flatMap { $0 }.compactMap { $0.name?.capitalized }).sorted()
     }
     private var selectedGenre: String?
     
@@ -163,7 +163,7 @@ final class HomePresenter: HomePresenterProtocol {
                         [weak self] in
                         
                         self?.router?.showMovieList(
-                            title: "Popular movies",
+                            title: "Popular movies".localized,
                             slug: nil,
                             genre: self?.selectedGenre
                         )
@@ -180,7 +180,7 @@ final class HomePresenter: HomePresenterProtocol {
     }
     
     private func didSelectGenre(_ genre: String) {
-        if genre == "All" {
+        if genre == "All".localized {
             selectedGenre = nil
         } else {
             selectedGenre = genre.lowercased()
@@ -193,9 +193,9 @@ final class HomePresenter: HomePresenterProtocol {
     @MainActor
     private func showError() async {
         view?.showError(
-            "Не получилось загрузить все данные",
-            message: "Попробуйте еще раз",
-            actionTitle: "Обновить",
+            "Failed to load all data".localized,
+            message: "Try again".localized,
+            actionTitle: "Update".localized,
             action: {
                 [weak self] stub in
                 

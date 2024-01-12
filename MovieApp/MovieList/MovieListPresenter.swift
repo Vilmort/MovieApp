@@ -18,7 +18,7 @@ final class MovieListPresenter: MovieListPresenterProtocol {
     private var genre: String?
     private var movies = [KPMovieSearchEntity.KPSearchMovie]()
     private var genres: [String] {
-        ["All"] + Set(movies.compactMap { $0.genres }.flatMap { $0 }.compactMap { $0.name?.capitalized }).sorted()
+        ["All".localized] + Set(movies.compactMap { $0.genres }.flatMap { $0 }.compactMap { $0.name?.capitalized }).sorted()
     }
     private var firstLoad = true
     
@@ -129,7 +129,7 @@ final class MovieListPresenter: MovieListPresenterProtocol {
     
     @MainActor
     func didSelectGenre(_ genre: String) {
-        if genre == "All" {
+        if genre == "All".localized {
             self.genre = nil
         } else {
             self.genre = genre.lowercased()

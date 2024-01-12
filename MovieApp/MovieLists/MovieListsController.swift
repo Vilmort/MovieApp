@@ -33,7 +33,7 @@ final class MovieListsController: ViewController, MovieListsViewProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "Movie Lists"
+        title = "Movie Lists".localized
         configure()
         presenter.activate()
     }

@@ -69,15 +69,15 @@ final class MovieDetailCollectionBuilder: NSObject, UICollectionViewDelegate, UI
                     didSelectHandler: $0.didSelectHandler
                     )
             }
-            sections += [.cast(header: "Съёмочная группа"), .space(16)]
+            sections += [.cast(header: "Crew".localized), .space(16)]
         }
         if !model.images.isEmpty {
             self.images = model.images.map { .init(image: nil, url: $0, tintColor: nil, size: .init(width: 150, height: 100)) }
-            sections += [.images(header: "Кадры"), .space(16)]
+            sections += [.images(header: "Personnel".localized), .space(16)]
         }
         if !model.videos.isEmpty {
             self.videos = model.videos
-            sections += [.videos(header: "Видео"), .space(16)]
+            sections += [.videos(header: "Video".localized), .space(16)]
         }
         if !model.facts.isEmpty {
             self.facts = model.facts.map {
@@ -92,7 +92,7 @@ final class MovieDetailCollectionBuilder: NSObject, UICollectionViewDelegate, UI
                     spoiler: $0.spoiler
                 )
             }
-            sections += [.facts(header: "Интересные факты"), .space(16)]
+            sections += [.facts(header: "Interesting Facts".localized), .space(16)]
         }
         if !model.similarMovies.isEmpty {
             similarMovies = model.similarMovies.map {
@@ -106,7 +106,7 @@ final class MovieDetailCollectionBuilder: NSObject, UICollectionViewDelegate, UI
                     didSelectHandler: $0.didSelectHandler
                 )
             }
-            sections += [.similarMovies(header: "Похожие фильмы"), .space(16)]
+            sections += [.similarMovies(header: "Similar Movies".localized), .space(16)]
         }
         collection.dataSource = self
         collection.delegate = self

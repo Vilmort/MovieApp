@@ -46,7 +46,7 @@ final class HomeController: ViewController, HomeViewProtocol {
                                     cornerRadius: 20
                                 ),
                         title: .init(
-                            text: "Hello!",
+                            text: "Hello!".localized,
                             font: .montserratSemiBold(ofSize: 16),
                             textColor: .white,
                             numberOfLines: 1
@@ -65,7 +65,7 @@ final class HomeController: ViewController, HomeViewProtocol {
                                 cornerRadius: 20
                             ),
                     title: .init(
-                        text: "Hello, " + user.login,
+                        text: "Hello, ".localized + user.login,
                         font: .montserratSemiBold(ofSize: 16),
                         textColor: .white,
                         numberOfLines: 1

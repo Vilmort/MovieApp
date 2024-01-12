@@ -41,7 +41,7 @@ final class HomeBuilder: NSObject, UICollectionViewDelegate, UICollectionViewDat
             sections[popularIndex] = .popularMovies(
                 model: model.popularMovies!,
                 header: .init(
-                    title: "Popular movies",
+                    title: "Popular movies".localized,
                     seeAll: model.popularMovies?.seeAllHandler
                 )
             )
@@ -53,7 +53,7 @@ final class HomeBuilder: NSObject, UICollectionViewDelegate, UICollectionViewDat
                     .categories(
                         model: model.categories!,
                         header: .init(
-                            title: "Categories",
+                            title: "Categories".localized,
                             seeAll: {
                                 model.categories?.seeAllHandler()
                             }
@@ -66,7 +66,7 @@ final class HomeBuilder: NSObject, UICollectionViewDelegate, UICollectionViewDat
                     .genres(
                         model: model.genres!,
                         header: .init(
-                            title: "Genres",
+                            title: "Genres".localized,
                             seeAll: nil
                         )
                     )
@@ -78,7 +78,7 @@ final class HomeBuilder: NSObject, UICollectionViewDelegate, UICollectionViewDat
                     .popularMovies(
                         model: model.popularMovies!,
                         header: .init(
-                            title: "Popular movies",
+                            title: "Popular movies".localized,
                             seeAll: model.popularMovies?.seeAllHandler
                         )
                     )
@@ -180,7 +180,7 @@ final class HomeBuilder: NSObject, UICollectionViewDelegate, UICollectionViewDat
             break
         }
         let view = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: String(describing: TextButtonHeader.self), for: indexPath) as! TextButtonHeader
-        view.update(with: .init(text: .init(text: header?.title ?? "", font: .montserratSemiBold(ofSize: 16), textColor: .white, numberOfLines: 1), buttonTitle: "See All", buttonHandler: header?.seeAll), insets: insets)
+        view.update(with: .init(text: .init(text: header?.title ?? "", font: .montserratSemiBold(ofSize: 16), textColor: .white, numberOfLines: 1), buttonTitle: "See all".localized, buttonHandler: header?.seeAll), insets: insets)
         return view
     }
     

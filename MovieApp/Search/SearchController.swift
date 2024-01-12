@@ -51,7 +51,7 @@ final class SearchController: ViewController, SearchViewProtocol {
             with: .init(
                 image: .init(image: .noResults, renderingMode: .alwaysOriginal, tintColor: nil),
                 title: .init(
-                    text: model.emptyQuery ? "Введите название фильма, чтобы начать поиск" : "Не удалось найти фильмы по вашему запросу",
+                    text: model.emptyQuery ? "Enter movie title to start searching".localized : "We couldn't find movies matching your request".localized,
                     font: .montserratSemiBold(ofSize: 16),
                     textColor: .white,
                     numberOfLines: 0,
