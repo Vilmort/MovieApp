@@ -20,6 +20,11 @@ final class HomeController: ViewController, HomeViewProtocol {
     private let profileView = ImageTitleSubtitleView()
     private let searchTextField = SearchTextField()
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        updateProfileView()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -28,27 +33,49 @@ final class HomeController: ViewController, HomeViewProtocol {
         presenter.activate()
     }
     
+    private func updateProfileView() {
+        guard let user = presenter.fetchUser() else {
+            profileView.update(with:
+                    .init(
+                        image:
+                                .init(
+                                    image: UIImage(systemName: "person.circle"),
+                                    renderingMode: .alwaysOriginal,
+                                    tintColor: .white,
+                                    size: CGSize(width: 40, height: 40),
+                                    cornerRadius: 20
+                                ),
+                        title: .init(
+                            text: "Hello!",
+                            font: .montserratSemiBold(ofSize: 16),
+                            textColor: .white,
+                            numberOfLines: 1
+                        ),
+                        spacing: 16))
+            return
+        }
+        profileView.update(with:
+                .init(
+                    image:
+                            .init(
+                                image: UIImage(data: user.image),
+                                renderingMode: .alwaysOriginal,
+                                tintColor: nil,
+                                size: CGSize(width: 40, height: 40),
+                                cornerRadius: 20
+                            ),
+                    title: .init(
+                        text: "Hello, " + user.login,
+                        font: .montserratSemiBold(ofSize: 16),
+                        textColor: .white,
+                        numberOfLines: 1
+                    ),
+                    spacing: 16))
+        profileView.reloadInputViews()
+    }
+    
     func update(with model: Model, onlyPopular: Bool) {
         builder.reloadData(model, onlyPopular)
-        
-        profileView.update(
-            with: .init(
-                image: .init(
-                    image: model.profile.image,
-                    renderingMode: .alwaysOriginal,
-                    tintColor: nil,
-                    size: CGSize(width: 40, height: 40),
-                    cornerRadius: 20
-                ),
-                title: .init(
-                    text: model.profile.text,
-                    font: .montserratSemiBold(ofSize: 16),
-                    textColor: .white,
-                    numberOfLines: 1
-                ),
-                spacing: 16
-            )
-        )
     }
     
     private func configure() {

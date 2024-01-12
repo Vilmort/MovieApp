@@ -14,7 +14,7 @@ final class HomePresenter: HomePresenterProtocol {
     
     weak var view: HomeViewProtocol?
     var router: HomeRouterProtocol?
-    
+    var realmService: RealmServiceProtocol?
     private let networkService: KPNetworkClient
     
     private var listsResponse: KPListSearchEntity?
@@ -63,6 +63,10 @@ final class HomePresenter: HomePresenterProtocol {
     
     func didTapSearch() {
         router?.showSearch()
+    }
+    
+    func fetchUser() -> User? {        
+        return realmService?.fetchUser()
     }
     
     @MainActor
@@ -200,4 +204,6 @@ final class HomePresenter: HomePresenterProtocol {
             }
         )
     }
+    
+    
 }
