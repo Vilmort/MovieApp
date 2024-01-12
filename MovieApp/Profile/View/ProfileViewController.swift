@@ -36,9 +36,6 @@ final class ProfileViewController: ViewController, ProfileViewProtocol {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         updateUI()
-        navigationController?.tabBarController?.tabBar.isHidden = false
-        navigationController?.tabBarController?.tabBar.isTranslucent = false
-
     }
     
     private func setupView() {

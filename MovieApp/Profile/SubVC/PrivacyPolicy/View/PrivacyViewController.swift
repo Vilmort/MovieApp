@@ -62,17 +62,17 @@ final class PrivacyViewController: ViewController, PrivacyViewProtocol {
     }
     
     private func setupVC() {
-        navigationController?.tabBarController?.tabBar.isHidden = true
-        navigationController?.tabBarController?.tabBar.isTranslucent = true
         view.backgroundColor = .appDark
         view.addSubview(scrollView)
+        scrollView.showsVerticalScrollIndicator = false
         title = "Privacy Policy".localized
     }
     
     func setupConstraints() {
         scrollView.snp.makeConstraints { make in
             make.leading.trailing.equalToSuperview().inset(14)
-            make.top.bottom.equalToSuperview()
+            make.bottom.equalToSuperview()
+            make.top.equalTo(view.safeAreaLayoutGuide)
         }
     }
 

@@ -58,7 +58,6 @@ final class LanguageViewController: ViewController, LanguageVCProtocol {
     }
     
     private func setViews() {
-        navigationController?.tabBarController?.tabBar.isHidden = true
         view.backgroundColor = .appDark
         view.addSubview(mainView)
         mainView.addSubview(tableView)
@@ -85,22 +84,12 @@ final class LanguageViewController: ViewController, LanguageVCProtocol {
     }
     
     private func configureBarBackButton() {
-        let appearance = UINavigationBarAppearance()
-        appearance.configureWithTransparentBackground()
-        appearance.titleTextAttributes = [
-            .foregroundColor: UIColor.white,
-            .font: UIFont.montserratMedium(ofSize: 16)
-        ]
-        
-        navigationController?.navigationBar.scrollEdgeAppearance = appearance
-        navigationController?.navigationBar.standardAppearance = appearance
-        
-            navigationItem.leftBarButtonItem = .init(
-                image: .back.withRenderingMode(.alwaysOriginal),
-                style: .plain,
-                target: self,
-                action: #selector(didTapBackButtonToHome)
-            )
+        navigationItem.leftBarButtonItem = .init(
+            image: .back.withRenderingMode(.alwaysOriginal),
+            style: .plain,
+            target: self,
+            action: #selector(didTapBackButtonToHome)
+        )
     }
     
     @objc

@@ -18,6 +18,8 @@ final class MovieListsAssembly: ModuleAssembly {
         router.controller = controller
         controller.presenter = presenter
         
+        controller.hidesBottomBarWhenPushed = true
+        
         return controller
     }
 }
