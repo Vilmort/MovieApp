@@ -79,6 +79,7 @@
 		7718F36F2B3CDB8F007F5E49 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7718F36E2B3CDB8F007F5E49 /* UIImageView+Extension.swift */; };
 		7718F3712B3CDE1E007F5E49 /* MovieRatingSmallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7718F3702B3CDE1E007F5E49 /* MovieRatingSmallView.swift */; };
 		7718F3732B3CED3B007F5E49 /* MovieAgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7718F3722B3CED3B007F5E49 /* MovieAgeView.swift */; };
+		771F4D582B51DDB500403A86 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771F4D572B51DDB500403A86 /* NotificationService.swift */; };
 		7728A39D2B46166400AE0B6B /* KPNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77D1BB3F2B3AE29C001C5F99 /* KPNetwork.framework */; };
 		7728A39E2B46166400AE0B6B /* KPNetwork.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 77D1BB3F2B3AE29C001C5F99 /* KPNetwork.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7728A3A02B4618A700AE0B6B /* WishlistMovieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7728A39F2B4618A700AE0B6B /* WishlistMovieView.swift */; };
@@ -264,6 +265,7 @@
 		7718F36E2B3CDB8F007F5E49 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		7718F3702B3CDE1E007F5E49 /* MovieRatingSmallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRatingSmallView.swift; sourceTree = "<group>"; };
 		7718F3722B3CED3B007F5E49 /* MovieAgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieAgeView.swift; sourceTree = "<group>"; };
+		771F4D572B51DDB500403A86 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		7728A39F2B4618A700AE0B6B /* WishlistMovieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistMovieView.swift; sourceTree = "<group>"; };
 		773049532B4F3681004FF857 /* HomeProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProtocols.swift; sourceTree = "<group>"; };
 		773049552B4F368A004FF857 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
@@ -737,6 +739,7 @@
 				77BA69E12B44CC72003C6B4B /* ShareService.swift */,
 				77BA69F42B460B58003C6B4B /* PersistentService.swift */,
 				0BE74AAE2B4BFE00002ADDAC /* RealmService.swift */,
+				771F4D572B51DDB500403A86 /* NotificationService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -1086,6 +1089,7 @@
 				0B7F05742B3B6DB100AAC7A7 /* TabBarButton.swift in Sources */,
 				0BE74AB12B4BFFA4002ADDAC /* ProfileRouter.swift in Sources */,
 				77E5D94C2B5060DF00A8FC6A /* SearchPresenter.swift in Sources */,
+				771F4D582B51DDB500403A86 /* NotificationService.swift in Sources */,
 				77BA69F12B4609C6003C6B4B /* WishlistRouter.swift in Sources */,
 				77C997A52B3B736A00D39210 /* ViewController.swift in Sources */,
 				0BE74AB52B4BFFDD002ADDAC /* LanguageViewController.swift in Sources */,
