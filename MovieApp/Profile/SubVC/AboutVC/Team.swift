@@ -15,13 +15,13 @@ struct TeamPayer {
 
 struct Team {
     static let team: [TeamPayer] = [
-        TeamPayer(image: .profilePicture2,
+        TeamPayer(image: .vanopr,
                   role: "TeamLeader".localized,
                   gitHub: "https://github.com/Vanopr"),
-        TeamPayer(image: .profilePicture1,
+        TeamPayer(image: .victor,
                   role: "IOS Developer".localized,
                   gitHub: "https://github.com/viktorporch"),
-        TeamPayer(image: .profilePicture1,
+        TeamPayer(image: .nodnet,
                   role: "IOS Developer".localized,
                   gitHub: "https://github.com/Nodnet")
     ]
