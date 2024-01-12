@@ -45,7 +45,7 @@ final class ShareView: CustomView {
         container.addSubview(label)
         label.update(
             with: .init(
-                text: "Share to",
+                text: "Share to".localized,
                 font: .montserratSemiBold(ofSize: 18),
                 textColor: .white,
                 numberOfLines: 0,
