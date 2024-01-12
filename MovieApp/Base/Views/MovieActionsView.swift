@@ -30,7 +30,7 @@ final class MovieActionsView: CustomView {
         hStack.alignment = .center
         
         var watchConfig = UIButton.Configuration.filled()
-        watchConfig.title = "Смотреть"
+        watchConfig.title = "Watch".localized
         watchConfig.image = .play
         watchConfig.baseBackgroundColor = .appOrange
         watchConfig.baseForegroundColor = .white

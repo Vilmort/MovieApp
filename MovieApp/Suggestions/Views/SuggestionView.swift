@@ -42,7 +42,7 @@ final class SuggestionView: CustomView {
         }
         
         var openConfig = UIButton.Configuration.filled()
-        openConfig.title = "Открыть"
+        openConfig.title = "Open".localized
         openConfig.image = .play
         openConfig.baseBackgroundColor = .appOrange
         openConfig.baseForegroundColor = .white

@@ -16,6 +16,7 @@ protocol HomePresenterProtocol: AnyObject {
     func didTapWishlistButton()
     func didTapProfile()
     func didTapSearch()
+    func fetchUser() -> User?
 }
 
 protocol HomeRouterProtocol: AnyObject {

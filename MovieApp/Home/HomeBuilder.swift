@@ -41,7 +41,7 @@ final class HomeBuilder: NSObject, UICollectionViewDelegate, UICollectionViewDat
             sections[popularIndex] = .popularMovies(
                 model: model.popularMovies!,
                 header: .init(
-                    title: "Popular movies",
+                    title: "Popular movies".localized,
                     seeAll: model.popularMovies?.seeAllHandler
                 )
             )
@@ -53,7 +53,7 @@ final class HomeBuilder: NSObject, UICollectionViewDelegate, UICollectionViewDat
                     .categories(
                         model: model.categories!,
                         header: .init(
-                            title: "Categories",
+                            title: "Categories".localized,
                             seeAll: {
                                 model.categories?.seeAllHandler()
                             }
@@ -66,7 +66,7 @@ final class HomeBuilder: NSObject, UICollectionViewDelegate, UICollectionViewDat
                     .genres(
                         model: model.genres!,
                         header: .init(
-                            title: "Genres",
+                            title: "Genres".localized,
                             seeAll: nil
                         )
                     )
@@ -78,7 +78,7 @@ final class HomeBuilder: NSObject, UICollectionViewDelegate, UICollectionViewDat
                     .popularMovies(
                         model: model.popularMovies!,
                         header: .init(
-                            title: "Popular movies",
+                            title: "Popular movies".localized,
                             seeAll: model.popularMovies?.seeAllHandler
                         )
                     )
@@ -91,53 +91,61 @@ final class HomeBuilder: NSObject, UICollectionViewDelegate, UICollectionViewDat
     func makeLayout() -> UICollectionViewCompositionalLayout {
         .init {
             sectionIndex, _ in
-            
-            var item = NSCollectionLayoutItem(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .estimated(1)))
-            var group = NSCollectionLayoutGroup.horizontal(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .estimated(1)), subitems: [item])
-            var section = NSCollectionLayoutSection(group: group)
-            
             switch self.sections[sectionIndex] {
             case .space:
-                break
+                return nil
             case .popularMovies:
-                item = NSCollectionLayoutItem(layoutSize: .init(widthDimension: .absolute(135), heightDimension: .absolute(231)))
-                group = NSCollectionLayoutGroup.horizontal(layoutSize: .init(widthDimension: .absolute(135), heightDimension: .absolute(231)), subitems: [item])
-                section = NSCollectionLayoutSection(group: group)
-                section.contentInsets = .init(top: 0, leading: 16, bottom: 0, trailing: 16)
-                section.interGroupSpacing = 12
-                section.boundarySupplementaryItems = [.init(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .absolute(52)), elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)]
-                section.orthogonalScrollingBehavior = .continuous
+                return self.makePopularMovie()
             case .genres:
-                item = NSCollectionLayoutItem(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1)))
-                group = NSCollectionLayoutGroup.horizontal(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .absolute(39)), subitems: [item])
-                section = NSCollectionLayoutSection(group: group)
-                section.boundarySupplementaryItems = [.init(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .absolute(52)), elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)]
+                return self.makeGenres()
             case .categories:
-                item = NSCollectionLayoutItem(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1)))
-                group = NSCollectionLayoutGroup.horizontal(layoutSize: .init(widthDimension: .fractionalWidth(0.78), heightDimension: .fractionalWidth(0.41)), subitems: [item])
-                section = NSCollectionLayoutSection(group: group)
-                section.orthogonalScrollingBehavior = .groupPagingCentered
-                section.interGroupSpacing = 12
-                section.boundarySupplementaryItems = [.init(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .absolute(52)), elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)]
-                section.visibleItemsInvalidationHandler = {
-                    (items, offset, environment) in
-                    
-                    items.forEach { item in
-                        
-                        guard item.representedElementKind == nil else {
-                            return
-                        }
-                        
-                        let distanceFromCenter = abs((item.frame.midX - offset.x) - environment.container.contentSize.width / 2)
-                        let minScale: CGFloat = 0.9
-                        let maxScale: CGFloat = 1
-                        let scale = max(maxScale - (distanceFromCenter / environment.container.contentSize.width) * 0.2, minScale)
-                        item.transform = CGAffineTransform(scaleX: 1, y: scale)
-                    }
-                }
+                return self.makeCategories()
             }
-            return section
         }
+    }
+    
+    private func makePopularMovie() -> NSCollectionLayoutSection {
+        let item = NSCollectionLayoutItem(layoutSize: .init(widthDimension: .absolute(135), heightDimension: .absolute(231)))
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: .init(widthDimension: .absolute(135), heightDimension: .absolute(231)), subitems: [item])
+       let section = NSCollectionLayoutSection(group: group)
+        section.contentInsets = .init(top: 0, leading: 16, bottom: 0, trailing: 16)
+        section.interGroupSpacing = 12
+        section.boundarySupplementaryItems = [.init(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .absolute(52)), elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)]
+        section.orthogonalScrollingBehavior = .continuous
+        return section
+    }
+    
+    private func makeGenres() -> NSCollectionLayoutSection {
+        let item = NSCollectionLayoutItem(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1)))
+       let group = NSCollectionLayoutGroup.horizontal(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .absolute(39)), subitems: [item])
+        let section = NSCollectionLayoutSection(group: group)
+        section.boundarySupplementaryItems = [.init(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .absolute(52)), elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)]
+        return section
+    }
+    
+    private func makeCategories() -> NSCollectionLayoutSection {
+       let item = NSCollectionLayoutItem(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1)))
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: .init(widthDimension: .fractionalWidth(0.78), heightDimension: .fractionalWidth(0.41)), subitems: [item])
+        let section = NSCollectionLayoutSection(group: group)
+        section.orthogonalScrollingBehavior = .groupPagingCentered
+        section.interGroupSpacing = 12
+        section.boundarySupplementaryItems = [.init(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .absolute(52)), elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)]
+        section.visibleItemsInvalidationHandler = {
+            (items, offset, environment) in
+            
+            items.forEach { item in
+                guard item.representedElementKind == nil else {
+                    return
+                }
+                
+                let distanceFromCenter = abs((item.frame.midX - offset.x) - environment.container.contentSize.width / 2)
+                let minScale: CGFloat = 0.9
+                let maxScale: CGFloat = 1
+                let scale = max(maxScale - (distanceFromCenter / environment.container.contentSize.width) * 0.2, minScale)
+                item.transform = CGAffineTransform(scaleX: 1, y: scale)
+            }
+        }
+        return section
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -172,7 +180,7 @@ final class HomeBuilder: NSObject, UICollectionViewDelegate, UICollectionViewDat
             break
         }
         let view = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: String(describing: TextButtonHeader.self), for: indexPath) as! TextButtonHeader
-        view.update(with: .init(text: .init(text: header?.title ?? "", font: .montserratSemiBold(ofSize: 16), textColor: .white, numberOfLines: 1), buttonTitle: "See All", buttonHandler: header?.seeAll), insets: insets)
+        view.update(with: .init(text: .init(text: header?.title ?? "", font: .montserratSemiBold(ofSize: 16), textColor: .white, numberOfLines: 1), buttonTitle: "See all".localized, buttonHandler: header?.seeAll), insets: insets)
         return view
     }
     

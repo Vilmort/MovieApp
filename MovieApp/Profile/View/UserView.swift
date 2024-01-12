@@ -28,7 +28,6 @@ final class UserView: UIView {
             color: .white,
             numberOfLines: 1,
             alignment: .left)
-        label.text = "Login"
         return label
     }()
     
@@ -38,7 +37,6 @@ final class UserView: UIView {
             color: .white,
             numberOfLines: 1,
             alignment: .left)
-        label.text = "Email"
         return label
     }()
     

@@ -62,4 +62,18 @@ Welcome to MovieApp, your premier destination for an unparalleled cinematic expe
 "MovieApp is not intended for users under 13, and we do not knowingly collect information from children." = "MovieApp is not intended for users under 13, and we do not knowingly collect information from children.";
 "If you have any questions or concerns about this Privacy Policy, please contact us at [https://github.com/Vanopr]." = "If you have any questions or concerns about this Privacy Policy, please contact us at https://github.com/Vanopr.";
 "Thank you for choosing MovieApp. We are committed to providing you with an exceptional and secure movie-watching experience." = "Thank you for choosing MovieApp. We are committed to providing you with an exceptional and secure movie-watching experience.";
+"Hello!" = "Hello!";
+"Hello, " = "Hello, ";
+"Popular movies" = "Popular movies";
+"Failed to load all data" = "Failed to load all data";
+"Try again" = "Try again";
+"Update" = "Update";
+"Search movie or artist..." = "Search movie or artist...";
+"Enter movie title to start searching" = "Enter movie title to start searching";
+"We couldn't find movies matching your request" = "We couldn't find movies matching your request";
+"Your today recommend is..." = "Your today recommend is...";
+"Open" = "Open";
+"Movie Lists" = "Movie Lists";
+"Watch" = "Watch";
+
 

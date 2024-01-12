@@ -60,7 +60,7 @@ final class SuggestionsController: ViewController, SuggestionsViewProtocol {
         suggestionView.update(
             with: .init(
                 title: .init(
-                    text: "Your today recommend is...",
+                    text: "Your today recommend is...".localized,
                     font: .montserratSemiBold(ofSize: 28),
                     textColor: .white,
                     numberOfLines: 0

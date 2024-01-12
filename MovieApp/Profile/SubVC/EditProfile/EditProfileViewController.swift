@@ -245,6 +245,10 @@ extension EditProfileViewController: UITextFieldDelegate {
             break
         }
     }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+    }
 }
 
 

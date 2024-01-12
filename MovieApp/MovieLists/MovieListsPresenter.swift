@@ -41,7 +41,7 @@ final class MovieListsPresenter: MovieListsPresenterProtocol {
     @MainActor
     private func updateUI() async {
         var lists = self.lists.filter { $0.category != "0" }
-        let categories = ["All"] + Array(Set(lists.compactMap { $0.category })).sorted()
+        let categories = ["All".localized] + Array(Set(lists.compactMap { $0.category })).sorted()
         if let selectedCategory {
             lists = lists.filter { $0.category == selectedCategory }
         }
@@ -102,7 +102,7 @@ final class MovieListsPresenter: MovieListsPresenterProtocol {
     }
     
     private func didSelectCategory(_ category: String) {
-        selectedCategory = category == "All" ? nil : category
+        selectedCategory = category == "All".localized ? nil : category
         Task {
             await updateUI()
         }
