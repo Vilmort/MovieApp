@@ -1,6 +1,6 @@
 #MovieApp
 <p align= "left">
-< a href ="https://swift.org">
+< a href="https://swift.org">
 <img src="https://img.shields.io/badge/Swift-5.7-orange" alt="Swift Version 5.7" /></a>
 <a href="https://developer.apple.com/ios/">
 <img src="https://img.shields.io/badge/iOS-15.0%2B-success" alt="iOS Version 15.0"/></a>
