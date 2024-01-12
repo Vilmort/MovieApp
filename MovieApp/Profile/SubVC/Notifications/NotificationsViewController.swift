@@ -61,8 +61,6 @@ final class NotificationsViewController: ViewController, NotificationsVCProtocol
     
     // MARK: - Private Methods
     private func setViews() {
-        navigationController?.tabBarController?.tabBar.isHidden = true
-        navigationController?.tabBarController?.tabBar.isTranslucent = true
         view.backgroundColor = .appDark
         view.addSubview(mainView)
         mainView.addSubviews(settingLabel, notificationsLabel, notificationSwitch)

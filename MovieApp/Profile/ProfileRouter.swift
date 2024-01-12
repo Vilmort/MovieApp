@@ -19,22 +19,30 @@ protocol ProfileRouterProtocol: AnyObject {
 }
 final class ProfileRouter: Router, ProfileRouterProtocol {
     func showPrivacyPolicy() {
-        pushScreen(Builder.createPrivacyPolicyVC())
+        let vc = Builder.createPrivacyPolicyVC()
+        vc.hidesBottomBarWhenPushed = true
+        pushScreen(vc)
     }
     
     func showEditProfile() {
-        pushScreen(Builder.createEditProfileVC())
+        let vc = Builder.createEditProfileVC()
+        vc.hidesBottomBarWhenPushed = true
+        pushScreen(vc)
     }
         
     func showNotifications() {
-        pushScreen(Builder.createNotificationsVC())
+        let vc = Builder.createNotificationsVC()
+        vc.hidesBottomBarWhenPushed = true
+        pushScreen(vc)
     }
     func showLanguageVC() {
-        let vc = UINavigationController(rootViewController: Builder.createLanguageVC())
+        let vc = NavigationController(rootViewController: Builder.createLanguageVC())
         vc.modalPresentationStyle = .fullScreen
         presentScreen(vc)
     }
     func showAboutUsVC() {
-        pushScreen(Builder.createAboutUsVC())
+        let vc = Builder.createAboutUsVC()
+        vc.hidesBottomBarWhenPushed = true
+        pushScreen(vc)
     }
 }

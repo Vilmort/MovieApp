@@ -36,6 +36,8 @@ final class MovieDetailAssembly: ModuleAssembly {
         presenter.router = router
         router.controller = controller
         
+        controller.hidesBottomBarWhenPushed = true
+        
         return controller
     }
 }

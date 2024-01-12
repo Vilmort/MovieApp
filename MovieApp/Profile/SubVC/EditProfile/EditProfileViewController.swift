@@ -162,8 +162,6 @@ final class EditProfileViewController: ViewController, EditProfileViewController
     // MARK: - Life Cycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.tabBarController?.tabBar.isHidden = true
-        navigationController?.tabBarController?.tabBar.isTranslucent = true
         setupViews()
         setupConstraints()
         presenter.fetchUser()

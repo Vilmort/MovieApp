@@ -21,27 +21,22 @@ final class AboutUsViewController: ViewController, AboutViewControllerProtocol {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.register(TeamViewCell.self, forCellWithReuseIdentifier: "TeamViewCell")
         collectionView.showsHorizontalScrollIndicator = false
+        collectionView.showsVerticalScrollIndicator = false
         collectionView.backgroundColor = .clear
         return collectionView
-        
-        
     }()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.tabBarController?.tabBar.isHidden = true
-        navigationController?.tabBarController?.tabBar.isTranslucent = true
         view.backgroundColor = .appDark
         view.addSubview(collection)
         collection.dataSource = self
         collection.delegate = self
         title = "Team".localized
         collection.snp.makeConstraints { make in
-            make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
-            make.left.equalToSuperview()
-            make.right.equalToSuperview()
-            make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
+            make.top.bottom.equalTo(view.safeAreaLayoutGuide).inset(16)
+            make.leading.trailing.equalToSuperview()
         }
     }
     
