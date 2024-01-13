@@ -1,14 +1,22 @@
-#MovieApp
+# MovieApp
+A movie app where users can access the latest movies. The source of the data is [kinopoisk API](https://api.kinopoisk.dev/documentation). You can see the technologies and features used in the project below.
 <p align= "left">
 
-<img src="https://img.shields.io/badge/Swift-5.7-orange" alt="Swift Version 5.7" /></a>
-<a href="https://developer.apple.com/ios/">
+
 <img src="https://img.shields.io/badge/iOS-15.0%2B-success" alt="iOS Version 15.0"/></a>
-<img src="https://img.shields.io/badge/MVC-ff69b4" alt="MVP" /></a>
-<img src="https://img.shields.io/badge/No storyboard-purple" alt="MVC" /></a>
+<img src="https://img.shields.io/badge/MVP-ff69b4" alt="MVP" /></a>
+<img src="https://img.shields.io/badge/No storyboard-purple" /></a>
 </p>
 
-### В разработке участвовали:
+<p float="left">
+  <img src="https://github.com/Vanopr/MovieApp/blob/develop/Resource/Assets.xcassets/Images/image1.imageset/image1.png" width="190" />
+  <img src="https://github.com/Vanopr/MovieApp/blob/develop/Resource/Assets.xcassets/Images/image2.imageset/image2.png" width="190" /> 
+  <img src="https://github.com/Vanopr/MovieApp/blob/develop/Resource/Assets.xcassets/Images/image3.imageset/image3.png" width="190" />
+  <img src="https://github.com/Vanopr/MovieApp/blob/develop/Resource/Assets.xcassets/Images/image4.imageset/image4.png" width="190" />
+  <img src="https://github.com/Vanopr/MovieApp/blob/develop/Resource/Assets.xcassets/Images/image5.imageset/image5.png" width="190" />
+</p>
+
+## App Developers:
 <p align="left"> 
 <a href="https://github.com/Vanopr">
 <img src="https://img.shields.io/badge/Vanopr-gray"/></a>
@@ -21,3 +29,21 @@
 <a href="https://github.com/UdachiTomo">
 <img src="https://img.shields.io/badge/UdachiTomo-purple"/></a>
 </p>
+
+## Technologies
+* MVP
+* Realm
+* Kingfisher
+* Lottie
+* OOP
+* Snapkit
+
+## Features
+
+- Show movie genre list
+- Show movies based on genre and category
+- Show movie details
+- Show movie trailer
+- Show movie reviews
+
+
