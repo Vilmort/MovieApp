@@ -20,8 +20,8 @@ class OnboardingViewController: ViewController, OnboardingViewProtocol {
     private let scrollView: UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.isPagingEnabled = true
-        scrollView.translatesAutoresizingMaskIntoConstraints = false
         scrollView.bounces = false
+        scrollView.showsHorizontalScrollIndicator = false
         return scrollView
     }()
     
@@ -30,8 +30,16 @@ class OnboardingViewController: ViewController, OnboardingViewProtocol {
         skipButton.setTitle("Skip", for: .normal)
         skipButton.setTitleColor(UIColor.lightGray, for: .normal)
         skipButton.addTarget(self, action: #selector(skipButtonPressed), for: .touchUpInside)
-        skipButton.translatesAutoresizingMaskIntoConstraints = false
         return skipButton
+    }()
+    
+    private let pageControl: UIPageControl = {
+        var pageControl = UIPageControl()
+        pageControl.numberOfPages = 3
+        pageControl.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
+        pageControl.currentPageIndicatorTintColor = .appBlue
+        pageControl.pageIndicatorTintColor = .appBlue.withAlphaComponent(0.4)
+        return pageControl
     }()
     
     private let animationButton: LottieAnimationView = .init()
@@ -83,9 +91,12 @@ class OnboardingViewController: ViewController, OnboardingViewProtocol {
     
     private func setupViews() {
         view.backgroundColor = .appDark
-        view.addSubview(scrollView)
-        view.addSubview(skipButton)
-        view.addSubview(animationButton)
+        view.addSubviews(
+            scrollView,
+            skipButton,
+            animationButton,
+            pageControl
+        )
     }
     
     private func setDelegates() {
@@ -113,6 +124,7 @@ class OnboardingViewController: ViewController, OnboardingViewProtocol {
         currentPageIndex = nextPageIndex
         currentButtons()
         playAnimationFor(currentPageIndex)
+        pageControl.currentPage = currentPageIndex
     }
     
     @objc private func skipButtonPressed() {
@@ -158,6 +170,7 @@ extension OnboardingViewController: UIScrollViewDelegate {
         let currentPageIndex = Int(targetOffsetX / view.frame.width)
         self.currentPageIndex = currentPageIndex
         currentButtons()
+        pageControl.currentPage = currentPageIndex
         playAnimationFor(currentPageIndex)
     }
 }
@@ -182,6 +195,12 @@ extension OnboardingViewController {
             make.bottom.equalTo(skipButton.snp.top)
             make.trailing.equalToSuperview().inset(15)
             make.width.height.equalTo(80)
+        }
+        
+        pageControl.snp.makeConstraints { make in
+            make.leading.equalToSuperview().inset(20)
+            make.centerY.equalTo(animationButton)
+            make.height.equalTo(50)
         }
     }
 }
