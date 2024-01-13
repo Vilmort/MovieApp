@@ -15,6 +15,7 @@ final class DIContainer {
     let networkService: KPNetworkClient
     let shareService: ShareService
     let persistentService: PersistentServiceProtocol
+    let notificationService: NotificationService
     
     init() {
         self.networkService = DefaultKPNetworkClient(
@@ -27,5 +28,6 @@ final class DIContainer {
         )
         self.shareService = ShareService()
         self.persistentService = PersistentService()
+        self.notificationService = NotificationService()
     }
 }

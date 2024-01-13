@@ -82,4 +82,9 @@ Welcome to MovieApp, your premier destination for an unparalleled cinematic expe
 "Similar Movies" = "Similar Movies";
 "Team" = "Team";
 "Share to" = "Share to";
-
+"NotificationTitle" = "Time to watch movie";
+"NotificationMessage" = "Choose movie!";
+"Error" = "Error";
+"NotificationAlertMessage" = "To enable notification you need to grant access to the application in your phone's settings";
+"Close" = "Close";
+"OpenSettings" = "Open Settings";

@@ -86,3 +86,9 @@ Information is processed for transactions, customer support, and to analyze usag
 "Similar Movies" = "Похожие фильмы";
 "Team" = "Команда";
 "Share to" = "Поделиться";
+"NotificationTitle" = "Пора смотреть фильмы";
+"NotificationMessage" = "Время выбирать!";
+"Error" = "Ошибка";
+"NotificationAlertMessage" = "Чтобы включить уведомления нужно предоставить доступ приложению в настройках вашего телефона";
+"Close" = "Закрыть";
+"OpenSettings" = "Открыть Настройки";

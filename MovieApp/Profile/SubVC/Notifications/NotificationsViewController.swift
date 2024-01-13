@@ -41,7 +41,7 @@ final class NotificationsViewController: ViewController, NotificationsVCProtocol
             numberOfLines: 1,
             alignment: .left
         )
-        label.text =  "Show Notifications".localized
+        label.text = "Show Notifications".localized
         return label
     }()
     
@@ -57,6 +57,39 @@ final class NotificationsViewController: ViewController, NotificationsVCProtocol
         super.viewDidLoad()
         setViews()
         setupConstraints()
+        presenter.activate()
+    }
+    
+    // MARK: - NotificationsVCProtocol
+    
+    func update(isNotificationEnabled: Bool) {
+        notificationSwitch.isOn = isNotificationEnabled
+    }
+    
+    func showNotificationsAlert() {
+        let alert = UIAlertController(
+            title: "Error".localized,
+            message: "NotificationAlertMessage".localized,
+            preferredStyle: .alert
+        )
+        alert.addAction(
+            .init(
+                title: "OpenSettings".localized,
+                style: .default,
+                handler: {
+                    _ in
+                    
+                    UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!)
+                }
+            )
+        )
+        alert.addAction(
+            .init(
+                title: "Close".localized,
+                style: .cancel
+            )
+        )
+        present(alert, animated: true)
     }
     
     // MARK: - Private Methods
@@ -65,6 +98,7 @@ final class NotificationsViewController: ViewController, NotificationsVCProtocol
         view.addSubview(mainView)
         mainView.addSubviews(settingLabel, notificationsLabel, notificationSwitch)
         title = "Notifications".localized
+        notificationSwitch.addTarget(self, action: #selector(didChangeSwitch(_:)), for: .valueChanged)
     }
     
     private func setupConstraints() {
@@ -95,6 +129,11 @@ final class NotificationsViewController: ViewController, NotificationsVCProtocol
             make.right.equalToSuperview()
                 .offset(-LayoutConstraint.standardOffset)
         }
+    }
+    
+    @objc
+    private func didChangeSwitch(_ switch: UISwitch) {
+        presenter.didSwitchNotifications()
     }
 }
 
