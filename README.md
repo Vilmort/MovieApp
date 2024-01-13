@@ -24,19 +24,16 @@ A movie app where users can access the latest movies. The source of the data is 
 <img src="https://img.shields.io/badge/viktorporch-red"/></a>
 <a href="https://github.com/Nodnet">
 <img src="https://img.shields.io/badge/Nodnet-green"/></a>
-<a href="https://github.com/NatashaM92">
-<img src="https://img.shields.io/badge/NatashaM92-pink"/></a>
-<a href="https://github.com/UdachiTomo">
-<img src="https://img.shields.io/badge/UdachiTomo-purple"/></a>
 </p>
 
 ## Technologies
-* MVP
-* Realm
-* Kingfisher
-* Lottie
-* OOP
+* MVP, Router, Builder, Factory
 * Snapkit
+* Realm
+* Lottie
+* Kingfisher
+* OOP
+
 
 ## Features
 
