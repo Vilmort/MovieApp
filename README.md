@@ -4,7 +4,8 @@ A movie app where users can access the latest movies. The source of the data is 
 
 
 <img src="https://img.shields.io/badge/iOS-15.0%2B-success" alt="iOS Version 15.0"/></a>
-<img src="https://img.shields.io/badge/MVP-ff69b4" alt="MVP" /></a>
+<img src="https://img.shields.io/badge/MVP-ff69b4" alt="MVP + Router, Builder, Factory
+" /></a>
 <img src="https://img.shields.io/badge/No storyboard-purple" /></a>
 </p>
 
